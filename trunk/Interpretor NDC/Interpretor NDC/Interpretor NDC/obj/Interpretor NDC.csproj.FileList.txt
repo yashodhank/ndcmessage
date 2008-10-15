@@ -1,0 +1,8 @@
+bin\Debug\Interpretor NDC.exe
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Interpretor_NDC.Form1.resources
+obj\Debug\Interpretor_NDC.Properties.Resources.resources
+obj\Debug\Interpretor NDC.csproj.GenerateResource.Cache
+obj\Debug\Interpretor NDC.exe
+obj\Debug\Interpretor NDC.pdb
+bin\Debug\Interpretor NDC.pdb
