@@ -1,8 +1,0 @@
-C:\Documents and Settings\marian.voicu\Desktop\Interpretor NDC\Interpretor NDC\obj\Debug\Interpretor NDC.exe
-C:\Documents and Settings\marian.voicu\Desktop\Interpretor NDC\Interpretor NDC\obj\Debug\Interpretor NDC.pdb
-C:\Documents and Settings\marian.voicu\Desktop\Interpretor NDC\Interpretor NDC\bin\Debug\Interpretor NDC.exe
-C:\Documents and Settings\marian.voicu\Desktop\Interpretor NDC\Interpretor NDC\bin\Debug\Interpretor NDC.pdb
-C:\Documents and Settings\marian.voicu\Desktop\Interpretor NDC\Interpretor NDC\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\marian.voicu\Desktop\Interpretor NDC\Interpretor NDC\obj\Debug\Interpretor_NDC.Form1.resources
-C:\Documents and Settings\marian.voicu\Desktop\Interpretor NDC\Interpretor NDC\obj\Debug\Interpretor_NDC.Properties.Resources.resources
-C:\Documents and Settings\marian.voicu\Desktop\Interpretor NDC\Interpretor NDC\obj\Debug\Interpretor NDC.csproj.GenerateResource.Cache
