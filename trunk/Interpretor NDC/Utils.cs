@@ -6,7 +6,7 @@ namespace Interpretor_NDC
 {
     class Utils
     {
-        public static int StrIndexOf(char ch, string str, int nr_skip)
+        public static int StrIndexOf(char ch, string str, int nr_skip)  // pozitia ch sarind peste primele skip aparitii
         {
             int count = 0;
 
