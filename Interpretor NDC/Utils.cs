@@ -39,5 +39,18 @@ namespace Interpretor_NDC
             }
             return -1;
         }
+
+        public static string GetSubstring(string str, string begin, string end) // returneaza stringul dintre bigin si end
+        {
+            string temp = "";
+
+            int start = str.IndexOf(begin);
+            int stop = str.IndexOf(end);
+
+            if (start >= 0 && stop > 0 && stop > start)
+                temp = str.Substring(start, stop - start);
+
+            return temp;
+        }
     }
 }
