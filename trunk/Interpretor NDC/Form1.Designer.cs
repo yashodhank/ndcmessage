@@ -30,20 +30,17 @@ namespace Interpretor_NDC
         {
             this.buttonOpenFile = new System.Windows.Forms.Button();
             this.openFileDialogMessageIn = new System.Windows.Forms.OpenFileDialog();
-            this.dataGridViewMessageIn = new System.Windows.Forms.DataGridView();
-            this.Col1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Col3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMessageIn)).BeginInit();
+            this.listBoxMessageIn = new System.Windows.Forms.ListBox();
+            this.textBoxMessageIn = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonOpenFile
             // 
-            this.buttonOpenFile.Location = new System.Drawing.Point(13, 13);
+            this.buttonOpenFile.Location = new System.Drawing.Point(44, 12);
             this.buttonOpenFile.Name = "buttonOpenFile";
-            this.buttonOpenFile.Size = new System.Drawing.Size(105, 23);
+            this.buttonOpenFile.Size = new System.Drawing.Size(144, 23);
             this.buttonOpenFile.TabIndex = 0;
-            this.buttonOpenFile.Text = "OpenFileToSplit";
+            this.buttonOpenFile.Text = "Analyse MessageIn.log";
             this.buttonOpenFile.UseVisualStyleBackColor = true;
             this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
             // 
@@ -51,52 +48,36 @@ namespace Interpretor_NDC
             // 
             this.openFileDialogMessageIn.Filter = "LOG (*.log)|*.log|All files (*.*)|*.*\"";
             // 
-            // dataGridViewMessageIn
+            // listBoxMessageIn
             // 
-            this.dataGridViewMessageIn.AllowUserToAddRows = false;
-            this.dataGridViewMessageIn.AllowUserToDeleteRows = false;
-            this.dataGridViewMessageIn.AllowUserToResizeRows = false;
-            this.dataGridViewMessageIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMessageIn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Col1,
-            this.Col2,
-            this.Col3});
-            this.dataGridViewMessageIn.Location = new System.Drawing.Point(12, 42);
-            this.dataGridViewMessageIn.Name = "dataGridViewMessageIn";
-            this.dataGridViewMessageIn.ReadOnly = true;
-            this.dataGridViewMessageIn.Size = new System.Drawing.Size(343, 153);
-            this.dataGridViewMessageIn.TabIndex = 1;
+            this.listBoxMessageIn.FormattingEnabled = true;
+            this.listBoxMessageIn.Location = new System.Drawing.Point(12, 41);
+            this.listBoxMessageIn.Name = "listBoxMessageIn";
+            this.listBoxMessageIn.Size = new System.Drawing.Size(62, 212);
+            this.listBoxMessageIn.TabIndex = 1;
+            this.listBoxMessageIn.SelectedIndexChanged += new System.EventHandler(this.listBoxMessageIn_SelectedIndexChanged);
             // 
-            // Col1
+            // textBoxMessageIn
             // 
-            this.Col1.HeaderText = "Nr";
-            this.Col1.Name = "Col1";
-            this.Col1.ReadOnly = true;
-            // 
-            // Col2
-            // 
-            this.Col2.HeaderText = "Type";
-            this.Col2.Name = "Col2";
-            this.Col2.ReadOnly = true;
-            // 
-            // Col3
-            // 
-            this.Col3.HeaderText = "Message";
-            this.Col3.Name = "Col3";
-            this.Col3.ReadOnly = true;
+            this.textBoxMessageIn.Location = new System.Drawing.Point(80, 41);
+            this.textBoxMessageIn.Multiline = true;
+            this.textBoxMessageIn.Name = "textBoxMessageIn";
+            this.textBoxMessageIn.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxMessageIn.Size = new System.Drawing.Size(150, 211);
+            this.textBoxMessageIn.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 566);
-            this.Controls.Add(this.dataGridViewMessageIn);
+            this.Controls.Add(this.textBoxMessageIn);
+            this.Controls.Add(this.listBoxMessageIn);
             this.Controls.Add(this.buttonOpenFile);
             this.Name = "Form1";
             this.Text = "Analizator NDC";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMessageIn)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -104,10 +85,8 @@ namespace Interpretor_NDC
 
         private System.Windows.Forms.Button buttonOpenFile;
         private System.Windows.Forms.OpenFileDialog openFileDialogMessageIn;
-        private System.Windows.Forms.DataGridView dataGridViewMessageIn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Col3;
+        private System.Windows.Forms.ListBox listBoxMessageIn;
+        private System.Windows.Forms.TextBox textBoxMessageIn;
     }
 }
 
