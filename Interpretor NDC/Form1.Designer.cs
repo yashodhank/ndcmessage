@@ -56,12 +56,13 @@ namespace Interpretor_NDC
             this.buttonOpenFile.Name = "buttonOpenFile";
             this.buttonOpenFile.Size = new System.Drawing.Size(144, 23);
             this.buttonOpenFile.TabIndex = 0;
-            this.buttonOpenFile.Text = "Analyse MessageIn.log";
+            this.buttonOpenFile.Text = "Deschide MessageIn.log";
             this.buttonOpenFile.UseVisualStyleBackColor = true;
             this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
             // 
             // openFileDialogMessageIn
             // 
+            this.openFileDialogMessageIn.FileName = "MessageIn.log";
             this.openFileDialogMessageIn.Filter = "LOG (*.log)|*.log|All files (*.*)|*.*\"";
             // 
             // listBoxMessageIn
@@ -75,9 +76,11 @@ namespace Interpretor_NDC
             // 
             // textBoxMessageIn
             // 
+            this.textBoxMessageIn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.textBoxMessageIn.Location = new System.Drawing.Point(110, 41);
             this.textBoxMessageIn.Multiline = true;
             this.textBoxMessageIn.Name = "textBoxMessageIn";
+            this.textBoxMessageIn.ReadOnly = true;
             this.textBoxMessageIn.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxMessageIn.Size = new System.Drawing.Size(670, 212);
             this.textBoxMessageIn.TabIndex = 2;
@@ -95,9 +98,10 @@ namespace Interpretor_NDC
             // labelSplit
             // 
             this.labelSplit.AutoSize = true;
-            this.labelSplit.Location = new System.Drawing.Point(162, 268);
+            this.labelSplit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelSplit.Location = new System.Drawing.Point(132, 276);
             this.labelSplit.Name = "labelSplit";
-            this.labelSplit.Size = new System.Drawing.Size(75, 13);
+            this.labelSplit.Size = new System.Drawing.Size(170, 25);
             this.labelSplit.TabIndex = 4;
             this.labelSplit.Text = "Extract exit file";
             // 
@@ -243,8 +247,8 @@ namespace Interpretor_NDC
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(792, 566);
             this.Controls.Add(this.buttonSplitSelect);
             this.Controls.Add(this.checkBoxEncryptionKeyChange);
@@ -265,6 +269,8 @@ namespace Interpretor_NDC
             this.Controls.Add(this.textBoxMessageIn);
             this.Controls.Add(this.listBoxMessageIn);
             this.Controls.Add(this.buttonOpenFile);
+            this.MaximumSize = new System.Drawing.Size(800, 600);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Form1";
             this.Text = "Analizator NDC";
             this.ResumeLayout(false);
