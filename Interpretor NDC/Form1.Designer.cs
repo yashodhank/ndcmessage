@@ -57,15 +57,15 @@ namespace Interpretor_NDC
             this.labelCaractere = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBoxArataLog = new System.Windows.Forms.TextBox();
             this.buttonArataLog = new System.Windows.Forms.Button();
-            this.checkBoxHostToExitMessages = new System.Windows.Forms.CheckBox();
+            this.textBoxArataLog = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.checkBoxTransactionReplyCommand = new System.Windows.Forms.CheckBox();
+            this.checkBoxHostToExitMessages = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.buttonOpenStateTabels = new System.Windows.Forms.Button();
-            this.textBoxStateTabels = new System.Windows.Forms.TextBox();
+            this.listBoxStateTabels = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -84,7 +84,7 @@ namespace Interpretor_NDC
             // 
             // openFileDialogMessageIn
             // 
-            this.openFileDialogMessageIn.Filter = "LOG (*.log)|*.log|ANL(*.anl)|*.anl|All files (*.*)|*.*\"";
+            this.openFileDialogMessageIn.Filter = "LOG (*.log)|*.log|TextDataBase(*.tdb)|*.tdb|Analyse(*.anl)|*.anl";
             // 
             // listBoxMessageIn
             // 
@@ -360,6 +360,27 @@ namespace Interpretor_NDC
             this.tabPage1.Text = "Setari si Incarcare";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // buttonArataLog
+            // 
+            this.buttonArataLog.Location = new System.Drawing.Point(9, 15);
+            this.buttonArataLog.Name = "buttonArataLog";
+            this.buttonArataLog.Size = new System.Drawing.Size(147, 23);
+            this.buttonArataLog.TabIndex = 27;
+            this.buttonArataLog.Text = "Arata MessageIn.log";
+            this.buttonArataLog.UseVisualStyleBackColor = true;
+            this.buttonArataLog.Click += new System.EventHandler(this.buttonArataLog_Click);
+            // 
+            // textBoxArataLog
+            // 
+            this.textBoxArataLog.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.textBoxArataLog.Location = new System.Drawing.Point(9, 44);
+            this.textBoxArataLog.Multiline = true;
+            this.textBoxArataLog.Name = "textBoxArataLog";
+            this.textBoxArataLog.ReadOnly = true;
+            this.textBoxArataLog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxArataLog.Size = new System.Drawing.Size(770, 400);
+            this.textBoxArataLog.TabIndex = 26;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.checkBoxTransactionReplyCommand);
@@ -390,26 +411,15 @@ namespace Interpretor_NDC
             this.tabPage2.Text = "Analiza";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBoxArataLog
+            // checkBoxTransactionReplyCommand
             // 
-            this.textBoxArataLog.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBoxArataLog.Location = new System.Drawing.Point(9, 44);
-            this.textBoxArataLog.Multiline = true;
-            this.textBoxArataLog.Name = "textBoxArataLog";
-            this.textBoxArataLog.ReadOnly = true;
-            this.textBoxArataLog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxArataLog.Size = new System.Drawing.Size(770, 400);
-            this.textBoxArataLog.TabIndex = 26;
-            // 
-            // buttonArataLog
-            // 
-            this.buttonArataLog.Location = new System.Drawing.Point(9, 15);
-            this.buttonArataLog.Name = "buttonArataLog";
-            this.buttonArataLog.Size = new System.Drawing.Size(147, 23);
-            this.buttonArataLog.TabIndex = 27;
-            this.buttonArataLog.Text = "Arata MessageIn.log";
-            this.buttonArataLog.UseVisualStyleBackColor = true;
-            this.buttonArataLog.Click += new System.EventHandler(this.buttonArataLog_Click);
+            this.checkBoxTransactionReplyCommand.AutoSize = true;
+            this.checkBoxTransactionReplyCommand.Location = new System.Drawing.Point(207, 436);
+            this.checkBoxTransactionReplyCommand.Name = "checkBoxTransactionReplyCommand";
+            this.checkBoxTransactionReplyCommand.Size = new System.Drawing.Size(162, 17);
+            this.checkBoxTransactionReplyCommand.TabIndex = 20;
+            this.checkBoxTransactionReplyCommand.Text = "Transaction Reply Command";
+            this.checkBoxTransactionReplyCommand.UseVisualStyleBackColor = true;
             // 
             // checkBoxHostToExitMessages
             // 
@@ -420,16 +430,6 @@ namespace Interpretor_NDC
             this.checkBoxHostToExitMessages.TabIndex = 19;
             this.checkBoxHostToExitMessages.Text = "Host to Exit Messages";
             this.checkBoxHostToExitMessages.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxTransactionReplyCommand
-            // 
-            this.checkBoxTransactionReplyCommand.AutoSize = true;
-            this.checkBoxTransactionReplyCommand.Location = new System.Drawing.Point(207, 436);
-            this.checkBoxTransactionReplyCommand.Name = "checkBoxTransactionReplyCommand";
-            this.checkBoxTransactionReplyCommand.Size = new System.Drawing.Size(162, 17);
-            this.checkBoxTransactionReplyCommand.TabIndex = 20;
-            this.checkBoxTransactionReplyCommand.Text = "Transaction Reply Command";
-            this.checkBoxTransactionReplyCommand.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
@@ -443,7 +443,7 @@ namespace Interpretor_NDC
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.textBoxStateTabels);
+            this.tabPage4.Controls.Add(this.listBoxStateTabels);
             this.tabPage4.Controls.Add(this.buttonOpenStateTabels);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -459,18 +459,18 @@ namespace Interpretor_NDC
             this.buttonOpenStateTabels.Name = "buttonOpenStateTabels";
             this.buttonOpenStateTabels.Size = new System.Drawing.Size(161, 28);
             this.buttonOpenStateTabels.TabIndex = 0;
-            this.buttonOpenStateTabels.Text = "Deschide state tabels.anl";
+            this.buttonOpenStateTabels.Text = "Deschide State Tabels.tdb";
             this.buttonOpenStateTabels.UseVisualStyleBackColor = true;
             this.buttonOpenStateTabels.Click += new System.EventHandler(this.buttonOpenStateTabels_Click);
             // 
-            // textBoxStateTabels
+            // listBoxStateTabels
             // 
-            this.textBoxStateTabels.Location = new System.Drawing.Point(4, 42);
-            this.textBoxStateTabels.Multiline = true;
-            this.textBoxStateTabels.Name = "textBoxStateTabels";
-            this.textBoxStateTabels.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxStateTabels.Size = new System.Drawing.Size(775, 141);
-            this.textBoxStateTabels.TabIndex = 1;
+            this.listBoxStateTabels.FormattingEnabled = true;
+            this.listBoxStateTabels.HorizontalScrollbar = true;
+            this.listBoxStateTabels.Location = new System.Drawing.Point(7, 42);
+            this.listBoxStateTabels.Name = "listBoxStateTabels";
+            this.listBoxStateTabels.Size = new System.Drawing.Size(207, 446);
+            this.listBoxStateTabels.TabIndex = 1;
             // 
             // Form1
             // 
@@ -489,7 +489,6 @@ namespace Interpretor_NDC
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -532,8 +531,8 @@ namespace Interpretor_NDC
         private System.Windows.Forms.CheckBox checkBoxTransactionReplyCommand;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TextBox textBoxStateTabels;
         private System.Windows.Forms.Button buttonOpenStateTabels;
+        private System.Windows.Forms.ListBox listBoxStateTabels;
     }
 }
 
