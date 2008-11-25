@@ -60,9 +60,16 @@ namespace Interpretor_NDC
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.textBoxArataLog = new System.Windows.Forms.TextBox();
             this.buttonArataLog = new System.Windows.Forms.Button();
+            this.checkBoxHostToExitMessages = new System.Windows.Forms.CheckBox();
+            this.checkBoxTransactionReplyCommand = new System.Windows.Forms.CheckBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.buttonOpenStateTabels = new System.Windows.Forms.Button();
+            this.textBoxStateTabels = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonOpenFile
@@ -77,8 +84,7 @@ namespace Interpretor_NDC
             // 
             // openFileDialogMessageIn
             // 
-            this.openFileDialogMessageIn.FileName = "MessageIn.log";
-            this.openFileDialogMessageIn.Filter = "LOG (*.log)|*.log|All files (*.*)|*.*\"";
+            this.openFileDialogMessageIn.Filter = "LOG (*.log)|*.log|ANL(*.anl)|*.anl|All files (*.*)|*.*\"";
             // 
             // listBoxMessageIn
             // 
@@ -326,6 +332,8 @@ namespace Interpretor_NDC
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(0, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -354,6 +362,8 @@ namespace Interpretor_NDC
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.checkBoxTransactionReplyCommand);
+            this.tabPage2.Controls.Add(this.checkBoxHostToExitMessages);
             this.tabPage2.Controls.Add(this.listBoxMessageIn);
             this.tabPage2.Controls.Add(this.buttonSplitSelect);
             this.tabPage2.Controls.Add(this.textBoxMessageIn);
@@ -401,6 +411,67 @@ namespace Interpretor_NDC
             this.buttonArataLog.UseVisualStyleBackColor = true;
             this.buttonArataLog.Click += new System.EventHandler(this.buttonArataLog_Click);
             // 
+            // checkBoxHostToExitMessages
+            // 
+            this.checkBoxHostToExitMessages.AutoSize = true;
+            this.checkBoxHostToExitMessages.Location = new System.Drawing.Point(207, 413);
+            this.checkBoxHostToExitMessages.Name = "checkBoxHostToExitMessages";
+            this.checkBoxHostToExitMessages.Size = new System.Drawing.Size(131, 17);
+            this.checkBoxHostToExitMessages.TabIndex = 19;
+            this.checkBoxHostToExitMessages.Text = "Host to Exit Messages";
+            this.checkBoxHostToExitMessages.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxTransactionReplyCommand
+            // 
+            this.checkBoxTransactionReplyCommand.AutoSize = true;
+            this.checkBoxTransactionReplyCommand.Location = new System.Drawing.Point(207, 436);
+            this.checkBoxTransactionReplyCommand.Name = "checkBoxTransactionReplyCommand";
+            this.checkBoxTransactionReplyCommand.Size = new System.Drawing.Size(162, 17);
+            this.checkBoxTransactionReplyCommand.TabIndex = 20;
+            this.checkBoxTransactionReplyCommand.Text = "Transaction Reply Command";
+            this.checkBoxTransactionReplyCommand.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(785, 538);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Screens";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.textBoxStateTabels);
+            this.tabPage4.Controls.Add(this.buttonOpenStateTabels);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(785, 538);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "State Tabels";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // buttonOpenStateTabels
+            // 
+            this.buttonOpenStateTabels.Location = new System.Drawing.Point(4, 7);
+            this.buttonOpenStateTabels.Name = "buttonOpenStateTabels";
+            this.buttonOpenStateTabels.Size = new System.Drawing.Size(161, 28);
+            this.buttonOpenStateTabels.TabIndex = 0;
+            this.buttonOpenStateTabels.Text = "Deschide state tabels.anl";
+            this.buttonOpenStateTabels.UseVisualStyleBackColor = true;
+            this.buttonOpenStateTabels.Click += new System.EventHandler(this.buttonOpenStateTabels_Click);
+            // 
+            // textBoxStateTabels
+            // 
+            this.textBoxStateTabels.Location = new System.Drawing.Point(4, 42);
+            this.textBoxStateTabels.Multiline = true;
+            this.textBoxStateTabels.Name = "textBoxStateTabels";
+            this.textBoxStateTabels.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxStateTabels.Size = new System.Drawing.Size(775, 141);
+            this.textBoxStateTabels.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -417,6 +488,8 @@ namespace Interpretor_NDC
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -455,6 +528,12 @@ namespace Interpretor_NDC
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button buttonArataLog;
         private System.Windows.Forms.TextBox textBoxArataLog;
+        private System.Windows.Forms.CheckBox checkBoxHostToExitMessages;
+        private System.Windows.Forms.CheckBox checkBoxTransactionReplyCommand;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TextBox textBoxStateTabels;
+        private System.Windows.Forms.Button buttonOpenStateTabels;
     }
 }
 
