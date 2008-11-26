@@ -68,41 +68,43 @@ namespace Interpretor_NDC
             this.buttonClearMap = new System.Windows.Forms.Button();
             this.buttonGenerateMap = new System.Windows.Forms.Button();
             this.panelDrawStates = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxDescriptionPart8 = new System.Windows.Forms.TextBox();
+            this.textBoxDescriptionPart7 = new System.Windows.Forms.TextBox();
+            this.textBoxDescriptionPart6 = new System.Windows.Forms.TextBox();
+            this.textBoxDescriptionPart5 = new System.Windows.Forms.TextBox();
+            this.textBoxDescriptionPart4 = new System.Windows.Forms.TextBox();
+            this.textBoxDescriptionPart3 = new System.Windows.Forms.TextBox();
+            this.textBoxDescriptionPart2 = new System.Windows.Forms.TextBox();
+            this.textBoxDescriptionPart1 = new System.Windows.Forms.TextBox();
+            this.textBoxDescriptionStateType = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxMessType = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelMessType = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.labelViewStateType = new System.Windows.Forms.Label();
             this.comboBoxViewStateTabel = new System.Windows.Forms.ComboBox();
-            this.descriptionLabel8 = new System.Windows.Forms.Label();
-            this.descriptionLabel7 = new System.Windows.Forms.Label();
-            this.descriptionLabel6 = new System.Windows.Forms.Label();
-            this.descriptionLabel5 = new System.Windows.Forms.Label();
-            this.descriptionLabel4 = new System.Windows.Forms.Label();
-            this.labelDescriptionLabel3 = new System.Windows.Forms.Label();
-            this.labelDescriptionLabel2 = new System.Windows.Forms.Label();
-            this.labelDescriptionLabel1 = new System.Windows.Forms.Label();
-            this.labelDescriptionStateType = new System.Windows.Forms.Label();
-            this.textBoxMessType = new System.Windows.Forms.TextBox();
-            this.labelMessType = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.listBoxStateTabels = new System.Windows.Forms.ListBox();
             this.buttonOpenStateTabels = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonOpenFile
@@ -477,39 +479,13 @@ namespace Interpretor_NDC
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.Linen;
+            this.tabPage4.Controls.Add(this.panel1);
             this.tabPage4.Controls.Add(this.button1);
             this.tabPage4.Controls.Add(this.buttonClearMap);
             this.tabPage4.Controls.Add(this.buttonGenerateMap);
             this.tabPage4.Controls.Add(this.panelDrawStates);
             this.tabPage4.Controls.Add(this.labelViewStateType);
             this.tabPage4.Controls.Add(this.comboBoxViewStateTabel);
-            this.tabPage4.Controls.Add(this.descriptionLabel8);
-            this.tabPage4.Controls.Add(this.descriptionLabel7);
-            this.tabPage4.Controls.Add(this.descriptionLabel6);
-            this.tabPage4.Controls.Add(this.descriptionLabel5);
-            this.tabPage4.Controls.Add(this.descriptionLabel4);
-            this.tabPage4.Controls.Add(this.labelDescriptionLabel3);
-            this.tabPage4.Controls.Add(this.labelDescriptionLabel2);
-            this.tabPage4.Controls.Add(this.labelDescriptionLabel1);
-            this.tabPage4.Controls.Add(this.labelDescriptionStateType);
-            this.tabPage4.Controls.Add(this.textBoxMessType);
-            this.tabPage4.Controls.Add(this.labelMessType);
-            this.tabPage4.Controls.Add(this.label8);
-            this.tabPage4.Controls.Add(this.label7);
-            this.tabPage4.Controls.Add(this.textBox7);
-            this.tabPage4.Controls.Add(this.textBox8);
-            this.tabPage4.Controls.Add(this.textBox4);
-            this.tabPage4.Controls.Add(this.textBox5);
-            this.tabPage4.Controls.Add(this.textBox6);
-            this.tabPage4.Controls.Add(this.textBox3);
-            this.tabPage4.Controls.Add(this.textBox2);
-            this.tabPage4.Controls.Add(this.textBox1);
-            this.tabPage4.Controls.Add(this.label6);
-            this.tabPage4.Controls.Add(this.label5);
-            this.tabPage4.Controls.Add(this.label4);
-            this.tabPage4.Controls.Add(this.label3);
-            this.tabPage4.Controls.Add(this.label2);
-            this.tabPage4.Controls.Add(this.label1);
             this.tabPage4.Controls.Add(this.listBoxStateTabels);
             this.tabPage4.Controls.Add(this.buttonOpenStateTabels);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -523,7 +499,7 @@ namespace Interpretor_NDC
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(24, 510);
+            this.button1.Location = new System.Drawing.Point(4, 510);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(40, 20);
             this.button1.TabIndex = 0;
@@ -532,7 +508,7 @@ namespace Interpretor_NDC
             // 
             // buttonClearMap
             // 
-            this.buttonClearMap.Location = new System.Drawing.Point(259, 513);
+            this.buttonClearMap.Location = new System.Drawing.Point(63, 506);
             this.buttonClearMap.Name = "buttonClearMap";
             this.buttonClearMap.Size = new System.Drawing.Size(92, 23);
             this.buttonClearMap.TabIndex = 33;
@@ -542,7 +518,7 @@ namespace Interpretor_NDC
             // 
             // buttonGenerateMap
             // 
-            this.buttonGenerateMap.Location = new System.Drawing.Point(161, 513);
+            this.buttonGenerateMap.Location = new System.Drawing.Point(50, 512);
             this.buttonGenerateMap.Name = "buttonGenerateMap";
             this.buttonGenerateMap.Size = new System.Drawing.Size(92, 23);
             this.buttonGenerateMap.TabIndex = 32;
@@ -554,10 +530,291 @@ namespace Interpretor_NDC
             // 
             this.panelDrawStates.AutoScroll = true;
             this.panelDrawStates.BackColor = System.Drawing.Color.SeaShell;
-            this.panelDrawStates.Location = new System.Drawing.Point(635, 30);
+            this.panelDrawStates.Location = new System.Drawing.Point(161, 167);
             this.panelDrawStates.Name = "panelDrawStates";
-            this.panelDrawStates.Size = new System.Drawing.Size(141, 500);
+            this.panelDrawStates.Size = new System.Drawing.Size(618, 365);
             this.panelDrawStates.TabIndex = 31;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel1.Controls.Add(this.textBoxDescriptionPart8);
+            this.panel1.Controls.Add(this.textBoxDescriptionPart7);
+            this.panel1.Controls.Add(this.textBoxDescriptionPart6);
+            this.panel1.Controls.Add(this.textBoxDescriptionPart5);
+            this.panel1.Controls.Add(this.textBoxDescriptionPart4);
+            this.panel1.Controls.Add(this.textBoxDescriptionPart3);
+            this.panel1.Controls.Add(this.textBoxDescriptionPart2);
+            this.panel1.Controls.Add(this.textBoxDescriptionPart1);
+            this.panel1.Controls.Add(this.textBoxDescriptionStateType);
+            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.textBoxMessType);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.labelMessType);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Location = new System.Drawing.Point(161, 7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(618, 154);
+            this.panel1.TabIndex = 29;
+            // 
+            // textBoxDescriptionPart8
+            // 
+            this.textBoxDescriptionPart8.Location = new System.Drawing.Point(395, 342);
+            this.textBoxDescriptionPart8.Multiline = true;
+            this.textBoxDescriptionPart8.Name = "textBoxDescriptionPart8";
+            this.textBoxDescriptionPart8.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxDescriptionPart8.Size = new System.Drawing.Size(188, 102);
+            this.textBoxDescriptionPart8.TabIndex = 28;
+            // 
+            // textBoxDescriptionPart7
+            // 
+            this.textBoxDescriptionPart7.Location = new System.Drawing.Point(201, 342);
+            this.textBoxDescriptionPart7.Multiline = true;
+            this.textBoxDescriptionPart7.Name = "textBoxDescriptionPart7";
+            this.textBoxDescriptionPart7.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxDescriptionPart7.Size = new System.Drawing.Size(188, 102);
+            this.textBoxDescriptionPart7.TabIndex = 27;
+            // 
+            // textBoxDescriptionPart6
+            // 
+            this.textBoxDescriptionPart6.Location = new System.Drawing.Point(7, 342);
+            this.textBoxDescriptionPart6.Multiline = true;
+            this.textBoxDescriptionPart6.Name = "textBoxDescriptionPart6";
+            this.textBoxDescriptionPart6.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxDescriptionPart6.Size = new System.Drawing.Size(188, 102);
+            this.textBoxDescriptionPart6.TabIndex = 26;
+            // 
+            // textBoxDescriptionPart5
+            // 
+            this.textBoxDescriptionPart5.Location = new System.Drawing.Point(395, 195);
+            this.textBoxDescriptionPart5.Multiline = true;
+            this.textBoxDescriptionPart5.Name = "textBoxDescriptionPart5";
+            this.textBoxDescriptionPart5.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxDescriptionPart5.Size = new System.Drawing.Size(188, 102);
+            this.textBoxDescriptionPart5.TabIndex = 25;
+            // 
+            // textBoxDescriptionPart4
+            // 
+            this.textBoxDescriptionPart4.Location = new System.Drawing.Point(201, 195);
+            this.textBoxDescriptionPart4.Multiline = true;
+            this.textBoxDescriptionPart4.Name = "textBoxDescriptionPart4";
+            this.textBoxDescriptionPart4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxDescriptionPart4.Size = new System.Drawing.Size(188, 102);
+            this.textBoxDescriptionPart4.TabIndex = 24;
+            // 
+            // textBoxDescriptionPart3
+            // 
+            this.textBoxDescriptionPart3.Location = new System.Drawing.Point(7, 195);
+            this.textBoxDescriptionPart3.Multiline = true;
+            this.textBoxDescriptionPart3.Name = "textBoxDescriptionPart3";
+            this.textBoxDescriptionPart3.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxDescriptionPart3.Size = new System.Drawing.Size(188, 102);
+            this.textBoxDescriptionPart3.TabIndex = 23;
+            // 
+            // textBoxDescriptionPart2
+            // 
+            this.textBoxDescriptionPart2.Location = new System.Drawing.Point(395, 47);
+            this.textBoxDescriptionPart2.Multiline = true;
+            this.textBoxDescriptionPart2.Name = "textBoxDescriptionPart2";
+            this.textBoxDescriptionPart2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxDescriptionPart2.Size = new System.Drawing.Size(188, 102);
+            this.textBoxDescriptionPart2.TabIndex = 22;
+            // 
+            // textBoxDescriptionPart1
+            // 
+            this.textBoxDescriptionPart1.Location = new System.Drawing.Point(201, 47);
+            this.textBoxDescriptionPart1.Multiline = true;
+            this.textBoxDescriptionPart1.Name = "textBoxDescriptionPart1";
+            this.textBoxDescriptionPart1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxDescriptionPart1.Size = new System.Drawing.Size(188, 102);
+            this.textBoxDescriptionPart1.TabIndex = 21;
+            // 
+            // textBoxDescriptionStateType
+            // 
+            this.textBoxDescriptionStateType.Location = new System.Drawing.Point(7, 47);
+            this.textBoxDescriptionStateType.Multiline = true;
+            this.textBoxDescriptionStateType.Name = "textBoxDescriptionStateType";
+            this.textBoxDescriptionStateType.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxDescriptionStateType.Size = new System.Drawing.Size(188, 102);
+            this.textBoxDescriptionStateType.TabIndex = 20;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBox8.Location = new System.Drawing.Point(395, 316);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(27, 20);
+            this.textBox8.TabIndex = 14;
+            // 
+            // textBoxMessType
+            // 
+            this.textBoxMessType.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBoxMessType.Location = new System.Drawing.Point(7, 21);
+            this.textBoxMessType.Name = "textBoxMessType";
+            this.textBoxMessType.ReadOnly = true;
+            this.textBoxMessType.Size = new System.Drawing.Size(23, 20);
+            this.textBoxMessType.TabIndex = 19;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(392, 300);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "label8";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(201, 5);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            // 
+            // labelMessType
+            // 
+            this.labelMessType.AutoSize = true;
+            this.labelMessType.Location = new System.Drawing.Point(4, 5);
+            this.labelMessType.Name = "labelMessType";
+            this.labelMessType.Size = new System.Drawing.Size(58, 13);
+            this.labelMessType.TabIndex = 18;
+            this.labelMessType.Text = "State type:";
+            this.labelMessType.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(392, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "label2";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(198, 300);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "label7";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 153);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "label3";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBox7.Location = new System.Drawing.Point(201, 316);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(27, 20);
+            this.textBox7.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(198, 153);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(392, 153);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "label5";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBox4.Location = new System.Drawing.Point(201, 169);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(27, 20);
+            this.textBox4.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 300);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "label6";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBox5.Location = new System.Drawing.Point(395, 169);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(27, 20);
+            this.textBox5.TabIndex = 12;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBox1.Location = new System.Drawing.Point(201, 21);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(27, 20);
+            this.textBox1.TabIndex = 8;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBox6.Location = new System.Drawing.Point(7, 316);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(27, 20);
+            this.textBox6.TabIndex = 11;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBox2.Location = new System.Drawing.Point(395, 21);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(27, 20);
+            this.textBox2.TabIndex = 9;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBox3.Location = new System.Drawing.Point(7, 169);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(27, 20);
+            this.textBox3.TabIndex = 10;
             // 
             // labelViewStateType
             // 
@@ -618,260 +875,6 @@ namespace Interpretor_NDC
             this.comboBoxViewStateTabel.TabIndex = 29;
             this.comboBoxViewStateTabel.SelectedIndexChanged += new System.EventHandler(this.comboBoxViewStateTabel_SelectedIndexChanged);
             // 
-            // descriptionLabel8
-            // 
-            this.descriptionLabel8.AutoSize = true;
-            this.descriptionLabel8.Location = new System.Drawing.Point(194, 487);
-            this.descriptionLabel8.Name = "descriptionLabel8";
-            this.descriptionLabel8.Size = new System.Drawing.Size(89, 13);
-            this.descriptionLabel8.TabIndex = 28;
-            this.descriptionLabel8.Text = "description label4";
-            this.descriptionLabel8.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // descriptionLabel7
-            // 
-            this.descriptionLabel7.AutoSize = true;
-            this.descriptionLabel7.Location = new System.Drawing.Point(194, 434);
-            this.descriptionLabel7.Name = "descriptionLabel7";
-            this.descriptionLabel7.Size = new System.Drawing.Size(89, 13);
-            this.descriptionLabel7.TabIndex = 27;
-            this.descriptionLabel7.Text = "description label4";
-            this.descriptionLabel7.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // descriptionLabel6
-            // 
-            this.descriptionLabel6.AutoSize = true;
-            this.descriptionLabel6.Location = new System.Drawing.Point(194, 379);
-            this.descriptionLabel6.Name = "descriptionLabel6";
-            this.descriptionLabel6.Size = new System.Drawing.Size(89, 13);
-            this.descriptionLabel6.TabIndex = 26;
-            this.descriptionLabel6.Text = "description label4";
-            this.descriptionLabel6.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // descriptionLabel5
-            // 
-            this.descriptionLabel5.AutoSize = true;
-            this.descriptionLabel5.Location = new System.Drawing.Point(194, 322);
-            this.descriptionLabel5.Name = "descriptionLabel5";
-            this.descriptionLabel5.Size = new System.Drawing.Size(89, 13);
-            this.descriptionLabel5.TabIndex = 25;
-            this.descriptionLabel5.Text = "description label4";
-            this.descriptionLabel5.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // descriptionLabel4
-            // 
-            this.descriptionLabel4.AutoSize = true;
-            this.descriptionLabel4.Location = new System.Drawing.Point(194, 267);
-            this.descriptionLabel4.Name = "descriptionLabel4";
-            this.descriptionLabel4.Size = new System.Drawing.Size(89, 13);
-            this.descriptionLabel4.TabIndex = 24;
-            this.descriptionLabel4.Text = "description label4";
-            this.descriptionLabel4.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // labelDescriptionLabel3
-            // 
-            this.labelDescriptionLabel3.AutoSize = true;
-            this.labelDescriptionLabel3.Location = new System.Drawing.Point(194, 213);
-            this.labelDescriptionLabel3.Name = "labelDescriptionLabel3";
-            this.labelDescriptionLabel3.Size = new System.Drawing.Size(89, 13);
-            this.labelDescriptionLabel3.TabIndex = 23;
-            this.labelDescriptionLabel3.Text = "description label1";
-            this.labelDescriptionLabel3.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // labelDescriptionLabel2
-            // 
-            this.labelDescriptionLabel2.AutoSize = true;
-            this.labelDescriptionLabel2.Location = new System.Drawing.Point(194, 156);
-            this.labelDescriptionLabel2.Name = "labelDescriptionLabel2";
-            this.labelDescriptionLabel2.Size = new System.Drawing.Size(89, 13);
-            this.labelDescriptionLabel2.TabIndex = 22;
-            this.labelDescriptionLabel2.Text = "description label1";
-            this.labelDescriptionLabel2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // labelDescriptionLabel1
-            // 
-            this.labelDescriptionLabel1.AutoSize = true;
-            this.labelDescriptionLabel1.Location = new System.Drawing.Point(194, 101);
-            this.labelDescriptionLabel1.Name = "labelDescriptionLabel1";
-            this.labelDescriptionLabel1.Size = new System.Drawing.Size(89, 13);
-            this.labelDescriptionLabel1.TabIndex = 21;
-            this.labelDescriptionLabel1.Text = "description label1";
-            this.labelDescriptionLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // labelDescriptionStateType
-            // 
-            this.labelDescriptionStateType.AutoSize = true;
-            this.labelDescriptionStateType.Location = new System.Drawing.Point(194, 56);
-            this.labelDescriptionStateType.Name = "labelDescriptionStateType";
-            this.labelDescriptionStateType.Size = new System.Drawing.Size(107, 13);
-            this.labelDescriptionStateType.TabIndex = 20;
-            this.labelDescriptionStateType.Text = "description state type";
-            this.labelDescriptionStateType.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // textBoxMessType
-            // 
-            this.textBoxMessType.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxMessType.Location = new System.Drawing.Point(165, 53);
-            this.textBoxMessType.Name = "textBoxMessType";
-            this.textBoxMessType.ReadOnly = true;
-            this.textBoxMessType.Size = new System.Drawing.Size(23, 20);
-            this.textBoxMessType.TabIndex = 19;
-            // 
-            // labelMessType
-            // 
-            this.labelMessType.AutoSize = true;
-            this.labelMessType.Location = new System.Drawing.Point(158, 31);
-            this.labelMessType.Name = "labelMessType";
-            this.labelMessType.Size = new System.Drawing.Size(58, 13);
-            this.labelMessType.TabIndex = 18;
-            this.labelMessType.Text = "State type:";
-            this.labelMessType.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(158, 468);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "label8";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(158, 415);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "label7";
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox7.Location = new System.Drawing.Point(161, 431);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(27, 20);
-            this.textBox7.TabIndex = 15;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox8.Location = new System.Drawing.Point(161, 484);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(27, 20);
-            this.textBox8.TabIndex = 14;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox4.Location = new System.Drawing.Point(161, 264);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(27, 20);
-            this.textBox4.TabIndex = 13;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox5.Location = new System.Drawing.Point(161, 319);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(27, 20);
-            this.textBox5.TabIndex = 12;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox6.Location = new System.Drawing.Point(161, 376);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(27, 20);
-            this.textBox6.TabIndex = 11;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox3.Location = new System.Drawing.Point(161, 210);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(27, 20);
-            this.textBox3.TabIndex = 10;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox2.Location = new System.Drawing.Point(161, 153);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(27, 20);
-            this.textBox2.TabIndex = 9;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox1.Location = new System.Drawing.Point(161, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(27, 20);
-            this.textBox1.TabIndex = 8;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(158, 360);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "label6";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(158, 303);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "label5";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(158, 248);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "label4";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(158, 194);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(158, 137);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(161, 82);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            // 
             // listBoxStateTabels
             // 
             this.listBoxStateTabels.FormattingEnabled = true;
@@ -911,6 +914,8 @@ namespace Interpretor_NDC
             this.tabPage2.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -973,21 +978,22 @@ namespace Interpretor_NDC
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBoxMessType;
         private System.Windows.Forms.Label labelMessType;
-        private System.Windows.Forms.Label labelDescriptionLabel1;
-        private System.Windows.Forms.Label labelDescriptionStateType;
-        private System.Windows.Forms.Label descriptionLabel4;
-        private System.Windows.Forms.Label labelDescriptionLabel3;
-        private System.Windows.Forms.Label labelDescriptionLabel2;
-        private System.Windows.Forms.Label descriptionLabel6;
-        private System.Windows.Forms.Label descriptionLabel5;
-        private System.Windows.Forms.Label descriptionLabel8;
-        private System.Windows.Forms.Label descriptionLabel7;
         private System.Windows.Forms.ComboBox comboBoxViewStateTabel;
         private System.Windows.Forms.Label labelViewStateType;
         private System.Windows.Forms.Panel panelDrawStates;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonGenerateMap;
         private System.Windows.Forms.Button buttonClearMap;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBoxDescriptionPart5;
+        private System.Windows.Forms.TextBox textBoxDescriptionPart4;
+        private System.Windows.Forms.TextBox textBoxDescriptionPart3;
+        private System.Windows.Forms.TextBox textBoxDescriptionPart2;
+        private System.Windows.Forms.TextBox textBoxDescriptionPart1;
+        private System.Windows.Forms.TextBox textBoxDescriptionStateType;
+        private System.Windows.Forms.TextBox textBoxDescriptionPart8;
+        private System.Windows.Forms.TextBox textBoxDescriptionPart7;
+        private System.Windows.Forms.TextBox textBoxDescriptionPart6;
     }
 }
 
