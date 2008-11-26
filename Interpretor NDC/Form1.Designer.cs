@@ -64,11 +64,17 @@ namespace Interpretor_NDC
             this.checkBoxHostToExitMessages = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.labelViewStateType = new System.Windows.Forms.Label();
+            this.comboBoxViewStateTabel = new System.Windows.Forms.ComboBox();
+            this.descriptionLabel8 = new System.Windows.Forms.Label();
+            this.descriptionLabel7 = new System.Windows.Forms.Label();
+            this.descriptionLabel6 = new System.Windows.Forms.Label();
+            this.descriptionLabel5 = new System.Windows.Forms.Label();
             this.descriptionLabel4 = new System.Windows.Forms.Label();
             this.labelDescriptionLabel3 = new System.Windows.Forms.Label();
             this.labelDescriptionLabel2 = new System.Windows.Forms.Label();
             this.labelDescriptionLabel1 = new System.Windows.Forms.Label();
-            this.labelDescriptionMessageType = new System.Windows.Forms.Label();
+            this.labelDescriptionStateType = new System.Windows.Forms.Label();
             this.textBoxMessType = new System.Windows.Forms.TextBox();
             this.labelMessType = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -89,10 +95,6 @@ namespace Interpretor_NDC
             this.label1 = new System.Windows.Forms.Label();
             this.listBoxStateTabels = new System.Windows.Forms.ListBox();
             this.buttonOpenStateTabels = new System.Windows.Forms.Button();
-            this.descriptionLabel5 = new System.Windows.Forms.Label();
-            this.descriptionLabel6 = new System.Windows.Forms.Label();
-            this.descriptionLabel7 = new System.Windows.Forms.Label();
-            this.descriptionLabel8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -105,7 +107,7 @@ namespace Interpretor_NDC
             this.buttonOpenFile.Name = "buttonOpenFile";
             this.buttonOpenFile.Size = new System.Drawing.Size(144, 23);
             this.buttonOpenFile.TabIndex = 0;
-            this.buttonOpenFile.Text = "Analizeaza MessageIn.log";
+            this.buttonOpenFile.Text = "Analyse MessageIn.log";
             this.buttonOpenFile.UseVisualStyleBackColor = true;
             this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
             // 
@@ -298,18 +300,18 @@ namespace Interpretor_NDC
             this.labelInceputMesaj.AutoSize = true;
             this.labelInceputMesaj.Location = new System.Drawing.Point(173, 455);
             this.labelInceputMesaj.Name = "labelInceputMesaj";
-            this.labelInceputMesaj.Size = new System.Drawing.Size(100, 13);
+            this.labelInceputMesaj.Size = new System.Drawing.Size(82, 13);
             this.labelInceputMesaj.TabIndex = 19;
-            this.labelInceputMesaj.Text = "Inceputul mesajului:";
+            this.labelInceputMesaj.Text = "Message begin:";
             // 
             // labelSfarsitulMesajului
             // 
             this.labelSfarsitulMesajului.AutoSize = true;
             this.labelSfarsitulMesajului.Location = new System.Drawing.Point(177, 481);
             this.labelSfarsitulMesajului.Name = "labelSfarsitulMesajului";
-            this.labelSfarsitulMesajului.Size = new System.Drawing.Size(96, 13);
+            this.labelSfarsitulMesajului.Size = new System.Drawing.Size(74, 13);
             this.labelSfarsitulMesajului.TabIndex = 20;
-            this.labelSfarsitulMesajului.Text = "Sfarsitul  mesajului:";
+            this.labelSfarsitulMesajului.Text = "Message end:";
             // 
             // textBoxInceputulMesajului
             // 
@@ -330,11 +332,11 @@ namespace Interpretor_NDC
             // labelSariPeste
             // 
             this.labelSariPeste.AutoSize = true;
-            this.labelSariPeste.Location = new System.Drawing.Point(403, 455);
+            this.labelSariPeste.Location = new System.Drawing.Point(387, 455);
             this.labelSariPeste.Name = "labelSariPeste";
-            this.labelSariPeste.Size = new System.Drawing.Size(93, 13);
+            this.labelSariPeste.Size = new System.Drawing.Size(109, 13);
             this.labelSariPeste.TabIndex = 23;
-            this.labelSariPeste.Text = "Sari peste primele:";
+            this.labelSariPeste.Text = "Len header message:";
             // 
             // textBoxSariPestePrimele
             // 
@@ -351,9 +353,9 @@ namespace Interpretor_NDC
             this.labelCaractere.AutoSize = true;
             this.labelCaractere.Location = new System.Drawing.Point(551, 455);
             this.labelCaractere.Name = "labelCaractere";
-            this.labelCaractere.Size = new System.Drawing.Size(52, 13);
+            this.labelCaractere.Size = new System.Drawing.Size(57, 13);
             this.labelCaractere.TabIndex = 25;
-            this.labelCaractere.Text = "caractere";
+            this.labelCaractere.Text = "characters";
             // 
             // tabControl1
             // 
@@ -384,7 +386,7 @@ namespace Interpretor_NDC
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(785, 538);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Setari si Incarcare";
+            this.tabPage1.Text = "Load and Settings MessageIn.log";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // buttonArataLog
@@ -393,7 +395,7 @@ namespace Interpretor_NDC
             this.buttonArataLog.Name = "buttonArataLog";
             this.buttonArataLog.Size = new System.Drawing.Size(147, 23);
             this.buttonArataLog.TabIndex = 27;
-            this.buttonArataLog.Text = "Arata MessageIn.log";
+            this.buttonArataLog.Text = "Preview MessageIn.log";
             this.buttonArataLog.UseVisualStyleBackColor = true;
             this.buttonArataLog.Click += new System.EventHandler(this.buttonArataLog_Click);
             // 
@@ -470,6 +472,8 @@ namespace Interpretor_NDC
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.labelViewStateType);
+            this.tabPage4.Controls.Add(this.comboBoxViewStateTabel);
             this.tabPage4.Controls.Add(this.descriptionLabel8);
             this.tabPage4.Controls.Add(this.descriptionLabel7);
             this.tabPage4.Controls.Add(this.descriptionLabel6);
@@ -478,7 +482,7 @@ namespace Interpretor_NDC
             this.tabPage4.Controls.Add(this.labelDescriptionLabel3);
             this.tabPage4.Controls.Add(this.labelDescriptionLabel2);
             this.tabPage4.Controls.Add(this.labelDescriptionLabel1);
-            this.tabPage4.Controls.Add(this.labelDescriptionMessageType);
+            this.tabPage4.Controls.Add(this.labelDescriptionStateType);
             this.tabPage4.Controls.Add(this.textBoxMessType);
             this.tabPage4.Controls.Add(this.labelMessType);
             this.tabPage4.Controls.Add(this.label8);
@@ -506,6 +510,105 @@ namespace Interpretor_NDC
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "State Tabels";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // labelViewStateType
+            // 
+            this.labelViewStateType.AutoSize = true;
+            this.labelViewStateType.Location = new System.Drawing.Point(58, 60);
+            this.labelViewStateType.Name = "labelViewStateType";
+            this.labelViewStateType.Size = new System.Drawing.Size(82, 13);
+            this.labelViewStateType.TabIndex = 30;
+            this.labelViewStateType.Text = "View state type:";
+            // 
+            // comboBoxViewStateTabel
+            // 
+            this.comboBoxViewStateTabel.FormattingEnabled = true;
+            this.comboBoxViewStateTabel.Items.AddRange(new object[] {
+            "ALL",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "R",
+            "S",
+            "T",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z",
+            "b",
+            "d",
+            "e",
+            "g",
+            "f",
+            "k",
+            "m",
+            "w",
+            "-",
+            "&",
+            ",",
+            ".",
+            ";",
+            "?",
+            "_",
+            "+",
+            ">",
+            "/"});
+            this.comboBoxViewStateTabel.Location = new System.Drawing.Point(149, 57);
+            this.comboBoxViewStateTabel.Name = "comboBoxViewStateTabel";
+            this.comboBoxViewStateTabel.Size = new System.Drawing.Size(64, 21);
+            this.comboBoxViewStateTabel.TabIndex = 29;
+            this.comboBoxViewStateTabel.SelectedIndexChanged += new System.EventHandler(this.comboBoxViewStateTabel_SelectedIndexChanged);
+            // 
+            // descriptionLabel8
+            // 
+            this.descriptionLabel8.AutoSize = true;
+            this.descriptionLabel8.Location = new System.Drawing.Point(368, 481);
+            this.descriptionLabel8.Name = "descriptionLabel8";
+            this.descriptionLabel8.Size = new System.Drawing.Size(89, 13);
+            this.descriptionLabel8.TabIndex = 28;
+            this.descriptionLabel8.Text = "description label4";
+            this.descriptionLabel8.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // descriptionLabel7
+            // 
+            this.descriptionLabel7.AutoSize = true;
+            this.descriptionLabel7.Location = new System.Drawing.Point(368, 433);
+            this.descriptionLabel7.Name = "descriptionLabel7";
+            this.descriptionLabel7.Size = new System.Drawing.Size(89, 13);
+            this.descriptionLabel7.TabIndex = 27;
+            this.descriptionLabel7.Text = "description label4";
+            this.descriptionLabel7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // descriptionLabel6
+            // 
+            this.descriptionLabel6.AutoSize = true;
+            this.descriptionLabel6.Location = new System.Drawing.Point(368, 387);
+            this.descriptionLabel6.Name = "descriptionLabel6";
+            this.descriptionLabel6.Size = new System.Drawing.Size(89, 13);
+            this.descriptionLabel6.TabIndex = 26;
+            this.descriptionLabel6.Text = "description label4";
+            this.descriptionLabel6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // descriptionLabel5
+            // 
+            this.descriptionLabel5.AutoSize = true;
+            this.descriptionLabel5.Location = new System.Drawing.Point(368, 343);
+            this.descriptionLabel5.Name = "descriptionLabel5";
+            this.descriptionLabel5.Size = new System.Drawing.Size(89, 13);
+            this.descriptionLabel5.TabIndex = 25;
+            this.descriptionLabel5.Text = "description label4";
+            this.descriptionLabel5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // descriptionLabel4
             // 
@@ -547,15 +650,15 @@ namespace Interpretor_NDC
             this.labelDescriptionLabel1.Text = "description label1";
             this.labelDescriptionLabel1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // labelDescriptionMessageType
+            // labelDescriptionStateType
             // 
-            this.labelDescriptionMessageType.AutoSize = true;
-            this.labelDescriptionMessageType.Location = new System.Drawing.Point(368, 65);
-            this.labelDescriptionMessageType.Name = "labelDescriptionMessageType";
-            this.labelDescriptionMessageType.Size = new System.Drawing.Size(126, 13);
-            this.labelDescriptionMessageType.TabIndex = 20;
-            this.labelDescriptionMessageType.Text = "description message type";
-            this.labelDescriptionMessageType.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelDescriptionStateType.AutoSize = true;
+            this.labelDescriptionStateType.Location = new System.Drawing.Point(368, 65);
+            this.labelDescriptionStateType.Name = "labelDescriptionStateType";
+            this.labelDescriptionStateType.Size = new System.Drawing.Size(107, 13);
+            this.labelDescriptionStateType.TabIndex = 20;
+            this.labelDescriptionStateType.Text = "description state type";
+            this.labelDescriptionStateType.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // textBoxMessType
             // 
@@ -569,11 +672,11 @@ namespace Interpretor_NDC
             // labelMessType
             // 
             this.labelMessType.AutoSize = true;
-            this.labelMessType.Location = new System.Drawing.Point(292, 45);
+            this.labelMessType.Location = new System.Drawing.Point(307, 45);
             this.labelMessType.Name = "labelMessType";
-            this.labelMessType.Size = new System.Drawing.Size(73, 13);
+            this.labelMessType.Size = new System.Drawing.Size(58, 13);
             this.labelMessType.TabIndex = 18;
-            this.labelMessType.Text = "Message type";
+            this.labelMessType.Text = "State type:";
             this.labelMessType.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label8
@@ -716,18 +819,19 @@ namespace Interpretor_NDC
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(330, 102);
             this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // listBoxStateTabels
             // 
             this.listBoxStateTabels.FormattingEnabled = true;
             this.listBoxStateTabels.HorizontalScrollbar = true;
-            this.listBoxStateTabels.Location = new System.Drawing.Point(7, 42);
+            this.listBoxStateTabels.Location = new System.Drawing.Point(6, 84);
             this.listBoxStateTabels.Name = "listBoxStateTabels";
             this.listBoxStateTabels.Size = new System.Drawing.Size(207, 446);
+            this.listBoxStateTabels.Sorted = true;
             this.listBoxStateTabels.TabIndex = 1;
             this.listBoxStateTabels.SelectedIndexChanged += new System.EventHandler(this.listBoxStateTabels_SelectedIndexChanged);
             // 
@@ -740,46 +844,6 @@ namespace Interpretor_NDC
             this.buttonOpenStateTabels.Text = "Deschide State Tabels.tdb";
             this.buttonOpenStateTabels.UseVisualStyleBackColor = true;
             this.buttonOpenStateTabels.Click += new System.EventHandler(this.buttonOpenStateTabels_Click);
-            // 
-            // descriptionLabel5
-            // 
-            this.descriptionLabel5.AutoSize = true;
-            this.descriptionLabel5.Location = new System.Drawing.Point(368, 343);
-            this.descriptionLabel5.Name = "descriptionLabel5";
-            this.descriptionLabel5.Size = new System.Drawing.Size(89, 13);
-            this.descriptionLabel5.TabIndex = 25;
-            this.descriptionLabel5.Text = "description label4";
-            this.descriptionLabel5.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // descriptionLabel6
-            // 
-            this.descriptionLabel6.AutoSize = true;
-            this.descriptionLabel6.Location = new System.Drawing.Point(368, 387);
-            this.descriptionLabel6.Name = "descriptionLabel6";
-            this.descriptionLabel6.Size = new System.Drawing.Size(89, 13);
-            this.descriptionLabel6.TabIndex = 26;
-            this.descriptionLabel6.Text = "description label4";
-            this.descriptionLabel6.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // descriptionLabel7
-            // 
-            this.descriptionLabel7.AutoSize = true;
-            this.descriptionLabel7.Location = new System.Drawing.Point(368, 433);
-            this.descriptionLabel7.Name = "descriptionLabel7";
-            this.descriptionLabel7.Size = new System.Drawing.Size(89, 13);
-            this.descriptionLabel7.TabIndex = 27;
-            this.descriptionLabel7.Text = "description label4";
-            this.descriptionLabel7.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // descriptionLabel8
-            // 
-            this.descriptionLabel8.AutoSize = true;
-            this.descriptionLabel8.Location = new System.Drawing.Point(368, 481);
-            this.descriptionLabel8.Name = "descriptionLabel8";
-            this.descriptionLabel8.Size = new System.Drawing.Size(89, 13);
-            this.descriptionLabel8.TabIndex = 28;
-            this.descriptionLabel8.Text = "description label4";
-            this.descriptionLabel8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Form1
             // 
@@ -862,7 +926,7 @@ namespace Interpretor_NDC
         private System.Windows.Forms.TextBox textBoxMessType;
         private System.Windows.Forms.Label labelMessType;
         private System.Windows.Forms.Label labelDescriptionLabel1;
-        private System.Windows.Forms.Label labelDescriptionMessageType;
+        private System.Windows.Forms.Label labelDescriptionStateType;
         private System.Windows.Forms.Label descriptionLabel4;
         private System.Windows.Forms.Label labelDescriptionLabel3;
         private System.Windows.Forms.Label labelDescriptionLabel2;
@@ -870,6 +934,8 @@ namespace Interpretor_NDC
         private System.Windows.Forms.Label descriptionLabel5;
         private System.Windows.Forms.Label descriptionLabel8;
         private System.Windows.Forms.Label descriptionLabel7;
+        private System.Windows.Forms.ComboBox comboBoxViewStateTabel;
+        private System.Windows.Forms.Label labelViewStateType;
     }
 }
 
