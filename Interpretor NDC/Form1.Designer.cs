@@ -372,7 +372,7 @@ namespace Interpretor_NDC
             this.tabControl1.Location = new System.Drawing.Point(0, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(793, 564);
+            this.tabControl1.Size = new System.Drawing.Size(1015, 729);
             this.tabControl1.TabIndex = 26;
             // 
             // tabPage1
@@ -491,7 +491,7 @@ namespace Interpretor_NDC
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(785, 538);
+            this.tabPage4.Size = new System.Drawing.Size(1007, 703);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "State Tabels";
             // 
@@ -528,12 +528,12 @@ namespace Interpretor_NDC
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Location = new System.Drawing.Point(161, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(618, 154);
+            this.panel1.Size = new System.Drawing.Size(839, 302);
             this.panel1.TabIndex = 29;
             // 
             // textBoxDescriptionPart8
             // 
-            this.textBoxDescriptionPart8.Location = new System.Drawing.Point(395, 342);
+            this.textBoxDescriptionPart8.Location = new System.Drawing.Point(7, 348);
             this.textBoxDescriptionPart8.Multiline = true;
             this.textBoxDescriptionPart8.Name = "textBoxDescriptionPart8";
             this.textBoxDescriptionPart8.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -542,7 +542,7 @@ namespace Interpretor_NDC
             // 
             // textBoxDescriptionPart7
             // 
-            this.textBoxDescriptionPart7.Location = new System.Drawing.Point(201, 342);
+            this.textBoxDescriptionPart7.Location = new System.Drawing.Point(589, 195);
             this.textBoxDescriptionPart7.Multiline = true;
             this.textBoxDescriptionPart7.Name = "textBoxDescriptionPart7";
             this.textBoxDescriptionPart7.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -551,7 +551,7 @@ namespace Interpretor_NDC
             // 
             // textBoxDescriptionPart6
             // 
-            this.textBoxDescriptionPart6.Location = new System.Drawing.Point(7, 342);
+            this.textBoxDescriptionPart6.Location = new System.Drawing.Point(395, 195);
             this.textBoxDescriptionPart6.Multiline = true;
             this.textBoxDescriptionPart6.Name = "textBoxDescriptionPart6";
             this.textBoxDescriptionPart6.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -560,7 +560,7 @@ namespace Interpretor_NDC
             // 
             // textBoxDescriptionPart5
             // 
-            this.textBoxDescriptionPart5.Location = new System.Drawing.Point(395, 195);
+            this.textBoxDescriptionPart5.Location = new System.Drawing.Point(201, 195);
             this.textBoxDescriptionPart5.Multiline = true;
             this.textBoxDescriptionPart5.Name = "textBoxDescriptionPart5";
             this.textBoxDescriptionPart5.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -569,7 +569,7 @@ namespace Interpretor_NDC
             // 
             // textBoxDescriptionPart4
             // 
-            this.textBoxDescriptionPart4.Location = new System.Drawing.Point(201, 195);
+            this.textBoxDescriptionPart4.Location = new System.Drawing.Point(7, 195);
             this.textBoxDescriptionPart4.Multiline = true;
             this.textBoxDescriptionPart4.Name = "textBoxDescriptionPart4";
             this.textBoxDescriptionPart4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -578,7 +578,7 @@ namespace Interpretor_NDC
             // 
             // textBoxDescriptionPart3
             // 
-            this.textBoxDescriptionPart3.Location = new System.Drawing.Point(7, 195);
+            this.textBoxDescriptionPart3.Location = new System.Drawing.Point(589, 47);
             this.textBoxDescriptionPart3.Multiline = true;
             this.textBoxDescriptionPart3.Name = "textBoxDescriptionPart3";
             this.textBoxDescriptionPart3.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -615,7 +615,7 @@ namespace Interpretor_NDC
             // textBox8
             // 
             this.textBox8.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox8.Location = new System.Drawing.Point(395, 316);
+            this.textBox8.Location = new System.Drawing.Point(7, 322);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(27, 20);
@@ -633,7 +633,7 @@ namespace Interpretor_NDC
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(392, 300);
+            this.label8.Location = new System.Drawing.Point(4, 306);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 17;
@@ -671,7 +671,7 @@ namespace Interpretor_NDC
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(198, 300);
+            this.label7.Location = new System.Drawing.Point(586, 153);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 16;
@@ -680,7 +680,7 @@ namespace Interpretor_NDC
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 153);
+            this.label3.Location = new System.Drawing.Point(586, 5);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 4;
@@ -689,7 +689,7 @@ namespace Interpretor_NDC
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox7.Location = new System.Drawing.Point(201, 316);
+            this.textBox7.Location = new System.Drawing.Point(589, 169);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(27, 20);
@@ -698,7 +698,7 @@ namespace Interpretor_NDC
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(198, 153);
+            this.label4.Location = new System.Drawing.Point(4, 153);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 5;
@@ -707,7 +707,7 @@ namespace Interpretor_NDC
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(392, 153);
+            this.label5.Location = new System.Drawing.Point(198, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 6;
@@ -716,7 +716,7 @@ namespace Interpretor_NDC
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox4.Location = new System.Drawing.Point(201, 169);
+            this.textBox4.Location = new System.Drawing.Point(7, 169);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(27, 20);
@@ -725,7 +725,7 @@ namespace Interpretor_NDC
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 300);
+            this.label6.Location = new System.Drawing.Point(392, 153);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 7;
@@ -734,7 +734,7 @@ namespace Interpretor_NDC
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox5.Location = new System.Drawing.Point(395, 169);
+            this.textBox5.Location = new System.Drawing.Point(201, 169);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(27, 20);
@@ -752,7 +752,7 @@ namespace Interpretor_NDC
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox6.Location = new System.Drawing.Point(7, 316);
+            this.textBox6.Location = new System.Drawing.Point(395, 169);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(27, 20);
@@ -770,7 +770,7 @@ namespace Interpretor_NDC
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox3.Location = new System.Drawing.Point(7, 169);
+            this.textBox3.Location = new System.Drawing.Point(589, 21);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(27, 20);
@@ -789,7 +789,7 @@ namespace Interpretor_NDC
             // 
             // buttonClearMap
             // 
-            this.buttonClearMap.Location = new System.Drawing.Point(63, 506);
+            this.buttonClearMap.Location = new System.Drawing.Point(50, 541);
             this.buttonClearMap.Name = "buttonClearMap";
             this.buttonClearMap.Size = new System.Drawing.Size(92, 23);
             this.buttonClearMap.TabIndex = 33;
@@ -811,9 +811,9 @@ namespace Interpretor_NDC
             // 
             this.panelDrawStates.AutoScroll = true;
             this.panelDrawStates.BackColor = System.Drawing.Color.SeaShell;
-            this.panelDrawStates.Location = new System.Drawing.Point(161, 167);
+            this.panelDrawStates.Location = new System.Drawing.Point(161, 315);
             this.panelDrawStates.Name = "panelDrawStates";
-            this.panelDrawStates.Size = new System.Drawing.Size(618, 365);
+            this.panelDrawStates.Size = new System.Drawing.Size(843, 385);
             this.panelDrawStates.TabIndex = 31;
             this.panelDrawStates.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDrawStates_Paint);
             // 
@@ -901,9 +901,9 @@ namespace Interpretor_NDC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(792, 566);
+            this.ClientSize = new System.Drawing.Size(1016, 734);
             this.Controls.Add(this.tabControl1);
-            this.MaximumSize = new System.Drawing.Size(800, 600);
+            this.MaximumSize = new System.Drawing.Size(1024, 768);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Form1";
             this.Text = "Analizator NDC";
