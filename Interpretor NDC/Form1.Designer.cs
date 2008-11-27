@@ -64,10 +64,6 @@ namespace Interpretor_NDC
             this.checkBoxHostToExitMessages = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.buttonClearMap = new System.Windows.Forms.Button();
-            this.buttonGenerateMap = new System.Windows.Forms.Button();
-            this.panelDrawStates = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxDescriptionPart8 = new System.Windows.Forms.TextBox();
             this.textBoxDescriptionPart7 = new System.Windows.Forms.TextBox();
@@ -96,6 +92,10 @@ namespace Interpretor_NDC
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonClearMap = new System.Windows.Forms.Button();
+            this.buttonGenerateMap = new System.Windows.Forms.Button();
+            this.panelDrawStates = new System.Windows.Forms.Panel();
             this.labelViewStateType = new System.Windows.Forms.Label();
             this.comboBoxViewStateTabel = new System.Windows.Forms.ComboBox();
             this.listBoxStateTabels = new System.Windows.Forms.ListBox();
@@ -495,46 +495,6 @@ namespace Interpretor_NDC
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "State Tabels";
             // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(4, 510);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 20);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "888D";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // buttonClearMap
-            // 
-            this.buttonClearMap.Location = new System.Drawing.Point(63, 506);
-            this.buttonClearMap.Name = "buttonClearMap";
-            this.buttonClearMap.Size = new System.Drawing.Size(92, 23);
-            this.buttonClearMap.TabIndex = 33;
-            this.buttonClearMap.Text = "Clear Map";
-            this.buttonClearMap.UseVisualStyleBackColor = true;
-            this.buttonClearMap.Click += new System.EventHandler(this.buttonClearMap_Click);
-            // 
-            // buttonGenerateMap
-            // 
-            this.buttonGenerateMap.Location = new System.Drawing.Point(50, 512);
-            this.buttonGenerateMap.Name = "buttonGenerateMap";
-            this.buttonGenerateMap.Size = new System.Drawing.Size(92, 23);
-            this.buttonGenerateMap.TabIndex = 32;
-            this.buttonGenerateMap.Text = "Generate Map";
-            this.buttonGenerateMap.UseVisualStyleBackColor = true;
-            this.buttonGenerateMap.Click += new System.EventHandler(this.buttonGenerateMap_Click);
-            // 
-            // panelDrawStates
-            // 
-            this.panelDrawStates.AutoScroll = true;
-            this.panelDrawStates.BackColor = System.Drawing.Color.SeaShell;
-            this.panelDrawStates.Location = new System.Drawing.Point(161, 167);
-            this.panelDrawStates.Name = "panelDrawStates";
-            this.panelDrawStates.Size = new System.Drawing.Size(618, 365);
-            this.panelDrawStates.TabIndex = 31;
-            // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
@@ -815,6 +775,47 @@ namespace Interpretor_NDC
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(27, 20);
             this.textBox3.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(4, 510);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 20);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "888D";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // buttonClearMap
+            // 
+            this.buttonClearMap.Location = new System.Drawing.Point(63, 506);
+            this.buttonClearMap.Name = "buttonClearMap";
+            this.buttonClearMap.Size = new System.Drawing.Size(92, 23);
+            this.buttonClearMap.TabIndex = 33;
+            this.buttonClearMap.Text = "Clear Map";
+            this.buttonClearMap.UseVisualStyleBackColor = true;
+            this.buttonClearMap.Click += new System.EventHandler(this.buttonClearMap_Click);
+            // 
+            // buttonGenerateMap
+            // 
+            this.buttonGenerateMap.Location = new System.Drawing.Point(50, 512);
+            this.buttonGenerateMap.Name = "buttonGenerateMap";
+            this.buttonGenerateMap.Size = new System.Drawing.Size(92, 23);
+            this.buttonGenerateMap.TabIndex = 32;
+            this.buttonGenerateMap.Text = "Generate Map";
+            this.buttonGenerateMap.UseVisualStyleBackColor = true;
+            this.buttonGenerateMap.Click += new System.EventHandler(this.buttonGenerateMap_Click);
+            // 
+            // panelDrawStates
+            // 
+            this.panelDrawStates.AutoScroll = true;
+            this.panelDrawStates.BackColor = System.Drawing.Color.SeaShell;
+            this.panelDrawStates.Location = new System.Drawing.Point(161, 167);
+            this.panelDrawStates.Name = "panelDrawStates";
+            this.panelDrawStates.Size = new System.Drawing.Size(618, 365);
+            this.panelDrawStates.TabIndex = 31;
+            this.panelDrawStates.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDrawStates_Paint);
             // 
             // labelViewStateType
             // 
