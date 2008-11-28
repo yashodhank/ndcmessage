@@ -96,11 +96,11 @@ namespace Interpretor_NDC
             this.button1 = new System.Windows.Forms.Button();
             this.buttonClearMap = new System.Windows.Forms.Button();
             this.buttonGenerateMap = new System.Windows.Forms.Button();
-            this.panelDrawStates = new System.Windows.Forms.Panel();
             this.labelViewStateType = new System.Windows.Forms.Label();
             this.comboBoxViewStateTabel = new System.Windows.Forms.ComboBox();
             this.listBoxStateTabels = new System.Windows.Forms.ListBox();
             this.buttonOpenStateTabels = new System.Windows.Forms.Button();
+            this.panelDrawStates = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -826,17 +826,6 @@ namespace Interpretor_NDC
             this.buttonGenerateMap.UseVisualStyleBackColor = true;
             this.buttonGenerateMap.Click += new System.EventHandler(this.buttonGenerateMap_Click);
             // 
-            // panelDrawStates
-            // 
-            this.panelDrawStates.AutoScroll = true;
-            this.panelDrawStates.BackColor = System.Drawing.Color.SeaShell;
-            this.panelDrawStates.Location = new System.Drawing.Point(161, 315);
-            this.panelDrawStates.Name = "panelDrawStates";
-            this.panelDrawStates.Size = new System.Drawing.Size(843, 385);
-            this.panelDrawStates.TabIndex = 31;
-            this.panelDrawStates.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDrawStates_Paint);
-            this.panelDrawStates.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panelDrawStates_Scroll);
-            // 
             // labelViewStateType
             // 
             this.labelViewStateType.AutoSize = true;
@@ -916,6 +905,17 @@ namespace Interpretor_NDC
             this.buttonOpenStateTabels.Text = "Deschide State Tabels.tdb";
             this.buttonOpenStateTabels.UseVisualStyleBackColor = true;
             this.buttonOpenStateTabels.Click += new System.EventHandler(this.buttonOpenStateTabels_Click);
+            // 
+            // panelDrawStates
+            // 
+            this.panelDrawStates.AutoScroll = true;
+            this.panelDrawStates.BackColor = System.Drawing.Color.Coral;
+            this.panelDrawStates.Location = new System.Drawing.Point(161, 315);
+            this.panelDrawStates.Name = "panelDrawStates";
+            this.panelDrawStates.Size = new System.Drawing.Size(839, 385);
+            this.panelDrawStates.TabIndex = 31;
+            this.panelDrawStates.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDrawStates_Paint);
+            this.panelDrawStates.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panelDrawStates_Scroll);
             // 
             // Form1
             // 
