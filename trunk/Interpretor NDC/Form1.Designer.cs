@@ -822,7 +822,7 @@ namespace Interpretor_NDC
             this.labelViewStateType.AutoSize = true;
             this.labelViewStateType.Location = new System.Drawing.Point(3, 60);
             this.labelViewStateType.Name = "labelViewStateType";
-            this.labelViewStateType.Size = new System.Drawing.Size(82, 13);
+            this.labelViewStateType.Size = new System.Drawing.Size(82, 26);
             this.labelViewStateType.TabIndex = 30;
             this.labelViewStateType.Text = "View state type:";
             // 
