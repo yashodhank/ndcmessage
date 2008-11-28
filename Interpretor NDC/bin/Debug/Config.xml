@@ -18,10 +18,8 @@
                     descriprionPart7 = "Tells the terminal when the card should be returned to the cardholder:\r\n000 - eject the card immediately.\r\n001 - return the card as specified by a Transaction Reply command message."
                     descriprionPart8 = "State number to which the terminal goes if either the Financial Institution number on the card does not match any FIT, or if the card reader is a smart card reader and the read condition being evaluated has the chip connect bit set (bit 3). If FITs are not used this entry must be 000."             
                     >    
-    <Mask part1="SCREEN" part2="STATE" part3="SCREEN" part4="DATA" part5="DATA" part6="DATA" part7="DATA" part8="SCREEN" />
+    <Mask part1="SCREEN OK" part2="STATE OK" part3="SCREEN ERROR" part4="DATA" part5="DATA" part6="DATA" part7="DATA" part8="SCREEN ERROR" />
   </Node>
-  
-
   
   <Node type = "B"  descriptionType = "PIN Entry State"  
                     numePart1 = "Screen Number"
@@ -40,7 +38,10 @@
                     descriprionPart6 = "Display screen that prompts the cardholder to reenter the PIN. This screen is displayed after each incorrect PIN entry attempt. An ‘X’ is displayed for each key pressed. After the number of re-entry attempts allowed by table entry 9, the terminal enters the state determined by table entry 6."
                     descriprionPart7 = "State number to which the terminal goes when local PIN verification is not performed."
                     descriprionPart8 = "Maximum number of incorrect PIN entries allowed before the terminal enters the state determined by table entry 6."
-   />
+                    >
+    <Mask part1="SCREEN" part2="STATE" part3="SCREEN" part4="STATE" part5="STATE" part6="SCREEN" part7="STATE" part8="DATA" />
+  </Node>
+  
   <Node type = "C"  descriptionType = "Envelope Dispenser State"  
                     numePart1 = "Next State Number"
                     numePart2 = "Must be 000" 
