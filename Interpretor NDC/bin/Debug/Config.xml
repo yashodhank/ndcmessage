@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<STATE>
-  <Node type = "A"  descriptionType = "Card Read State"  
+<STATES>
+  <State type = "A"  descriptionType = "Card Read State"  
                     numePart1 = "Screen Number"
                     numePart2 = "Good Read Next State Number" 
                     numePart3 = "Error (Misread) Screen Number"
@@ -17,11 +17,11 @@
                     descriprionPart6 = "These three entries specify which card track(s)and/or chip data will be read. The possible values for these entries are shown below this table."
                     descriprionPart7 = "Tells the terminal when the card should be returned to the cardholder:\r\n000 - eject the card immediately.\r\n001 - return the card as specified by a Transaction Reply command message."
                     descriprionPart8 = "State number to which the terminal goes if either the Financial Institution number on the card does not match any FIT, or if the card reader is a smart card reader and the read condition being evaluated has the chip connect bit set (bit 3). If FITs are not used this entry must be 000."             
-                    >    
-    <Mask part1="SCREEN OK" part2="STATE OK" part3="SCREEN ERROR" part4="DATA" part5="DATA" part6="DATA" part7="DATA" part8="SCREEN ERROR" />
-  </Node>
-  
-  <Node type = "B"  descriptionType = "PIN Entry State"  
+                    >
+    <Mask part1="SCREEN_DISPLAY" part2="STATE_OK" part3="SCREEN_ERROR" part4="DATA" part5="DATA" part6="DATA" part7="DATA" part8="STATE_ERROR" />
+  </State>
+
+  <State type = "B"  descriptionType = "PIN Entry State"  
                     numePart1 = "Screen Number"
                     numePart2 = "Time-Out Next State Number" 
                     numePart3 = "Cancel Next State Number"
@@ -39,10 +39,10 @@
                     descriprionPart7 = "State number to which the terminal goes when local PIN verification is not performed."
                     descriprionPart8 = "Maximum number of incorrect PIN entries allowed before the terminal enters the state determined by table entry 6."
                     >
-    <Mask part1="SCREEN" part2="STATE" part3="SCREEN" part4="STATE" part5="STATE" part6="SCREEN" part7="STATE" part8="DATA" />
-  </Node>
-  
-  <Node type = "C"  descriptionType = "Envelope Dispenser State"  
+    <Mask part1="SCREEN_DISPLAY" part2="STATE_TIME_OUT" part3="STATE_CANCEL" part4="STATE_OK" part5="STATE_ERROR" part6="SCREEN_ERROR" part7="STATE_ERROR" part8="DATA" />
+  </State>
+
+  <State type = "C"  descriptionType = "Envelope Dispenser State"  
                     numePart1 = "Next State Number"
                     numePart2 = "Must be 000" 
                     numePart3 = "Must be 000"
@@ -59,8 +59,10 @@
                     descriprionPart6 = "Reserved"
                     descriprionPart7 = "Reserved"
                     descriprionPart8 = "Reserved"
-   />
-  <Node type = "D"  descriptionType = "Pre-Set Operation Code Buffer State"  
+                    >
+    <Mask part1="STATE_OK" part2="RESERVED" part3="RESERVED" part4="RESERVED" part5="RESERVED" part6="RESERVED" part7="RESERVED" part8="RESERVED" />
+  </State>
+  <State type = "D"  descriptionType = "Pre-Set Operation Code Buffer State"  
                     numePart1 = "Next State Number"
                     numePart2 = "Clear Mask" 
                     numePart3 = "‘A’ Pre-Set Mask"
@@ -77,8 +79,9 @@
                     descriprionPart6 = "The buffer contains eight bytes. This entry sets the specified bytes to ‘D’. If a bit is one, the corresponding entry is set to ‘D’. If a bit is zero, the corresponding entry is unchanged. See Table Note 3."
                     descriprionPart7 = "Reserved"
                     descriprionPart8 = "State number of the Extension state containing information on how the other operation codes are pre-set."
-   />
-  <Node type = "Z"  descriptionType = "Extension to State D"  
+                    >
+    <Mask part1="STATE_OK" part2="DATA" part3="DATA" part4="DATA" part5="DATA" part6="DATA" part7="RESERVED" part8="STATE_EXTENSION" />
+    <ExtensionState type = "Z"  descriptionType = "Extension to State D"  
                     numePart1 = "‘F’ Pre-Set Mask"
                     numePart2 = "‘G’ Pre-Set Mask" 
                     numePart3 = "‘H’ Pre-Set Mask"
@@ -95,8 +98,12 @@
                     descriprionPart6 = "Reserved"
                     descriprionPart7 = "Reserved"
                     descriprionPart8 = "Reserved"
-   />
-  <Node type = "E"  descriptionType = "Four FDK Selection Function State"  
+                    >
+      <Mask part1="DATA" part2="DATA" part3="DATA" part4="DATA" part5="RESERVED" part6="RESERVED" part7="RESERVED" part8="RESERVED" />
+    </ExtensionState>
+  </State>
+  
+  <State type = "E"  descriptionType = "Four FDK Selection Function State"  
                     numePart1 = "Screen Number"
                     numePart2 = "Time-Out Next State Number" 
                     numePart3 = "Cancel Next State Number"
@@ -113,8 +120,10 @@
                     descriprionPart6 = "State number to which the terminal goes if the specified FDK or touch area is pressed. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ) Enter 255 to deactivate any FDK or touch area."
                     descriprionPart7 = "State number to which the terminal goes if the specified FDK or touch area is pressed. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ) Enter 255 to deactivate any FDK or touch area."
                     descriprionPart8 = "Defines the Operation Code buffer byte in which the keycode for the selected FDK is stored.\r\nEntry Value - Position in Buffer\r\n‘000’ - 1st byte\r\n‘001 - 2nd byte’\r\n‘002’\r\n‘003’\r\n‘004’\r\n‘005’\r\n‘006’\r\n‘007’ - 8th byte\r\n"
-   />
-  <Node type = "F"  descriptionType = "Amount Entry State"  
+                    >
+    <Mask part1="SCREEN_DISPLAY" part2="STATE_TIME_OUT" part3="STATE_CANCEL" part4="STATE_OK" part5="STATE_OK" part6="STATE_OK" part7="STATE_OK" part8="DATA" />    
+  </State>
+  <State type = "F"  descriptionType = "Amount Entry State"  
                     numePart1 = "Screen Number"
                     numePart2 = "Time-Out Next State Number" 
                     numePart3 = "Cancel Next State Number"
@@ -131,8 +140,10 @@
                     descriprionPart6 = "State number to which the terminal goes if the cardholder presses an FDK or touch area. Normally  one FDK or touch area is designated for correct amount entries and another for incorrect amount entries. The remaining two FDKs or touch areas are  inactive. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ) Enter 255 to deactivate an FDK or touch area."
                     descriprionPart7 = "State number to which the terminal goes if the cardholder presses an FDK or touch area. Normally  one FDK or touch area is designated for correct amount entries and another for incorrect amount entries. The remaining two FDKs or touch areas are  inactive. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ) Enter 255 to deactivate an FDK or touch area."
                     descriprionPart8 = "Overlay screen for setting the cardholder screen cursor position. This screen optionally defines the initial display format before amount entry by the cardholder. The cursor should be set on the lefthand side of the echo field on the screen. This is space filled until the required start position for the currency character is reached. For details, see “International Currency Display Format” on page  3-31. The default echo field for eight digits is: bbbbb$b0.00 where b = space. The default echo field for twelve digits is: bbbbbbbbb$b0.00 where b = space." 
-   />
-  <Node type = "G"  descriptionType = "Amount Check State"  
+                    >
+    <Mask part1="SCREEN_DISPLAY" part2="STATE_TIME_OUT" part3="STATE_CANCEL" part4="STATE_OK" part5="STATE_OK" part6="STATE_OK" part7="STATE_OK" part8="DATA" />
+  </State>
+  <State type = "G"  descriptionType = "Amount Check State"  
                     numePart1 = "Amount Check Condition True Next State Number"
                     numePart2 = "Amount Check Condition False Next State Number" 
                     numePart3 = "Buffer to be checked"
@@ -149,8 +160,10 @@
                     descriprionPart6 = "Currency type of amount in specified buffer. Used in conjunction with the Dispenser Currency Cassette Mapping Table.\r\nThis field is ignored if table entry 8 is not ‘003’."
                     descriprionPart7 = "Amount check condition required.\r\nIf the condition being checked evaluates to 'true' then processing will proceed to the next state identified in table entry 2; otherwise processing will proceed to the next state identified in table entry 3.\r\nAll conditions check the buffer indicated by table entry 4, and take account of the decimal point location via the value in table entry 6.\r\nWhen this entry is set to 000, the state simply evaluates whether the value to the right of the decimal point position is zero.\r\nWhen this entry is set to 001, the state also evaluates whether the value is zero, or if Buffer B or C contains more than 12 digits.\r\nWhen this entry is set to 002, the state also evaluates whether the value is a whole number multiple of the value identified in table entry 5.\r\nWhen this entry is set to 003, the state evaluates whether the value is dispensable by the terminal, taking into account the Dispenser Currency Cassette Mapping Table entries, currency type required (table entry 7), the currency type denominations available, dispenser status and cassette status."
                     descriprionPart8 = "Reserved"
-   />
-  <Node type = "H"  descriptionType = "Information Entry State"  
+                    >
+    <Mask part1="STATE_OK" part2="STATE_ERROR" part3="DATA" part4="DATA" part5="DATA" part6="DATA" part7="DATA" part8="RESERVED" />
+  </State>
+  <State type = "H"  descriptionType = "Information Entry State"  
                     numePart1 = "Screen Number"
                     numePart2 = "Time-Out Next State Number" 
                     numePart3 = "Cancel Next State Number"
@@ -167,8 +180,10 @@
                     descriprionPart6 = "State number to which the terminal goes if the cardholder presses an FDK or touch area. Normally  one FDK or touch area is designated for correct amount entries and another for incorrect amount entries. The remaining two FDKs or touch areas are  inactive. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ) Enter 255 to deactivate an FDK or touch area."
                     descriprionPart7 = "State number to which the terminal goes if the cardholder presses an FDK or touch area. Normally  one FDK or touch area is designated for correct amount entries and another for incorrect amount entries. The remaining two FDKs or touch areas are  inactive. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ) Enter 255 to deactivate an FDK or touch area."
                     descriprionPart8 = "A general-purpose buffer (B or C) is designated for storage. The actual data entered (or ‘X’) to be displayed on the cardholder screen is also defined. The display begins from the current cursor position. Buffer and display parameters are as follows:\r\n000 - Display ‘X’ for each numeric key pressed. Store data in general-purpose buffer C.\r\n001 - Display data as keyed in. Store data in general purpose buffer C.\r\n002 - Display ‘X’ for each numeric key pressed. Store data in general purpose buffer B.\r\n003 - Display data as keyed in. Store data in general purpose buffer B.\r\nSee Table Note 5."  
-   />
-  <Node type = "I"  descriptionType = "Transaction Request State"  
+                    >
+    <Mask part1="SCREEN_OK" part2="STATE_TIME_OUT" part3="STATE_CANCEL" part4="STATE_OK" part5="STATE_OK" part6="STATE_OK" part7="STATE_OK" part8="DATA" />
+  </State>
+  <State type = "I"  descriptionType = "Transaction Request State"  
                     numePart1 = "Screen Number"
                     numePart2 = "Central Response Timeout Next" 
                     numePart3 = "Send Track 2 Data"
@@ -185,8 +200,9 @@
                     descriprionPart6 = "See Table Note 6."
                     descriprionPart7 = "See Table Note 6 and Table Note 7."
                     descriprionPart8 = "To send the general purpose buffer, the following values apply:\r\n000 - Send no buffers\r\n001 - Send Buffer B.\r\n002 - Send Buffer C\r\n003 - Send Buffers B and C\r\n004-007 - Reserved\r\nIf the extended format is selected in table entry 8, this entry is an Extension state number.\r\nSee Table Note 8."
-   />
-  <Node type = "Z"  descriptionType = "Extension to State I"  
+                    >
+    <Mask part1="SCREEN_OK" part2="STATE_OK" part3="DATA" part4="DATA" part5="DATA" part6="DATA" part7="DATA" part8="STATE_EXTENSION_OR_DATA" />
+    <ExtensionState type = "Z"  descriptionType = "Extension to State I"  
                     numePart1 = "Send General Purpose Buffers B and/or C"
                     numePart2 = "Send Optional Data Fields ‘A’ - ‘H’" 
                     numePart3 = "Send Optional Data Fields ‘I’ - ‘L’"
@@ -203,8 +219,11 @@
                     descriprionPart6 = "Reserved"
                     descriprionPart7 = "Indicates if EMV CAM processing is to be performed, as follows:\r\n000 - Do not perform EMV CAM processing (default).\r\n001 - Perform EMV CAM processing."
                     descriprionPart8 = "Reserved"
-   />
-  <Node type = "J"  descriptionType = "Close State"  
+                    >
+      <Mask part1="DATA" part2="DATA" part3="DATA" part4="DATA" part5="DATA" part6="RESERVED" part7="DATA" part8="DATA" />
+    </ExtensionState>
+  </State>
+  <State type = "J"  descriptionType = "Close State"  
                     numePart1 = "Receipt Delivered Screen Number"
                     numePart2 = "Next State Number" 
                     numePart3 = "No Receipt Delivered Screen Number"
@@ -221,11 +240,12 @@
                     descriprionPart6 = "Reserved"
                     descriprionPart7 = "Screen displayed on entry to the Close state, informing the cardholder that the Bunch Note Acceptor (BNA) notes are being returned."
                     descriprionPart8 = "State number of the optional Extension state. See Table Note 10."
-   />
-  <Node type = "Z"  descriptionType = "Extension to State J"  
-                    numePart1 = "Send General Purpose Buffers B and/or C"
-                    numePart2 = "CPM Take Document Screen Number" 
-                    numePart3 = "CPM Document Return/Retain Flag"
+                    >
+    <Mask part1="SCREEN_OK" part2="STATE_OK" part3="SCREEN_OK" part4="SCREEN_OK" part5="SCREEN_OK" part6="RESERVED" part7="SCREEN_OK" part8="STATE_EXTANSION" />
+    <ExtensionState type = "Z"  descriptionType = "Extension to State J"  
+                    numePart1 = "CPM Take Document Screen Number"
+                    numePart2 = "CPM Document Return/Retain Flag" 
+                    numePart3 = "Must be 000"
                     numePart4 = "Must be 000"
                     numePart5 = "Must be 000"
                     numePart6 = "Must be 000"
@@ -239,8 +259,11 @@
                     descriprionPart6 = "Reserved"
                     descriprionPart7 = "This flag controls the error recovery actions which may take place in this state if the BNA is present. See Table Note 12."
                     descriprionPart8 = "Reserved"
-   />
-  <Node type = "K"  descriptionType = "FIT Switch State"  
+                    >
+      <Mask part1="SCREEN_ERROR" part2="DATA" part3="RESERVED" part4="RESERVED" part5="RESERVED" part6="RESERVED" part7="DATA" part8="RESERVED" />
+    </ExtensionState>
+  </State>  
+  <State type = "K"  descriptionType = "FIT Switch State"  
                     numePart1 = "Next State Number"
                     numePart2 = "Next State Number" 
                     numePart3 = "Next State Number"
@@ -257,8 +280,9 @@
                     descriprionPart6 = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"
                     descriprionPart7 = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"
                     descriprionPart8 = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"
-   />
-  <Node type = "_"  descriptionType = "Expanded FIT Switch State"  
+                    >
+    <Mask part1="STATE_OK" part2="STATE_OK" part3="STATE_OK" part4="STATE_OK" part5="STATE_OK" part6="STATE_OK" part7="STATE_OK" part8="STATE_OK" />
+    <ExtensionState type = "_"  descriptionType = "Expanded FIT Switch State"  
                     numePart1 = "Next State Number"
                     numePart2 = "Next State Number" 
                     numePart3 = "Next State Number"
@@ -275,8 +299,9 @@
                     descriprionPart6 = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"
                     descriprionPart7 = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"
                     descriprionPart8 = "State number of the mandatory Extension state."
-   />
-  <Node type = "Z"  descriptionType = "Extension to State _"  
+                    >
+      <Mask part1="STATE_OK" part2="STATE_OK" part3="STATE_OK" part4="STATE_OK" part5="STATE_OK" part6="STATE_OK" part7="STATE_OK" part8="STATE_EXTANSION" />
+      <ExtensionExtensionState type = "Z"  descriptionType = "Extension to State _"  
                     numePart1 = "Next State Number"
                     numePart2 = "Next State Number" 
                     numePart3 = "Next State Number"
@@ -293,8 +318,12 @@
                     descriprionPart6 = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"
                     descriprionPart7 = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"
                     descriprionPart8 = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"
-   />
-  <Node type = "L"  descriptionType = "Card Write State"  
+                    >
+        <Mask part1="STATE_OK" part2="STATE_OK" part3="STATE_OK" part4="STATE_OK" part5="STATE_OK" part6="STATE_OK" part7="STATE_OK" part8="STATE_OK" />
+      </ExtensionExtensionState>
+    </ExtensionState>
+  </State>  
+  <State type = "L"  descriptionType = "Card Write State"  
                     numePart1 = ""
                     numePart2 = "" 
                     numePart3 = ""
@@ -311,8 +340,10 @@
                     descriprionPart6 = ""
                     descriprionPart7 = ""
                     descriprionPart8 = ""
-   />
-  <Node type = "M"  descriptionType = "Enhanced PIN Entry State"  
+                    >
+    
+  </State>
+  <State type = "M"  descriptionType = "Enhanced PIN Entry State"  
                     numePart1 = ""
                     numePart2 = "" 
                     numePart3 = ""
@@ -329,8 +360,10 @@
                     descriprionPart6 = ""
                     descriprionPart7 = ""
                     descriprionPart8 = ""
-   />
-  <Node type = "R"  descriptionType = "Enhanced Amount Entry State"  
+                    >
+    
+  </State>
+  <State type = "R"  descriptionType = "Enhanced Amount Entry State"  
                     numePart1 = ""
                     numePart2 = "" 
                     numePart3 = ""
@@ -347,8 +380,10 @@
                     descriprionPart6 = ""
                     descriprionPart7 = ""
                     descriprionPart8 = ""
-   />
-  <Node type = "S"  descriptionType = "Language Code Switch State"  
+                    >
+    
+  </State>
+  <State type = "S"  descriptionType = "Language Code Switch State"  
                     numePart1 = ""
                     numePart2 = "" 
                     numePart3 = ""
@@ -365,8 +400,10 @@
                     descriprionPart6 = ""
                     descriprionPart7 = ""
                     descriprionPart8 = ""
-   />
-  <Node type = "T"  descriptionType = "Card Read - PIN Entry Initiation State"  
+                    >
+    
+  </State>
+  <State type = "T"  descriptionType = "Card Read - PIN Entry Initiation State"  
                     numePart1 = ""
                     numePart2 = "" 
                     numePart3 = ""
@@ -383,8 +420,10 @@
                     descriprionPart6 = ""
                     descriprionPart7 = ""
                     descriprionPart8 = ""
-   />
-  <Node type = "V"  descriptionType = "Language Select From Card State"  
+                    >
+    
+  </State>
+  <State type = "V"  descriptionType = "Language Select From Card State"  
                     numePart1 = ""
                     numePart2 = "" 
                     numePart3 = ""
@@ -401,8 +440,10 @@
                     descriprionPart6 = ""
                     descriprionPart7 = ""
                     descriprionPart8 = ""
-   />
-  <Node type = "W"  descriptionType = "FDK Switch State"  
+                    >
+    
+  </State>
+  <State type = "W"  descriptionType = "FDK Switch State"  
                     numePart1 = ""
                     numePart2 = "" 
                     numePart3 = ""
@@ -419,8 +460,10 @@
                     descriprionPart6 = ""
                     descriprionPart7 = ""
                     descriprionPart8 = ""
-   />
-  <Node type = "X"  descriptionType = "FDK Information Entry State"  
+                    >
+    
+  </State>
+  <State type = "X"  descriptionType = "FDK Information Entry State"  
                     numePart1 = ""
                     numePart2 = "" 
                     numePart3 = ""
@@ -437,8 +480,10 @@
                     descriprionPart6 = ""
                     descriprionPart7 = ""
                     descriprionPart8 = ""
-   />
-  <Node type = "Y"  descriptionType = "Eight FDK Selection Function State"  
+                    >
+    
+  </State>
+  <State type = "Y"  descriptionType = "Eight FDK Selection Function State"  
                     numePart1 = ""
                     numePart2 = "" 
                     numePart3 = ""
@@ -455,12 +500,14 @@
                     descriprionPart6 = ""
                     descriprionPart7 = ""
                     descriprionPart8 = ""
-   />
+                    >
+    
+  </State>
   
-</STATE>
+</STATES>
 
 <!--MASCA
-  <Node type = ""  descriptionType = ""  
+  <State type = ""  descriptionType = ""  
                     numePart1 = ""
                     numePart2 = "" 
                     numePart3 = ""
@@ -477,5 +524,5 @@
                     descriprionPart6 = ""
                     descriprionPart7 = ""
                     descriprionPart8 = ""
-   />
+   ></State>
 -->
