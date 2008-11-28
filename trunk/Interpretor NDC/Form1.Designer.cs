@@ -64,6 +64,7 @@ namespace Interpretor_NDC
             this.checkBoxHostToExitMessages = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBoxDescriptionPart8 = new System.Windows.Forms.TextBox();
             this.textBoxDescriptionPart7 = new System.Windows.Forms.TextBox();
@@ -391,7 +392,7 @@ namespace Interpretor_NDC
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(785, 538);
+            this.tabPage1.Size = new System.Drawing.Size(1007, 703);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Load and Settings MessageIn.log";
             // 
@@ -442,7 +443,7 @@ namespace Interpretor_NDC
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(785, 538);
+            this.tabPage2.Size = new System.Drawing.Size(1007, 703);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Analiza";
             // 
@@ -472,28 +473,45 @@ namespace Interpretor_NDC
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(785, 538);
+            this.tabPage3.Size = new System.Drawing.Size(1007, 703);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Screens";
             // 
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.Linen;
+            this.tabPage4.Controls.Add(this.button2);
             this.tabPage4.Controls.Add(this.panel1);
             this.tabPage4.Controls.Add(this.button1);
             this.tabPage4.Controls.Add(this.buttonClearMap);
             this.tabPage4.Controls.Add(this.buttonGenerateMap);
-            this.tabPage4.Controls.Add(this.panelDrawStates);
             this.tabPage4.Controls.Add(this.labelViewStateType);
             this.tabPage4.Controls.Add(this.comboBoxViewStateTabel);
             this.tabPage4.Controls.Add(this.listBoxStateTabels);
             this.tabPage4.Controls.Add(this.buttonOpenStateTabels);
+            this.tabPage4.Controls.Add(this.panelDrawStates);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1007, 703);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "State Tabels";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button2.Location = new System.Drawing.Point(8, 541);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(40, 20);
+            this.button2.TabIndex = 34;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
@@ -784,8 +802,9 @@ namespace Interpretor_NDC
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(40, 20);
             this.button1.TabIndex = 0;
-            this.button1.Text = "888D";
+            this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonClearMap
             // 
@@ -816,13 +835,14 @@ namespace Interpretor_NDC
             this.panelDrawStates.Size = new System.Drawing.Size(843, 385);
             this.panelDrawStates.TabIndex = 31;
             this.panelDrawStates.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDrawStates_Paint);
+            this.panelDrawStates.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panelDrawStates_Scroll);
             // 
             // labelViewStateType
             // 
             this.labelViewStateType.AutoSize = true;
             this.labelViewStateType.Location = new System.Drawing.Point(3, 60);
             this.labelViewStateType.Name = "labelViewStateType";
-            this.labelViewStateType.Size = new System.Drawing.Size(82, 26);
+            this.labelViewStateType.Size = new System.Drawing.Size(82, 13);
             this.labelViewStateType.TabIndex = 30;
             this.labelViewStateType.Text = "View state type:";
             // 
@@ -995,6 +1015,7 @@ namespace Interpretor_NDC
         private System.Windows.Forms.TextBox textBoxDescriptionPart8;
         private System.Windows.Forms.TextBox textBoxDescriptionPart7;
         private System.Windows.Forms.TextBox textBoxDescriptionPart6;
+        private System.Windows.Forms.Button button2;
     }
 }
 
