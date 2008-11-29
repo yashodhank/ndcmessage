@@ -42,7 +42,7 @@
     <Compile Include="EnhancedConfigurationParametersLoad.cs" />
     <Compile Include="FITDataLoad.cs" />
     <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
