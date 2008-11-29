@@ -341,7 +341,7 @@
                     descriprionPart7 = ""
                     descriprionPart8 = ""
                     >
-    
+    <Mask part1="" part2="" part3="" part4="" part5="" part6="" part7="" part8="" />
   </State>
   <State type = "M"  descriptionType = "Enhanced PIN Entry State"  
                     numePart1 = ""
@@ -361,7 +361,7 @@
                     descriprionPart7 = ""
                     descriprionPart8 = ""
                     >
-    
+    <Mask part1="" part2="" part3="" part4="" part5="" part6="" part7="" part8="" />
   </State>
   <State type = "R"  descriptionType = "Enhanced Amount Entry State"  
                     numePart1 = ""
@@ -381,7 +381,7 @@
                     descriprionPart7 = ""
                     descriprionPart8 = ""
                     >
-    
+    <Mask part1="" part2="" part3="" part4="" part5="" part6="" part7="" part8="" />
   </State>
   <State type = "S"  descriptionType = "Language Code Switch State"  
                     numePart1 = ""
@@ -401,7 +401,7 @@
                     descriprionPart7 = ""
                     descriprionPart8 = ""
                     >
-    
+    <Mask part1="" part2="" part3="" part4="" part5="" part6="" part7="" part8="" />
   </State>
   <State type = "T"  descriptionType = "Card Read - PIN Entry Initiation State"  
                     numePart1 = ""
@@ -421,7 +421,7 @@
                     descriprionPart7 = ""
                     descriprionPart8 = ""
                     >
-    
+    <Mask part1="" part2="" part3="" part4="" part5="" part6="" part7="" part8="" />
   </State>
   <State type = "V"  descriptionType = "Language Select From Card State"  
                     numePart1 = ""
@@ -441,7 +441,7 @@
                     descriprionPart7 = ""
                     descriprionPart8 = ""
                     >
-    
+    <Mask part1="" part2="" part3="" part4="" part5="" part6="" part7="" part8="" />
   </State>
   <State type = "W"  descriptionType = "FDK Switch State"  
                     numePart1 = ""
@@ -461,7 +461,7 @@
                     descriprionPart7 = ""
                     descriprionPart8 = ""
                     >
-    
+    <Mask part1="" part2="" part3="" part4="" part5="" part6="" part7="" part8="" />
   </State>
   <State type = "X"  descriptionType = "FDK Information Entry State"  
                     numePart1 = ""
@@ -481,7 +481,7 @@
                     descriprionPart7 = ""
                     descriprionPart8 = ""
                     >
-    
+    <Mask part1="" part2="" part3="" part4="" part5="" part6="" part7="" part8="" />
   </State>
   <State type = "Y"  descriptionType = "Eight FDK Selection Function State"  
                     numePart1 = ""
@@ -501,7 +501,7 @@
                     descriprionPart7 = ""
                     descriprionPart8 = ""
                     >
-    
+    <Mask part1="" part2="" part3="" part4="" part5="" part6="" part7="" part8="" />
   </State>
   
 </STATES>
