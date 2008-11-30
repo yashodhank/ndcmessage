@@ -757,7 +757,7 @@ namespace Interpretor_NDC
             this.textBox29.Location = new System.Drawing.Point(588, 183);
             this.textBox29.Name = "textBox29";
             this.textBox29.ReadOnly = true;
-            this.textBox29.Size = new System.Drawing.Size(23, 20);
+            this.textBox29.Size = new System.Drawing.Size(27, 20);
             this.textBox29.TabIndex = 48;
             // 
             // textBox30
@@ -802,7 +802,7 @@ namespace Interpretor_NDC
             this.textBox24.Location = new System.Drawing.Point(588, 32);
             this.textBox24.Name = "textBox24";
             this.textBox24.ReadOnly = true;
-            this.textBox24.Size = new System.Drawing.Size(23, 20);
+            this.textBox24.Size = new System.Drawing.Size(27, 20);
             this.textBox24.TabIndex = 43;
             // 
             // textBox25
@@ -1115,7 +1115,7 @@ namespace Interpretor_NDC
             this.textBox14.Location = new System.Drawing.Point(588, 32);
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(23, 20);
+            this.textBox14.Size = new System.Drawing.Size(27, 20);
             this.textBox14.TabIndex = 34;
             // 
             // textBox15
@@ -1629,7 +1629,6 @@ namespace Interpretor_NDC
             this.listBoxStateTabels.Location = new System.Drawing.Point(6, 84);
             this.listBoxStateTabels.Name = "listBoxStateTabels";
             this.listBoxStateTabels.Size = new System.Drawing.Size(149, 420);
-            this.listBoxStateTabels.Sorted = true;
             this.listBoxStateTabels.TabIndex = 1;
             this.listBoxStateTabels.SelectedIndexChanged += new System.EventHandler(this.listBoxStateTabels_SelectedIndexChanged);
             // 
@@ -1647,9 +1646,9 @@ namespace Interpretor_NDC
             // 
             this.panelDrawStates.AutoScroll = true;
             this.panelDrawStates.BackColor = System.Drawing.Color.Coral;
-            this.panelDrawStates.Location = new System.Drawing.Point(299, 658);
+            this.panelDrawStates.Location = new System.Drawing.Point(161, 353);
             this.panelDrawStates.Name = "panelDrawStates";
-            this.panelDrawStates.Size = new System.Drawing.Size(839, 385);
+            this.panelDrawStates.Size = new System.Drawing.Size(839, 344);
             this.panelDrawStates.TabIndex = 31;
             this.panelDrawStates.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panelDrawStates_Scroll);
             this.panelDrawStates.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDrawStates_Paint);
