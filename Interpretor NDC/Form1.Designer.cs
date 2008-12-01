@@ -568,18 +568,17 @@ namespace Interpretor_NDC
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackColor = System.Drawing.Color.Linen;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.Location = new System.Drawing.Point(8, 541);
+            this.button2.Location = new System.Drawing.Point(11, 530);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 20);
+            this.button2.Size = new System.Drawing.Size(37, 20);
             this.button2.TabIndex = 34;
             this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = false;
+            this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
@@ -1535,9 +1534,9 @@ namespace Interpretor_NDC
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(4, 510);
+            this.button1.Location = new System.Drawing.Point(11, 499);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 20);
+            this.button1.Size = new System.Drawing.Size(37, 20);
             this.button1.TabIndex = 0;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = true;
@@ -1545,9 +1544,9 @@ namespace Interpretor_NDC
             // 
             // buttonClearMap
             // 
-            this.buttonClearMap.Location = new System.Drawing.Point(50, 541);
+            this.buttonClearMap.Location = new System.Drawing.Point(57, 528);
             this.buttonClearMap.Name = "buttonClearMap";
-            this.buttonClearMap.Size = new System.Drawing.Size(92, 23);
+            this.buttonClearMap.Size = new System.Drawing.Size(89, 23);
             this.buttonClearMap.TabIndex = 33;
             this.buttonClearMap.Text = "Clear Map";
             this.buttonClearMap.UseVisualStyleBackColor = true;
@@ -1555,9 +1554,9 @@ namespace Interpretor_NDC
             // 
             // buttonGenerateMap
             // 
-            this.buttonGenerateMap.Location = new System.Drawing.Point(50, 512);
+            this.buttonGenerateMap.Location = new System.Drawing.Point(57, 496);
             this.buttonGenerateMap.Name = "buttonGenerateMap";
-            this.buttonGenerateMap.Size = new System.Drawing.Size(92, 23);
+            this.buttonGenerateMap.Size = new System.Drawing.Size(89, 23);
             this.buttonGenerateMap.TabIndex = 32;
             this.buttonGenerateMap.Text = "Generate Map";
             this.buttonGenerateMap.UseVisualStyleBackColor = true;
@@ -1566,7 +1565,7 @@ namespace Interpretor_NDC
             // labelViewStateType
             // 
             this.labelViewStateType.AutoSize = true;
-            this.labelViewStateType.Location = new System.Drawing.Point(3, 60);
+            this.labelViewStateType.Location = new System.Drawing.Point(3, 44);
             this.labelViewStateType.Name = "labelViewStateType";
             this.labelViewStateType.Size = new System.Drawing.Size(82, 13);
             this.labelViewStateType.TabIndex = 30;
@@ -1616,7 +1615,7 @@ namespace Interpretor_NDC
             "+",
             ">",
             "/"});
-            this.comboBoxViewStateTabel.Location = new System.Drawing.Point(91, 57);
+            this.comboBoxViewStateTabel.Location = new System.Drawing.Point(91, 41);
             this.comboBoxViewStateTabel.Name = "comboBoxViewStateTabel";
             this.comboBoxViewStateTabel.Size = new System.Drawing.Size(64, 21);
             this.comboBoxViewStateTabel.TabIndex = 29;
@@ -1626,7 +1625,7 @@ namespace Interpretor_NDC
             // 
             this.listBoxStateTabels.FormattingEnabled = true;
             this.listBoxStateTabels.HorizontalScrollbar = true;
-            this.listBoxStateTabels.Location = new System.Drawing.Point(6, 84);
+            this.listBoxStateTabels.Location = new System.Drawing.Point(6, 68);
             this.listBoxStateTabels.Name = "listBoxStateTabels";
             this.listBoxStateTabels.Size = new System.Drawing.Size(149, 420);
             this.listBoxStateTabels.TabIndex = 1;
