@@ -42,7 +42,7 @@
     <Compile Include="EnhancedConfigurationParametersLoad.cs" />
     <Compile Include="FITDataLoad.cs" />
     <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -77,7 +77,8 @@
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\Config.xml">
+    <Content Include="C:\Config.xml">
+      <Link>bin\Debug\Config.xml</Link>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
