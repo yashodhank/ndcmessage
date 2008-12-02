@@ -60,9 +60,11 @@ namespace Interpretor_NDC
             this.buttonArataLog = new System.Windows.Forms.Button();
             this.textBoxArataLog = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkBoxHexa = new System.Windows.Forms.CheckBox();
             this.checkBoxTransactionReplyCommand = new System.Windows.Forms.CheckBox();
             this.checkBoxHostToExitMessages = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.buttonDeschideScreensTDB = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -167,9 +169,11 @@ namespace Interpretor_NDC
             this.listBoxStateTabels = new System.Windows.Forms.ListBox();
             this.buttonOpenStateTabels = new System.Windows.Forms.Button();
             this.panelDrawStates = new System.Windows.Forms.Panel();
+            this.listBoxScreenKeyboard = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -489,6 +493,7 @@ namespace Interpretor_NDC
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Linen;
+            this.tabPage2.Controls.Add(this.checkBoxHexa);
             this.tabPage2.Controls.Add(this.checkBoxTransactionReplyCommand);
             this.tabPage2.Controls.Add(this.checkBoxHostToExitMessages);
             this.tabPage2.Controls.Add(this.listBoxMessageIn);
@@ -516,6 +521,17 @@ namespace Interpretor_NDC
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Analiza";
             // 
+            // checkBoxHexa
+            // 
+            this.checkBoxHexa.AutoSize = true;
+            this.checkBoxHexa.Location = new System.Drawing.Point(107, 29);
+            this.checkBoxHexa.Name = "checkBoxHexa";
+            this.checkBoxHexa.Size = new System.Drawing.Size(55, 17);
+            this.checkBoxHexa.TabIndex = 21;
+            this.checkBoxHexa.Text = "HEXA";
+            this.checkBoxHexa.UseVisualStyleBackColor = true;
+            this.checkBoxHexa.CheckedChanged += new System.EventHandler(this.checkBoxHexa_CheckedChanged);
+            // 
             // checkBoxTransactionReplyCommand
             // 
             this.checkBoxTransactionReplyCommand.AutoSize = true;
@@ -539,12 +555,24 @@ namespace Interpretor_NDC
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Linen;
+            this.tabPage3.Controls.Add(this.listBoxScreenKeyboard);
+            this.tabPage3.Controls.Add(this.buttonDeschideScreensTDB);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1007, 703);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Screens";
+            // 
+            // buttonDeschideScreensTDB
+            // 
+            this.buttonDeschideScreensTDB.Location = new System.Drawing.Point(4, 7);
+            this.buttonDeschideScreensTDB.Name = "buttonDeschideScreensTDB";
+            this.buttonDeschideScreensTDB.Size = new System.Drawing.Size(165, 23);
+            this.buttonDeschideScreensTDB.TabIndex = 0;
+            this.buttonDeschideScreensTDB.Text = "Open Screen.tdb";
+            this.buttonDeschideScreensTDB.UseVisualStyleBackColor = true;
+            this.buttonDeschideScreensTDB.Click += new System.EventHandler(this.buttonDeschideScreensTDB_Click);
             // 
             // tabPage4
             // 
@@ -1649,8 +1677,16 @@ namespace Interpretor_NDC
             this.panelDrawStates.Name = "panelDrawStates";
             this.panelDrawStates.Size = new System.Drawing.Size(839, 344);
             this.panelDrawStates.TabIndex = 31;
-            this.panelDrawStates.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panelDrawStates_Scroll);
             this.panelDrawStates.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDrawStates_Paint);
+            this.panelDrawStates.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panelDrawStates_Scroll);
+            // 
+            // listBoxScreenKeyboard
+            // 
+            this.listBoxScreenKeyboard.FormattingEnabled = true;
+            this.listBoxScreenKeyboard.Location = new System.Drawing.Point(4, 37);
+            this.listBoxScreenKeyboard.Name = "listBoxScreenKeyboard";
+            this.listBoxScreenKeyboard.Size = new System.Drawing.Size(165, 498);
+            this.listBoxScreenKeyboard.TabIndex = 1;
             // 
             // Form1
             // 
@@ -1668,6 +1704,7 @@ namespace Interpretor_NDC
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -1822,6 +1859,9 @@ namespace Interpretor_NDC
         private System.Windows.Forms.TextBox textBoxDescriptionPart28;
         private System.Windows.Forms.TextBox textBoxDescriptionPart27;
         private System.Windows.Forms.TextBox textBoxDescriptionPart26;
+        private System.Windows.Forms.CheckBox checkBoxHexa;
+        private System.Windows.Forms.Button buttonDeschideScreensTDB;
+        private System.Windows.Forms.ListBox listBoxScreenKeyboard;
     }
 }
 
