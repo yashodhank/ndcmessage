@@ -72,7 +72,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ScreenKeyDataLoad.cs" />
+    <Compile Include="ScreenKeyDataLoad.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="StateTablesLoad.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>

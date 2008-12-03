@@ -64,6 +64,9 @@ namespace Interpretor_NDC
             this.checkBoxTransactionReplyCommand = new System.Windows.Forms.CheckBox();
             this.checkBoxHostToExitMessages = new System.Windows.Forms.CheckBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.checkBoxHexaScreen = new System.Windows.Forms.CheckBox();
+            this.textBoxScreen = new System.Windows.Forms.TextBox();
+            this.listBoxScreenKeyboard = new System.Windows.Forms.ListBox();
             this.buttonDeschideScreensTDB = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
@@ -169,7 +172,6 @@ namespace Interpretor_NDC
             this.listBoxStateTabels = new System.Windows.Forms.ListBox();
             this.buttonOpenStateTabels = new System.Windows.Forms.Button();
             this.panelDrawStates = new System.Windows.Forms.Panel();
-            this.listBoxScreenKeyboard = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -448,6 +450,7 @@ namespace Interpretor_NDC
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1015, 729);
             this.tabControl1.TabIndex = 26;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -555,6 +558,8 @@ namespace Interpretor_NDC
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Linen;
+            this.tabPage3.Controls.Add(this.checkBoxHexaScreen);
+            this.tabPage3.Controls.Add(this.textBoxScreen);
             this.tabPage3.Controls.Add(this.listBoxScreenKeyboard);
             this.tabPage3.Controls.Add(this.buttonDeschideScreensTDB);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -564,11 +569,40 @@ namespace Interpretor_NDC
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Screens";
             // 
+            // checkBoxHexaScreen
+            // 
+            this.checkBoxHexaScreen.AutoSize = true;
+            this.checkBoxHexaScreen.Location = new System.Drawing.Point(175, 13);
+            this.checkBoxHexaScreen.Name = "checkBoxHexaScreen";
+            this.checkBoxHexaScreen.Size = new System.Drawing.Size(67, 17);
+            this.checkBoxHexaScreen.TabIndex = 3;
+            this.checkBoxHexaScreen.Text = "<HEXA>";
+            this.checkBoxHexaScreen.UseVisualStyleBackColor = true;
+            this.checkBoxHexaScreen.CheckedChanged += new System.EventHandler(this.checkBoxFF_CheckedChanged);
+            // 
+            // textBoxScreen
+            // 
+            this.textBoxScreen.Location = new System.Drawing.Point(90, 36);
+            this.textBoxScreen.Multiline = true;
+            this.textBoxScreen.Name = "textBoxScreen";
+            this.textBoxScreen.Size = new System.Drawing.Size(825, 117);
+            this.textBoxScreen.TabIndex = 2;
+            // 
+            // listBoxScreenKeyboard
+            // 
+            this.listBoxScreenKeyboard.FormattingEnabled = true;
+            this.listBoxScreenKeyboard.Location = new System.Drawing.Point(4, 37);
+            this.listBoxScreenKeyboard.Name = "listBoxScreenKeyboard";
+            this.listBoxScreenKeyboard.Size = new System.Drawing.Size(80, 576);
+            this.listBoxScreenKeyboard.Sorted = true;
+            this.listBoxScreenKeyboard.TabIndex = 1;
+            this.listBoxScreenKeyboard.SelectedIndexChanged += new System.EventHandler(this.listBoxScreenKeyboard_SelectedIndexChanged);
+            // 
             // buttonDeschideScreensTDB
             // 
             this.buttonDeschideScreensTDB.Location = new System.Drawing.Point(4, 7);
             this.buttonDeschideScreensTDB.Name = "buttonDeschideScreensTDB";
-            this.buttonDeschideScreensTDB.Size = new System.Drawing.Size(165, 23);
+            this.buttonDeschideScreensTDB.Size = new System.Drawing.Size(164, 23);
             this.buttonDeschideScreensTDB.TabIndex = 0;
             this.buttonDeschideScreensTDB.Text = "Open Screen.tdb";
             this.buttonDeschideScreensTDB.UseVisualStyleBackColor = true;
@@ -1680,14 +1714,6 @@ namespace Interpretor_NDC
             this.panelDrawStates.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDrawStates_Paint);
             this.panelDrawStates.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panelDrawStates_Scroll);
             // 
-            // listBoxScreenKeyboard
-            // 
-            this.listBoxScreenKeyboard.FormattingEnabled = true;
-            this.listBoxScreenKeyboard.Location = new System.Drawing.Point(4, 37);
-            this.listBoxScreenKeyboard.Name = "listBoxScreenKeyboard";
-            this.listBoxScreenKeyboard.Size = new System.Drawing.Size(165, 498);
-            this.listBoxScreenKeyboard.TabIndex = 1;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1705,6 +1731,7 @@ namespace Interpretor_NDC
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -1862,6 +1889,8 @@ namespace Interpretor_NDC
         private System.Windows.Forms.CheckBox checkBoxHexa;
         private System.Windows.Forms.Button buttonDeschideScreensTDB;
         private System.Windows.Forms.ListBox listBoxScreenKeyboard;
+        private System.Windows.Forms.TextBox textBoxScreen;
+        private System.Windows.Forms.CheckBox checkBoxHexaScreen;
     }
 }
 
