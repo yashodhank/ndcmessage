@@ -64,6 +64,7 @@ namespace Interpretor_NDC
             this.textBoxArataLog = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.checkBoxShowGrid = new System.Windows.Forms.CheckBox();
             this.checkBoxHexaScreen = new System.Windows.Forms.CheckBox();
             this.textBoxScreen = new System.Windows.Forms.TextBox();
             this.listBoxScreenKeyboard = new System.Windows.Forms.ListBox();
@@ -184,7 +185,7 @@ namespace Interpretor_NDC
             // 
             // buttonOpenFile
             // 
-            this.buttonOpenFile.Location = new System.Drawing.Point(8, 138);
+            this.buttonOpenFile.Location = new System.Drawing.Point(8, 144);
             this.buttonOpenFile.Name = "buttonOpenFile";
             this.buttonOpenFile.Size = new System.Drawing.Size(144, 23);
             this.buttonOpenFile.TabIndex = 0;
@@ -199,7 +200,7 @@ namespace Interpretor_NDC
             // labelInceputMesaj
             // 
             this.labelInceputMesaj.AutoSize = true;
-            this.labelInceputMesaj.Location = new System.Drawing.Point(166, 143);
+            this.labelInceputMesaj.Location = new System.Drawing.Point(166, 149);
             this.labelInceputMesaj.Name = "labelInceputMesaj";
             this.labelInceputMesaj.Size = new System.Drawing.Size(82, 13);
             this.labelInceputMesaj.TabIndex = 19;
@@ -208,7 +209,7 @@ namespace Interpretor_NDC
             // labelSfarsitulMesajului
             // 
             this.labelSfarsitulMesajului.AutoSize = true;
-            this.labelSfarsitulMesajului.Location = new System.Drawing.Point(170, 169);
+            this.labelSfarsitulMesajului.Location = new System.Drawing.Point(170, 175);
             this.labelSfarsitulMesajului.Name = "labelSfarsitulMesajului";
             this.labelSfarsitulMesajului.Size = new System.Drawing.Size(74, 13);
             this.labelSfarsitulMesajului.TabIndex = 20;
@@ -216,7 +217,7 @@ namespace Interpretor_NDC
             // 
             // textBoxInceputulMesajului
             // 
-            this.textBoxInceputulMesajului.Location = new System.Drawing.Point(272, 140);
+            this.textBoxInceputulMesajului.Location = new System.Drawing.Point(272, 146);
             this.textBoxInceputulMesajului.Name = "textBoxInceputulMesajului";
             this.textBoxInceputulMesajului.Size = new System.Drawing.Size(100, 20);
             this.textBoxInceputulMesajului.TabIndex = 21;
@@ -224,7 +225,7 @@ namespace Interpretor_NDC
             // 
             // textBoxSfarsitulMesajului
             // 
-            this.textBoxSfarsitulMesajului.Location = new System.Drawing.Point(272, 166);
+            this.textBoxSfarsitulMesajului.Location = new System.Drawing.Point(272, 172);
             this.textBoxSfarsitulMesajului.Name = "textBoxSfarsitulMesajului";
             this.textBoxSfarsitulMesajului.Size = new System.Drawing.Size(100, 20);
             this.textBoxSfarsitulMesajului.TabIndex = 22;
@@ -233,7 +234,7 @@ namespace Interpretor_NDC
             // labelSariPeste
             // 
             this.labelSariPeste.AutoSize = true;
-            this.labelSariPeste.Location = new System.Drawing.Point(380, 143);
+            this.labelSariPeste.Location = new System.Drawing.Point(380, 149);
             this.labelSariPeste.Name = "labelSariPeste";
             this.labelSariPeste.Size = new System.Drawing.Size(109, 13);
             this.labelSariPeste.TabIndex = 23;
@@ -241,7 +242,7 @@ namespace Interpretor_NDC
             // 
             // textBoxSariPestePrimele
             // 
-            this.textBoxSariPestePrimele.Location = new System.Drawing.Point(495, 140);
+            this.textBoxSariPestePrimele.Location = new System.Drawing.Point(495, 146);
             this.textBoxSariPestePrimele.Name = "textBoxSariPestePrimele";
             this.textBoxSariPestePrimele.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBoxSariPestePrimele.Size = new System.Drawing.Size(43, 20);
@@ -252,7 +253,7 @@ namespace Interpretor_NDC
             // labelCaractere
             // 
             this.labelCaractere.AutoSize = true;
-            this.labelCaractere.Location = new System.Drawing.Point(544, 143);
+            this.labelCaractere.Location = new System.Drawing.Point(544, 149);
             this.labelCaractere.Name = "labelCaractere";
             this.labelCaractere.Size = new System.Drawing.Size(57, 13);
             this.labelCaractere.TabIndex = 25;
@@ -315,7 +316,7 @@ namespace Interpretor_NDC
             // checkBoxHexa
             // 
             this.checkBoxHexa.AutoSize = true;
-            this.checkBoxHexa.Location = new System.Drawing.Point(114, 197);
+            this.checkBoxHexa.Location = new System.Drawing.Point(110, 241);
             this.checkBoxHexa.Name = "checkBoxHexa";
             this.checkBoxHexa.Size = new System.Drawing.Size(55, 17);
             this.checkBoxHexa.TabIndex = 48;
@@ -326,7 +327,7 @@ namespace Interpretor_NDC
             // checkBoxTransactionReplyCommand
             // 
             this.checkBoxTransactionReplyCommand.AutoSize = true;
-            this.checkBoxTransactionReplyCommand.Location = new System.Drawing.Point(214, 604);
+            this.checkBoxTransactionReplyCommand.Location = new System.Drawing.Point(464, 557);
             this.checkBoxTransactionReplyCommand.Name = "checkBoxTransactionReplyCommand";
             this.checkBoxTransactionReplyCommand.Size = new System.Drawing.Size(162, 17);
             this.checkBoxTransactionReplyCommand.TabIndex = 47;
@@ -336,7 +337,7 @@ namespace Interpretor_NDC
             // checkBoxHostToExitMessages
             // 
             this.checkBoxHostToExitMessages.AutoSize = true;
-            this.checkBoxHostToExitMessages.Location = new System.Drawing.Point(214, 581);
+            this.checkBoxHostToExitMessages.Location = new System.Drawing.Point(464, 534);
             this.checkBoxHostToExitMessages.Name = "checkBoxHostToExitMessages";
             this.checkBoxHostToExitMessages.Size = new System.Drawing.Size(131, 17);
             this.checkBoxHostToExitMessages.TabIndex = 46;
@@ -346,15 +347,15 @@ namespace Interpretor_NDC
             // listBoxMessageIn
             // 
             this.listBoxMessageIn.FormattingEnabled = true;
-            this.listBoxMessageIn.Location = new System.Drawing.Point(13, 220);
+            this.listBoxMessageIn.Location = new System.Drawing.Point(9, 264);
             this.listBoxMessageIn.Name = "listBoxMessageIn";
-            this.listBoxMessageIn.Size = new System.Drawing.Size(92, 212);
+            this.listBoxMessageIn.Size = new System.Drawing.Size(92, 147);
             this.listBoxMessageIn.TabIndex = 28;
             this.listBoxMessageIn.SelectedIndexChanged += new System.EventHandler(this.listBoxMessageIn_SelectedIndexChanged);
             // 
             // buttonSplitSelect
             // 
-            this.buttonSplitSelect.Location = new System.Drawing.Point(93, 672);
+            this.buttonSplitSelect.Location = new System.Drawing.Point(230, 617);
             this.buttonSplitSelect.Name = "buttonSplitSelect";
             this.buttonSplitSelect.Size = new System.Drawing.Size(142, 27);
             this.buttonSplitSelect.TabIndex = 45;
@@ -365,18 +366,18 @@ namespace Interpretor_NDC
             // textBoxMessageIn
             // 
             this.textBoxMessageIn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBoxMessageIn.Location = new System.Drawing.Point(113, 220);
+            this.textBoxMessageIn.Location = new System.Drawing.Point(109, 264);
             this.textBoxMessageIn.Multiline = true;
             this.textBoxMessageIn.Name = "textBoxMessageIn";
             this.textBoxMessageIn.ReadOnly = true;
             this.textBoxMessageIn.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxMessageIn.Size = new System.Drawing.Size(670, 212);
+            this.textBoxMessageIn.Size = new System.Drawing.Size(670, 147);
             this.textBoxMessageIn.TabIndex = 29;
             // 
             // checkBoxEncryptionKeyChange
             // 
             this.checkBoxEncryptionKeyChange.AutoSize = true;
-            this.checkBoxEncryptionKeyChange.Location = new System.Drawing.Point(214, 535);
+            this.checkBoxEncryptionKeyChange.Location = new System.Drawing.Point(464, 488);
             this.checkBoxEncryptionKeyChange.Name = "checkBoxEncryptionKeyChange";
             this.checkBoxEncryptionKeyChange.Size = new System.Drawing.Size(137, 17);
             this.checkBoxEncryptionKeyChange.TabIndex = 44;
@@ -386,7 +387,7 @@ namespace Interpretor_NDC
             // checkBoxConfigurationIDNumber
             // 
             this.checkBoxConfigurationIDNumber.AutoSize = true;
-            this.checkBoxConfigurationIDNumber.Location = new System.Drawing.Point(13, 581);
+            this.checkBoxConfigurationIDNumber.Location = new System.Drawing.Point(215, 443);
             this.checkBoxConfigurationIDNumber.Name = "checkBoxConfigurationIDNumber";
             this.checkBoxConfigurationIDNumber.Size = new System.Drawing.Size(142, 17);
             this.checkBoxConfigurationIDNumber.TabIndex = 33;
@@ -396,7 +397,7 @@ namespace Interpretor_NDC
             // checkBoxExtendedEncryptionKeyChange
             // 
             this.checkBoxExtendedEncryptionKeyChange.AutoSize = true;
-            this.checkBoxExtendedEncryptionKeyChange.Location = new System.Drawing.Point(214, 558);
+            this.checkBoxExtendedEncryptionKeyChange.Location = new System.Drawing.Point(464, 511);
             this.checkBoxExtendedEncryptionKeyChange.Name = "checkBoxExtendedEncryptionKeyChange";
             this.checkBoxExtendedEncryptionKeyChange.Size = new System.Drawing.Size(185, 17);
             this.checkBoxExtendedEncryptionKeyChange.TabIndex = 43;
@@ -406,7 +407,7 @@ namespace Interpretor_NDC
             // checkBoxTerminalCommands
             // 
             this.checkBoxTerminalCommands.AutoSize = true;
-            this.checkBoxTerminalCommands.Location = new System.Drawing.Point(13, 466);
+            this.checkBoxTerminalCommands.Location = new System.Drawing.Point(13, 442);
             this.checkBoxTerminalCommands.Name = "checkBoxTerminalCommands";
             this.checkBoxTerminalCommands.Size = new System.Drawing.Size(121, 17);
             this.checkBoxTerminalCommands.TabIndex = 30;
@@ -416,7 +417,7 @@ namespace Interpretor_NDC
             // checkBoxDateAndTime
             // 
             this.checkBoxDateAndTime.AutoSize = true;
-            this.checkBoxDateAndTime.Location = new System.Drawing.Point(13, 649);
+            this.checkBoxDateAndTime.Location = new System.Drawing.Point(215, 511);
             this.checkBoxDateAndTime.Name = "checkBoxDateAndTime";
             this.checkBoxDateAndTime.Size = new System.Drawing.Size(96, 17);
             this.checkBoxDateAndTime.TabIndex = 42;
@@ -427,7 +428,7 @@ namespace Interpretor_NDC
             // 
             this.labelSplit.AutoSize = true;
             this.labelSplit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelSplit.Location = new System.Drawing.Point(104, 438);
+            this.labelSplit.Location = new System.Drawing.Point(104, 414);
             this.labelSplit.Name = "labelSplit";
             this.labelSplit.Size = new System.Drawing.Size(170, 25);
             this.labelSplit.TabIndex = 31;
@@ -436,7 +437,7 @@ namespace Interpretor_NDC
             // checkBoxInteractiveTransactionResponse
             // 
             this.checkBoxInteractiveTransactionResponse.AutoSize = true;
-            this.checkBoxInteractiveTransactionResponse.Location = new System.Drawing.Point(214, 512);
+            this.checkBoxInteractiveTransactionResponse.Location = new System.Drawing.Point(464, 465);
             this.checkBoxInteractiveTransactionResponse.Name = "checkBoxInteractiveTransactionResponse";
             this.checkBoxInteractiveTransactionResponse.Size = new System.Drawing.Size(186, 17);
             this.checkBoxInteractiveTransactionResponse.TabIndex = 41;
@@ -446,7 +447,7 @@ namespace Interpretor_NDC
             // checkBoxScreenKeyboard
             // 
             this.checkBoxScreenKeyboard.AutoSize = true;
-            this.checkBoxScreenKeyboard.Location = new System.Drawing.Point(13, 489);
+            this.checkBoxScreenKeyboard.Location = new System.Drawing.Point(13, 465);
             this.checkBoxScreenKeyboard.Name = "checkBoxScreenKeyboard";
             this.checkBoxScreenKeyboard.Size = new System.Drawing.Size(110, 17);
             this.checkBoxScreenKeyboard.TabIndex = 32;
@@ -456,7 +457,7 @@ namespace Interpretor_NDC
             // checkBoxDispencerCurrencyCassetteMapp
             // 
             this.checkBoxDispencerCurrencyCassetteMapp.AutoSize = true;
-            this.checkBoxDispencerCurrencyCassetteMapp.Location = new System.Drawing.Point(214, 466);
+            this.checkBoxDispencerCurrencyCassetteMapp.Location = new System.Drawing.Point(215, 534);
             this.checkBoxDispencerCurrencyCassetteMapp.Name = "checkBoxDispencerCurrencyCassetteMapp";
             this.checkBoxDispencerCurrencyCassetteMapp.Size = new System.Drawing.Size(206, 17);
             this.checkBoxDispencerCurrencyCassetteMapp.TabIndex = 40;
@@ -466,7 +467,7 @@ namespace Interpretor_NDC
             // checkBoxFIT
             // 
             this.checkBoxFIT.AutoSize = true;
-            this.checkBoxFIT.Location = new System.Drawing.Point(13, 558);
+            this.checkBoxFIT.Location = new System.Drawing.Point(13, 534);
             this.checkBoxFIT.Name = "checkBoxFIT";
             this.checkBoxFIT.Size = new System.Drawing.Size(42, 17);
             this.checkBoxFIT.TabIndex = 34;
@@ -476,7 +477,7 @@ namespace Interpretor_NDC
             // checkBoxXMLConfigurationDownload
             // 
             this.checkBoxXMLConfigurationDownload.AutoSize = true;
-            this.checkBoxXMLConfigurationDownload.Location = new System.Drawing.Point(214, 489);
+            this.checkBoxXMLConfigurationDownload.Location = new System.Drawing.Point(464, 442);
             this.checkBoxXMLConfigurationDownload.Name = "checkBoxXMLConfigurationDownload";
             this.checkBoxXMLConfigurationDownload.Size = new System.Drawing.Size(164, 17);
             this.checkBoxXMLConfigurationDownload.TabIndex = 39;
@@ -486,7 +487,7 @@ namespace Interpretor_NDC
             // checkBoxConfigurationParameters
             // 
             this.checkBoxConfigurationParameters.AutoSize = true;
-            this.checkBoxConfigurationParameters.Location = new System.Drawing.Point(13, 535);
+            this.checkBoxConfigurationParameters.Location = new System.Drawing.Point(13, 511);
             this.checkBoxConfigurationParameters.Name = "checkBoxConfigurationParameters";
             this.checkBoxConfigurationParameters.Size = new System.Drawing.Size(144, 17);
             this.checkBoxConfigurationParameters.TabIndex = 35;
@@ -496,7 +497,7 @@ namespace Interpretor_NDC
             // checkBoxMACFieldSelection
             // 
             this.checkBoxMACFieldSelection.AutoSize = true;
-            this.checkBoxMACFieldSelection.Location = new System.Drawing.Point(13, 626);
+            this.checkBoxMACFieldSelection.Location = new System.Drawing.Point(215, 488);
             this.checkBoxMACFieldSelection.Name = "checkBoxMACFieldSelection";
             this.checkBoxMACFieldSelection.Size = new System.Drawing.Size(121, 17);
             this.checkBoxMACFieldSelection.TabIndex = 38;
@@ -506,7 +507,7 @@ namespace Interpretor_NDC
             // checkBoxStateTables
             // 
             this.checkBoxStateTables.AutoSize = true;
-            this.checkBoxStateTables.Location = new System.Drawing.Point(13, 512);
+            this.checkBoxStateTables.Location = new System.Drawing.Point(13, 488);
             this.checkBoxStateTables.Name = "checkBoxStateTables";
             this.checkBoxStateTables.Size = new System.Drawing.Size(86, 17);
             this.checkBoxStateTables.TabIndex = 36;
@@ -516,7 +517,7 @@ namespace Interpretor_NDC
             // checkBox1EnhancedConfigurationParameters
             // 
             this.checkBox1EnhancedConfigurationParameters.AutoSize = true;
-            this.checkBox1EnhancedConfigurationParameters.Location = new System.Drawing.Point(13, 603);
+            this.checkBox1EnhancedConfigurationParameters.Location = new System.Drawing.Point(215, 465);
             this.checkBox1EnhancedConfigurationParameters.Name = "checkBox1EnhancedConfigurationParameters";
             this.checkBox1EnhancedConfigurationParameters.Size = new System.Drawing.Size(196, 17);
             this.checkBox1EnhancedConfigurationParameters.TabIndex = 37;
@@ -557,6 +558,7 @@ namespace Interpretor_NDC
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Linen;
+            this.tabPage3.Controls.Add(this.checkBoxShowGrid);
             this.tabPage3.Controls.Add(this.checkBoxHexaScreen);
             this.tabPage3.Controls.Add(this.textBoxScreen);
             this.tabPage3.Controls.Add(this.listBoxScreenKeyboard);
@@ -567,6 +569,19 @@ namespace Interpretor_NDC
             this.tabPage3.Size = new System.Drawing.Size(1007, 703);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Screens";
+            // 
+            // checkBoxShowGrid
+            // 
+            this.checkBoxShowGrid.AutoSize = true;
+            this.checkBoxShowGrid.Checked = true;
+            this.checkBoxShowGrid.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxShowGrid.Location = new System.Drawing.Point(90, 116);
+            this.checkBoxShowGrid.Name = "checkBoxShowGrid";
+            this.checkBoxShowGrid.Size = new System.Drawing.Size(73, 17);
+            this.checkBoxShowGrid.TabIndex = 4;
+            this.checkBoxShowGrid.Text = "Show grid";
+            this.checkBoxShowGrid.UseVisualStyleBackColor = true;
+            this.checkBoxShowGrid.CheckedChanged += new System.EventHandler(this.checkBoxShowGrid_CheckedChanged);
             // 
             // checkBoxHexaScreen
             // 
@@ -1889,6 +1904,7 @@ namespace Interpretor_NDC
         private System.Windows.Forms.CheckBox checkBoxMACFieldSelection;
         private System.Windows.Forms.CheckBox checkBoxStateTables;
         private System.Windows.Forms.CheckBox checkBox1EnhancedConfigurationParameters;
+        private System.Windows.Forms.CheckBox checkBoxShowGrid;
     }
 }
 
