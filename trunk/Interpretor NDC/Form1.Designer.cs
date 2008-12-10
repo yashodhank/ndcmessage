@@ -68,7 +68,6 @@ namespace Interpretor_NDC
             this.checkBoxHexaScreen = new System.Windows.Forms.CheckBox();
             this.textBoxScreen = new System.Windows.Forms.TextBox();
             this.listBoxScreenKeyboard = new System.Windows.Forms.ListBox();
-            this.buttonDeschideScreensTDB = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -562,7 +561,6 @@ namespace Interpretor_NDC
             this.tabPage3.Controls.Add(this.checkBoxHexaScreen);
             this.tabPage3.Controls.Add(this.textBoxScreen);
             this.tabPage3.Controls.Add(this.listBoxScreenKeyboard);
-            this.tabPage3.Controls.Add(this.buttonDeschideScreensTDB);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -573,8 +571,6 @@ namespace Interpretor_NDC
             // checkBoxShowGrid
             // 
             this.checkBoxShowGrid.AutoSize = true;
-            this.checkBoxShowGrid.Checked = true;
-            this.checkBoxShowGrid.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxShowGrid.Location = new System.Drawing.Point(90, 116);
             this.checkBoxShowGrid.Name = "checkBoxShowGrid";
             this.checkBoxShowGrid.Size = new System.Drawing.Size(73, 17);
@@ -586,7 +582,7 @@ namespace Interpretor_NDC
             // checkBoxHexaScreen
             // 
             this.checkBoxHexaScreen.AutoSize = true;
-            this.checkBoxHexaScreen.Location = new System.Drawing.Point(175, 13);
+            this.checkBoxHexaScreen.Location = new System.Drawing.Point(92, 13);
             this.checkBoxHexaScreen.Name = "checkBoxHexaScreen";
             this.checkBoxHexaScreen.Size = new System.Drawing.Size(67, 17);
             this.checkBoxHexaScreen.TabIndex = 3;
@@ -606,22 +602,12 @@ namespace Interpretor_NDC
             // listBoxScreenKeyboard
             // 
             this.listBoxScreenKeyboard.FormattingEnabled = true;
-            this.listBoxScreenKeyboard.Location = new System.Drawing.Point(4, 37);
+            this.listBoxScreenKeyboard.Location = new System.Drawing.Point(6, 6);
             this.listBoxScreenKeyboard.Name = "listBoxScreenKeyboard";
-            this.listBoxScreenKeyboard.Size = new System.Drawing.Size(80, 576);
+            this.listBoxScreenKeyboard.Size = new System.Drawing.Size(80, 381);
             this.listBoxScreenKeyboard.Sorted = true;
             this.listBoxScreenKeyboard.TabIndex = 1;
             this.listBoxScreenKeyboard.SelectedIndexChanged += new System.EventHandler(this.listBoxScreenKeyboard_SelectedIndexChanged);
-            // 
-            // buttonDeschideScreensTDB
-            // 
-            this.buttonDeschideScreensTDB.Location = new System.Drawing.Point(4, 7);
-            this.buttonDeschideScreensTDB.Name = "buttonDeschideScreensTDB";
-            this.buttonDeschideScreensTDB.Size = new System.Drawing.Size(164, 23);
-            this.buttonDeschideScreensTDB.TabIndex = 0;
-            this.buttonDeschideScreensTDB.Text = "Open Screen.tdb";
-            this.buttonDeschideScreensTDB.UseVisualStyleBackColor = true;
-            this.buttonDeschideScreensTDB.Click += new System.EventHandler(this.buttonDeschideScreensTDB_Click);
             // 
             // tabPage4
             // 
@@ -1772,7 +1758,6 @@ namespace Interpretor_NDC
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button buttonArataLog;
         private System.Windows.Forms.TextBox textBoxArataLog;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
@@ -1879,7 +1864,6 @@ namespace Interpretor_NDC
         private System.Windows.Forms.TextBox textBoxDescriptionPart28;
         private System.Windows.Forms.TextBox textBoxDescriptionPart27;
         private System.Windows.Forms.TextBox textBoxDescriptionPart26;
-        private System.Windows.Forms.Button buttonDeschideScreensTDB;
         private System.Windows.Forms.ListBox listBoxScreenKeyboard;
         private System.Windows.Forms.TextBox textBoxScreen;
         private System.Windows.Forms.CheckBox checkBoxHexaScreen;
@@ -1905,6 +1889,7 @@ namespace Interpretor_NDC
         private System.Windows.Forms.CheckBox checkBoxStateTables;
         private System.Windows.Forms.CheckBox checkBox1EnhancedConfigurationParameters;
         private System.Windows.Forms.CheckBox checkBoxShowGrid;
+        private System.Windows.Forms.Button buttonArataLog;
     }
 }
 
