@@ -625,7 +625,7 @@ namespace Interpretor_NDC
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1007, 703);
+            this.tabPage4.Size = new System.Drawing.Size(1007, 524);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "State Tabels";
             // 
