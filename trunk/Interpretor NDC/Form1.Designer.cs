@@ -64,6 +64,17 @@ namespace Interpretor_NDC
             this.textBoxArataLog = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.buttonPlaySubscreens = new System.Windows.Forms.Button();
+            this.buttonPlayIdleScreens = new System.Windows.Forms.Button();
+            this.buttonPlayVoices = new System.Windows.Forms.Button();
+            this.labelSubscreen = new System.Windows.Forms.Label();
+            this.labelIdleScreen = new System.Windows.Forms.Label();
+            this.labelDisplayImageFile = new System.Windows.Forms.Label();
+            this.labelPicture = new System.Windows.Forms.Label();
+            this.labelLogo = new System.Windows.Forms.Label();
+            this.labelGraphic = new System.Windows.Forms.Label();
+            this.labelVoice = new System.Windows.Forms.Label();
+            this.labelFF = new System.Windows.Forms.Label();
             this.checkBoxShowGrid = new System.Windows.Forms.CheckBox();
             this.checkBoxHexaScreen = new System.Windows.Forms.CheckBox();
             this.textBoxScreen = new System.Windows.Forms.TextBox();
@@ -557,6 +568,17 @@ namespace Interpretor_NDC
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Linen;
+            this.tabPage3.Controls.Add(this.buttonPlaySubscreens);
+            this.tabPage3.Controls.Add(this.buttonPlayIdleScreens);
+            this.tabPage3.Controls.Add(this.buttonPlayVoices);
+            this.tabPage3.Controls.Add(this.labelSubscreen);
+            this.tabPage3.Controls.Add(this.labelIdleScreen);
+            this.tabPage3.Controls.Add(this.labelDisplayImageFile);
+            this.tabPage3.Controls.Add(this.labelPicture);
+            this.tabPage3.Controls.Add(this.labelLogo);
+            this.tabPage3.Controls.Add(this.labelGraphic);
+            this.tabPage3.Controls.Add(this.labelVoice);
+            this.tabPage3.Controls.Add(this.labelFF);
             this.tabPage3.Controls.Add(this.checkBoxShowGrid);
             this.tabPage3.Controls.Add(this.checkBoxHexaScreen);
             this.tabPage3.Controls.Add(this.textBoxScreen);
@@ -567,6 +589,108 @@ namespace Interpretor_NDC
             this.tabPage3.Size = new System.Drawing.Size(1007, 703);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Screens";
+            // 
+            // buttonPlaySubscreens
+            // 
+            this.buttonPlaySubscreens.Location = new System.Drawing.Point(753, 337);
+            this.buttonPlaySubscreens.Name = "buttonPlaySubscreens";
+            this.buttonPlaySubscreens.Size = new System.Drawing.Size(134, 23);
+            this.buttonPlaySubscreens.TabIndex = 15;
+            this.buttonPlaySubscreens.Text = "Play Subscreens";
+            this.buttonPlaySubscreens.UseVisualStyleBackColor = true;
+            this.buttonPlaySubscreens.Click += new System.EventHandler(this.buttonPlaySubscreens_Click);
+            // 
+            // buttonPlayIdleScreens
+            // 
+            this.buttonPlayIdleScreens.Location = new System.Drawing.Point(753, 308);
+            this.buttonPlayIdleScreens.Name = "buttonPlayIdleScreens";
+            this.buttonPlayIdleScreens.Size = new System.Drawing.Size(134, 23);
+            this.buttonPlayIdleScreens.TabIndex = 14;
+            this.buttonPlayIdleScreens.Text = "Play Idle Screens";
+            this.buttonPlayIdleScreens.UseVisualStyleBackColor = true;
+            this.buttonPlayIdleScreens.Click += new System.EventHandler(this.buttonPlayIdleScreens_Click);
+            // 
+            // buttonPlayVoices
+            // 
+            this.buttonPlayVoices.Location = new System.Drawing.Point(753, 279);
+            this.buttonPlayVoices.Name = "buttonPlayVoices";
+            this.buttonPlayVoices.Size = new System.Drawing.Size(134, 23);
+            this.buttonPlayVoices.TabIndex = 13;
+            this.buttonPlayVoices.Text = "Play Voices";
+            this.buttonPlayVoices.UseVisualStyleBackColor = true;
+            this.buttonPlayVoices.Click += new System.EventHandler(this.buttonPlayVoices_Click);
+            // 
+            // labelSubscreen
+            // 
+            this.labelSubscreen.AutoSize = true;
+            this.labelSubscreen.Location = new System.Drawing.Point(750, 260);
+            this.labelSubscreen.Name = "labelSubscreen";
+            this.labelSubscreen.Size = new System.Drawing.Size(72, 13);
+            this.labelSubscreen.TabIndex = 12;
+            this.labelSubscreen.Text = "Subscreens : ";
+            // 
+            // labelIdleScreen
+            // 
+            this.labelIdleScreen.AutoSize = true;
+            this.labelIdleScreen.Location = new System.Drawing.Point(750, 240);
+            this.labelIdleScreen.Name = "labelIdleScreen";
+            this.labelIdleScreen.Size = new System.Drawing.Size(73, 13);
+            this.labelIdleScreen.TabIndex = 11;
+            this.labelIdleScreen.Text = "Idle screens : ";
+            // 
+            // labelDisplayImageFile
+            // 
+            this.labelDisplayImageFile.AutoSize = true;
+            this.labelDisplayImageFile.Location = new System.Drawing.Point(750, 220);
+            this.labelDisplayImageFile.Name = "labelDisplayImageFile";
+            this.labelDisplayImageFile.Size = new System.Drawing.Size(106, 13);
+            this.labelDisplayImageFile.TabIndex = 10;
+            this.labelDisplayImageFile.Text = "Display Image Files : ";
+            // 
+            // labelPicture
+            // 
+            this.labelPicture.AutoSize = true;
+            this.labelPicture.Location = new System.Drawing.Point(750, 200);
+            this.labelPicture.Name = "labelPicture";
+            this.labelPicture.Size = new System.Drawing.Size(54, 13);
+            this.labelPicture.TabIndex = 9;
+            this.labelPicture.Text = "Pictures : ";
+            // 
+            // labelLogo
+            // 
+            this.labelLogo.AutoSize = true;
+            this.labelLogo.Location = new System.Drawing.Point(750, 180);
+            this.labelLogo.Name = "labelLogo";
+            this.labelLogo.Size = new System.Drawing.Size(45, 13);
+            this.labelLogo.TabIndex = 8;
+            this.labelLogo.Text = "Logos : ";
+            // 
+            // labelGraphic
+            // 
+            this.labelGraphic.AutoSize = true;
+            this.labelGraphic.Location = new System.Drawing.Point(750, 160);
+            this.labelGraphic.Name = "labelGraphic";
+            this.labelGraphic.Size = new System.Drawing.Size(58, 13);
+            this.labelGraphic.TabIndex = 7;
+            this.labelGraphic.Text = "Graphics : ";
+            // 
+            // labelVoice
+            // 
+            this.labelVoice.AutoSize = true;
+            this.labelVoice.Location = new System.Drawing.Point(750, 140);
+            this.labelVoice.Name = "labelVoice";
+            this.labelVoice.Size = new System.Drawing.Size(48, 13);
+            this.labelVoice.TabIndex = 6;
+            this.labelVoice.Text = "Voices : ";
+            // 
+            // labelFF
+            // 
+            this.labelFF.AutoSize = true;
+            this.labelFF.Location = new System.Drawing.Point(750, 120);
+            this.labelFF.Name = "labelFF";
+            this.labelFF.Size = new System.Drawing.Size(68, 13);
+            this.labelFF.TabIndex = 5;
+            this.labelFF.Text = "whitout <FF>";
             // 
             // checkBoxShowGrid
             // 
@@ -625,7 +749,7 @@ namespace Interpretor_NDC
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1007, 524);
+            this.tabPage4.Size = new System.Drawing.Size(1007, 703);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "State Tabels";
             // 
@@ -1890,6 +2014,17 @@ namespace Interpretor_NDC
         private System.Windows.Forms.CheckBox checkBox1EnhancedConfigurationParameters;
         private System.Windows.Forms.CheckBox checkBoxShowGrid;
         private System.Windows.Forms.Button buttonArataLog;
+        private System.Windows.Forms.Label labelFF;
+        private System.Windows.Forms.Label labelVoice;
+        private System.Windows.Forms.Label labelLogo;
+        private System.Windows.Forms.Label labelGraphic;
+        private System.Windows.Forms.Label labelDisplayImageFile;
+        private System.Windows.Forms.Label labelPicture;
+        private System.Windows.Forms.Label labelSubscreen;
+        private System.Windows.Forms.Label labelIdleScreen;
+        private System.Windows.Forms.Button buttonPlaySubscreens;
+        private System.Windows.Forms.Button buttonPlayIdleScreens;
+        private System.Windows.Forms.Button buttonPlayVoices;
     }
 }
 
