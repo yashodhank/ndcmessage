@@ -184,6 +184,8 @@ namespace Interpretor_NDC
             this.listBoxStateTabels = new System.Windows.Forms.ListBox();
             this.buttonOpenStateTabels = new System.Windows.Forms.Button();
             this.panelDrawStates = new System.Windows.Forms.Panel();
+            this.labelGoToIdleScreen = new System.Windows.Forms.Label();
+            this.labelGoToSubscreen = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -569,6 +571,8 @@ namespace Interpretor_NDC
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Linen;
+            this.tabPage3.Controls.Add(this.labelGoToSubscreen);
+            this.tabPage3.Controls.Add(this.labelGoToIdleScreen);
             this.tabPage3.Controls.Add(this.buttonRefresh);
             this.tabPage3.Controls.Add(this.buttonPlaySubscreens);
             this.tabPage3.Controls.Add(this.buttonPlayIdleScreens);
@@ -1851,6 +1855,24 @@ namespace Interpretor_NDC
             this.panelDrawStates.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDrawStates_Paint);
             this.panelDrawStates.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panelDrawStates_Scroll);
             // 
+            // labelGoToIdleScreen
+            // 
+            this.labelGoToIdleScreen.AutoSize = true;
+            this.labelGoToIdleScreen.Location = new System.Drawing.Point(92, 636);
+            this.labelGoToIdleScreen.Name = "labelGoToIdleScreen";
+            this.labelGoToIdleScreen.Size = new System.Drawing.Size(96, 13);
+            this.labelGoToIdleScreen.TabIndex = 17;
+            this.labelGoToIdleScreen.Text = "Go to idle screen : ";
+            // 
+            // labelGoToSubscreen
+            // 
+            this.labelGoToSubscreen.AutoSize = true;
+            this.labelGoToSubscreen.Location = new System.Drawing.Point(92, 669);
+            this.labelGoToSubscreen.Name = "labelGoToSubscreen";
+            this.labelGoToSubscreen.Size = new System.Drawing.Size(94, 13);
+            this.labelGoToSubscreen.TabIndex = 18;
+            this.labelGoToSubscreen.Text = "Go to subscreen : ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2038,6 +2060,8 @@ namespace Interpretor_NDC
         private System.Windows.Forms.Button buttonPlayIdleScreens;
         private System.Windows.Forms.Button buttonPlayVoices;
         private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.Label labelGoToSubscreen;
+        private System.Windows.Forms.Label labelGoToIdleScreen;
     }
 }
 
