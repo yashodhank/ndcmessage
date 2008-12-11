@@ -64,6 +64,7 @@ namespace Interpretor_NDC
             this.textBoxArataLog = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonPlaySubscreens = new System.Windows.Forms.Button();
             this.buttonPlayIdleScreens = new System.Windows.Forms.Button();
             this.buttonPlayVoices = new System.Windows.Forms.Button();
@@ -381,7 +382,7 @@ namespace Interpretor_NDC
             this.textBoxMessageIn.Name = "textBoxMessageIn";
             this.textBoxMessageIn.ReadOnly = true;
             this.textBoxMessageIn.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxMessageIn.Size = new System.Drawing.Size(670, 147);
+            this.textBoxMessageIn.Size = new System.Drawing.Size(891, 147);
             this.textBoxMessageIn.TabIndex = 29;
             // 
             // checkBoxEncryptionKeyChange
@@ -568,6 +569,7 @@ namespace Interpretor_NDC
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Linen;
+            this.tabPage3.Controls.Add(this.buttonRefresh);
             this.tabPage3.Controls.Add(this.buttonPlaySubscreens);
             this.tabPage3.Controls.Add(this.buttonPlayIdleScreens);
             this.tabPage3.Controls.Add(this.buttonPlayVoices);
@@ -589,6 +591,16 @@ namespace Interpretor_NDC
             this.tabPage3.Size = new System.Drawing.Size(1007, 703);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Screens";
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Location = new System.Drawing.Point(90, 90);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(75, 21);
+            this.buttonRefresh.TabIndex = 16;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // buttonPlaySubscreens
             // 
@@ -695,7 +707,7 @@ namespace Interpretor_NDC
             // checkBoxShowGrid
             // 
             this.checkBoxShowGrid.AutoSize = true;
-            this.checkBoxShowGrid.Location = new System.Drawing.Point(90, 116);
+            this.checkBoxShowGrid.Location = new System.Drawing.Point(90, 115);
             this.checkBoxShowGrid.Name = "checkBoxShowGrid";
             this.checkBoxShowGrid.Size = new System.Drawing.Size(73, 17);
             this.checkBoxShowGrid.TabIndex = 4;
@@ -706,7 +718,7 @@ namespace Interpretor_NDC
             // checkBoxHexaScreen
             // 
             this.checkBoxHexaScreen.AutoSize = true;
-            this.checkBoxHexaScreen.Location = new System.Drawing.Point(92, 13);
+            this.checkBoxHexaScreen.Location = new System.Drawing.Point(90, 6);
             this.checkBoxHexaScreen.Name = "checkBoxHexaScreen";
             this.checkBoxHexaScreen.Size = new System.Drawing.Size(67, 17);
             this.checkBoxHexaScreen.TabIndex = 3;
@@ -716,11 +728,11 @@ namespace Interpretor_NDC
             // 
             // textBoxScreen
             // 
-            this.textBoxScreen.Location = new System.Drawing.Point(90, 36);
+            this.textBoxScreen.Location = new System.Drawing.Point(90, 29);
             this.textBoxScreen.Multiline = true;
             this.textBoxScreen.Name = "textBoxScreen";
             this.textBoxScreen.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxScreen.Size = new System.Drawing.Size(914, 53);
+            this.textBoxScreen.Size = new System.Drawing.Size(909, 53);
             this.textBoxScreen.TabIndex = 2;
             // 
             // listBoxScreenKeyboard
@@ -728,7 +740,7 @@ namespace Interpretor_NDC
             this.listBoxScreenKeyboard.FormattingEnabled = true;
             this.listBoxScreenKeyboard.Location = new System.Drawing.Point(6, 6);
             this.listBoxScreenKeyboard.Name = "listBoxScreenKeyboard";
-            this.listBoxScreenKeyboard.Size = new System.Drawing.Size(80, 381);
+            this.listBoxScreenKeyboard.Size = new System.Drawing.Size(80, 693);
             this.listBoxScreenKeyboard.Sorted = true;
             this.listBoxScreenKeyboard.TabIndex = 1;
             this.listBoxScreenKeyboard.SelectedIndexChanged += new System.EventHandler(this.listBoxScreenKeyboard_SelectedIndexChanged);
@@ -2025,6 +2037,7 @@ namespace Interpretor_NDC
         private System.Windows.Forms.Button buttonPlaySubscreens;
         private System.Windows.Forms.Button buttonPlayIdleScreens;
         private System.Windows.Forms.Button buttonPlayVoices;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }
 
