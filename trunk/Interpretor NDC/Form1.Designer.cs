@@ -787,6 +787,7 @@ namespace Interpretor_NDC
             this.textBoxScreen.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxScreen.Size = new System.Drawing.Size(909, 53);
             this.textBoxScreen.TabIndex = 2;
+            this.textBoxScreen.TextChanged += new System.EventHandler(this.textBoxScreen_TextChanged);
             // 
             // listBoxScreenKeyboard
             // 
