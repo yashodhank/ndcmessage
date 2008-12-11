@@ -64,6 +64,11 @@ namespace Interpretor_NDC
             this.textBoxArataLog = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBoxScreenView = new System.Windows.Forms.TextBox();
+            this.comboBoxSubscreen = new System.Windows.Forms.ComboBox();
+            this.comboBoxIdleScreen = new System.Windows.Forms.ComboBox();
+            this.labelGoToSubscreen = new System.Windows.Forms.Label();
+            this.labelGoToIdleScreen = new System.Windows.Forms.Label();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonPlaySubscreens = new System.Windows.Forms.Button();
             this.buttonPlayIdleScreens = new System.Windows.Forms.Button();
@@ -184,8 +189,6 @@ namespace Interpretor_NDC
             this.listBoxStateTabels = new System.Windows.Forms.ListBox();
             this.buttonOpenStateTabels = new System.Windows.Forms.Button();
             this.panelDrawStates = new System.Windows.Forms.Panel();
-            this.labelGoToIdleScreen = new System.Windows.Forms.Label();
-            this.labelGoToSubscreen = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -571,6 +574,9 @@ namespace Interpretor_NDC
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Linen;
+            this.tabPage3.Controls.Add(this.textBoxScreenView);
+            this.tabPage3.Controls.Add(this.comboBoxSubscreen);
+            this.tabPage3.Controls.Add(this.comboBoxIdleScreen);
             this.tabPage3.Controls.Add(this.labelGoToSubscreen);
             this.tabPage3.Controls.Add(this.labelGoToIdleScreen);
             this.tabPage3.Controls.Add(this.buttonRefresh);
@@ -596,9 +602,52 @@ namespace Interpretor_NDC
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Screens";
             // 
+            // textBoxScreenView
+            // 
+            this.textBoxScreenView.Location = new System.Drawing.Point(93, 110);
+            this.textBoxScreenView.Name = "textBoxScreenView";
+            this.textBoxScreenView.Size = new System.Drawing.Size(37, 20);
+            this.textBoxScreenView.TabIndex = 21;
+            // 
+            // comboBoxSubscreen
+            // 
+            this.comboBoxSubscreen.FormattingEnabled = true;
+            this.comboBoxSubscreen.Location = new System.Drawing.Point(364, 633);
+            this.comboBoxSubscreen.Name = "comboBoxSubscreen";
+            this.comboBoxSubscreen.Size = new System.Drawing.Size(46, 21);
+            this.comboBoxSubscreen.TabIndex = 20;
+            this.comboBoxSubscreen.SelectedIndexChanged += new System.EventHandler(this.comboBoxSubscreen_SelectedIndexChanged);
+            // 
+            // comboBoxIdleScreen
+            // 
+            this.comboBoxIdleScreen.FormattingEnabled = true;
+            this.comboBoxIdleScreen.Location = new System.Drawing.Point(194, 633);
+            this.comboBoxIdleScreen.Name = "comboBoxIdleScreen";
+            this.comboBoxIdleScreen.Size = new System.Drawing.Size(46, 21);
+            this.comboBoxIdleScreen.TabIndex = 19;
+            this.comboBoxIdleScreen.SelectedIndexChanged += new System.EventHandler(this.comboBoxIdleScreen_SelectedIndexChanged);
+            // 
+            // labelGoToSubscreen
+            // 
+            this.labelGoToSubscreen.AutoSize = true;
+            this.labelGoToSubscreen.Location = new System.Drawing.Point(264, 636);
+            this.labelGoToSubscreen.Name = "labelGoToSubscreen";
+            this.labelGoToSubscreen.Size = new System.Drawing.Size(94, 13);
+            this.labelGoToSubscreen.TabIndex = 18;
+            this.labelGoToSubscreen.Text = "Go to subscreen : ";
+            // 
+            // labelGoToIdleScreen
+            // 
+            this.labelGoToIdleScreen.AutoSize = true;
+            this.labelGoToIdleScreen.Location = new System.Drawing.Point(92, 636);
+            this.labelGoToIdleScreen.Name = "labelGoToIdleScreen";
+            this.labelGoToIdleScreen.Size = new System.Drawing.Size(96, 13);
+            this.labelGoToIdleScreen.TabIndex = 17;
+            this.labelGoToIdleScreen.Text = "Go to idle screen : ";
+            // 
             // buttonRefresh
             // 
-            this.buttonRefresh.Location = new System.Drawing.Point(90, 90);
+            this.buttonRefresh.Location = new System.Drawing.Point(141, 88);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(75, 21);
             this.buttonRefresh.TabIndex = 16;
@@ -711,7 +760,7 @@ namespace Interpretor_NDC
             // checkBoxShowGrid
             // 
             this.checkBoxShowGrid.AutoSize = true;
-            this.checkBoxShowGrid.Location = new System.Drawing.Point(90, 115);
+            this.checkBoxShowGrid.Location = new System.Drawing.Point(141, 116);
             this.checkBoxShowGrid.Name = "checkBoxShowGrid";
             this.checkBoxShowGrid.Size = new System.Drawing.Size(73, 17);
             this.checkBoxShowGrid.TabIndex = 4;
@@ -1855,24 +1904,6 @@ namespace Interpretor_NDC
             this.panelDrawStates.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDrawStates_Paint);
             this.panelDrawStates.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panelDrawStates_Scroll);
             // 
-            // labelGoToIdleScreen
-            // 
-            this.labelGoToIdleScreen.AutoSize = true;
-            this.labelGoToIdleScreen.Location = new System.Drawing.Point(92, 636);
-            this.labelGoToIdleScreen.Name = "labelGoToIdleScreen";
-            this.labelGoToIdleScreen.Size = new System.Drawing.Size(96, 13);
-            this.labelGoToIdleScreen.TabIndex = 17;
-            this.labelGoToIdleScreen.Text = "Go to idle screen : ";
-            // 
-            // labelGoToSubscreen
-            // 
-            this.labelGoToSubscreen.AutoSize = true;
-            this.labelGoToSubscreen.Location = new System.Drawing.Point(92, 669);
-            this.labelGoToSubscreen.Name = "labelGoToSubscreen";
-            this.labelGoToSubscreen.Size = new System.Drawing.Size(94, 13);
-            this.labelGoToSubscreen.TabIndex = 18;
-            this.labelGoToSubscreen.Text = "Go to subscreen : ";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2062,6 +2093,9 @@ namespace Interpretor_NDC
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Label labelGoToSubscreen;
         private System.Windows.Forms.Label labelGoToIdleScreen;
+        private System.Windows.Forms.ComboBox comboBoxIdleScreen;
+        private System.Windows.Forms.ComboBox comboBoxSubscreen;
+        private System.Windows.Forms.TextBox textBoxScreenView;
     }
 }
 
