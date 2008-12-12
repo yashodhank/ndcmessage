@@ -42,7 +42,7 @@
     <Compile Include="EnhancedConfigurationParametersLoad.cs" />
     <Compile Include="FITDataLoad.cs" />
     <Compile Include="Form1.cs">
-      <SubType>Component</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -83,8 +83,9 @@
     <Content Include="C:\Config.xml">
       <Link>bin\Debug\Config.xml</Link>
     </Content>
-    <None Include="Resources\Screen.bmp" />
-    <None Include="Resources\Screen.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
