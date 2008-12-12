@@ -59,11 +59,5 @@ namespace Interpretor_NDC.Properties {
                 resourceCulture = value;
             }
         }
-        internal static System.Drawing.Bitmap Screen2 {
-            get {
-                object obj = ResourceManager.GetObject("Screen2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

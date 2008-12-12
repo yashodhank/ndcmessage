@@ -832,7 +832,6 @@ namespace Interpretor_NDC
             this.button2.TabIndex = 34;
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
@@ -843,7 +842,7 @@ namespace Interpretor_NDC
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(161, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(843, 341);
+            this.panel1.Size = new System.Drawing.Size(843, 183);
             this.panel1.TabIndex = 29;
             // 
             // groupBox3
@@ -1083,7 +1082,6 @@ namespace Interpretor_NDC
             this.label22.Size = new System.Drawing.Size(41, 13);
             this.label22.TabIndex = 39;
             this.label22.Text = "label22";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label23
             // 
@@ -1121,7 +1119,6 @@ namespace Interpretor_NDC
             this.label26.Size = new System.Drawing.Size(41, 13);
             this.label26.TabIndex = 38;
             this.label26.Text = "label26";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label27
             // 
@@ -1396,7 +1393,6 @@ namespace Interpretor_NDC
             this.label11.Size = new System.Drawing.Size(41, 13);
             this.label11.TabIndex = 29;
             this.label11.Text = "label11";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label20
             // 
@@ -1434,7 +1430,6 @@ namespace Interpretor_NDC
             this.label12.Size = new System.Drawing.Size(41, 13);
             this.label12.TabIndex = 18;
             this.label12.Text = "label12";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label17
             // 
@@ -1617,7 +1612,6 @@ namespace Interpretor_NDC
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 29;
             this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // textBoxDescriptionPart3
             // 
@@ -1736,7 +1730,6 @@ namespace Interpretor_NDC
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 18;
             this.label2.Text = "label2";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label7
             // 
@@ -1793,7 +1786,6 @@ namespace Interpretor_NDC
             this.button1.TabIndex = 0;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonClearMap
             // 
@@ -1803,7 +1795,6 @@ namespace Interpretor_NDC
             this.buttonClearMap.TabIndex = 33;
             this.buttonClearMap.Text = "Clear Map";
             this.buttonClearMap.UseVisualStyleBackColor = true;
-            this.buttonClearMap.Click += new System.EventHandler(this.buttonClearMap_Click);
             // 
             // buttonGenerateMap
             // 
@@ -1813,7 +1804,6 @@ namespace Interpretor_NDC
             this.buttonGenerateMap.TabIndex = 32;
             this.buttonGenerateMap.Text = "Generate Map";
             this.buttonGenerateMap.UseVisualStyleBackColor = true;
-            this.buttonGenerateMap.Click += new System.EventHandler(this.buttonGenerateMap_Click);
             // 
             // labelViewStateType
             // 
@@ -1898,12 +1888,10 @@ namespace Interpretor_NDC
             // 
             this.panelDrawStates.AutoScroll = true;
             this.panelDrawStates.BackColor = System.Drawing.Color.Coral;
-            this.panelDrawStates.Location = new System.Drawing.Point(161, 353);
+            this.panelDrawStates.Location = new System.Drawing.Point(161, 196);
             this.panelDrawStates.Name = "panelDrawStates";
-            this.panelDrawStates.Size = new System.Drawing.Size(839, 344);
+            this.panelDrawStates.Size = new System.Drawing.Size(839, 502);
             this.panelDrawStates.TabIndex = 31;
-            this.panelDrawStates.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDrawStates_Paint);
-            this.panelDrawStates.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panelDrawStates_Scroll);
             // 
             // Form1
             // 
