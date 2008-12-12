@@ -623,26 +623,83 @@
       <Mask part1="DATA" part2="DATA" part3="DATA" part4="DATA" part5="DATA" part6="DATA" part7="DATA" part8="DATA" />
     </ExtensionState>
   </State>
+
+  <STATES>
+    <State name = "A" extended = "0">
+      <Part1  value = "###"  mask = "STATE_NUMBER"     name = "State number" description = "State number"/>
+      <Part2  value = "#"    mask = "TYPE_STATE"       name = "Tyoe" description = "Card Read State"/>
+      <Part3  value = "###"  mask = "SCREEN_DISPLAY"   name = "Screen Number" description = "Display screen that prompts the cardholder to enter the card. While the terminal is waiting for card entry, this screen is displayed."/>
+      <Part4  value = "###"  mask = "STATE_OK"         name = "Good Read Next State Number" description = "State number to which the terminal goes: \r\n1. Following a good read of the card if FITs are not used (Table entry 9 = 000) \r\nor 2. If the Financial Institution number on the card matches a Financial Institution number in a FIT."/>
+      <Part5  value = "###"  mask = "STATE_ERROR"      name = "Error (Misread) Screen Number" description = "If the read conditions are not satisfied due to a bad card or a mechanism error, the card is ejected and this screen is displayed."/>
+      <Part6  value = "###"  mask = "DATA"             name = "Read Condition 1" description = "These three entries specify which card track(s)and/or chip data will be read. The possible values for these entries are shown below this table."/>
+      <Part7  value = "###"  mask = "DATA"             name = "Read Condition 2" description = "These three entries specify which card track(s)and/or chip data will be read. The possible values for these entries are shown below this table."/>
+      <Part8  value = "###"  mask = "DATA"             name = "Read Condition 3" description = "These three entries specify which card track(s)and/or chip data will be read. The possible values for these entries are shown below this table."/>
+      <Part9  value = "###"  mask = "DATA"             name = "Card Return Flag" description = "Tells the terminal when the card should be returned to the cardholder:\r\n000 - eject the card immediately.\r\n001 - return the card as specified by a Transaction Reply command message."/>
+      <Part10 value = "###"  mask = "STATE_ERROR"      name = "No FIT Match Next State Number" description = "State number to which the terminal goes if either the Financial Institution number on the card does not match any FIT, or if the card reader is a smart card reader and the read condition being evaluated has the chip connect bit set (bit 3). If FITs are not used this entry must be 000."/>
+    </State>
+    <State name = "B" extended = "0">
+      <Part1  value = "###"  mask = "STATE_NUMBER"     name = "State number" description = "State number"/>
+      <Part2  value = "#"    mask = "TYPE_STATE"       name = "Type" description = "PIN Entry State"/>
+      <Part3  value = "###"  mask = "SCREEN_DISPLAY"   name = "Screen number" description = "Display screen that prompts the cardholder to enter the PIN the first time. This screen, which is displayed on entering the PIN Entry state, must leave the cardholder screen cursor at the start of the PIN Entry display area. An ‘X’ is displayed for each key pressed."/>
+      <Part4  value = "###"  mask = "SCREEN_TIME_OUT"  name = "Time-Out Next State Number" description = "State number to which the terminal goes if the cardholder does not enter the PIN within the permitted time limit. Enter 255 if the time-out function is not required."/>
+      <Part5  value = "###"  mask = "STATE_CANCEL"     name = "Cancel Next State Number" description = "State number to which the terminal goes if the cardholder presses the Cancel key before the maximum number of digits specified for the PIN have been entered."/>
+      <Part6  value = "###"  mask = "STATE_OK"         name = "Local PIN Check Good PIN" description = "State number to which the terminal goes after verification of a correct PIN entry. A Pre-Set Operation Code Buffer state (clearing the function key buffer before Transaction Selection) usually follows a correct PIN entry."/>
+      <Part7  value = "###"  mask = "STATE_ERROR"      name = "Local PIN Check Maximum Bad" description = "State number to which the terminal goes if the correct PIN has not been entered after the number of attempts allowed by table entry 9. The terminal normally enters a Close state if this occurs."/>
+      <Part8  value = "###"  mask = "SCREEN_ERROR"     name = "Local PIN Check Error Screen Number" description = "Display screen that prompts the cardholder to reenter the PIN. This screen is displayed after each incorrect PIN entry attempt. An ‘X’ is displayed for each key pressed. After the number of re-entry attempts allowed by table entry 9, the terminal enters the state determined by table entry 6."/>
+      <Part9  value = "###"  mask = "STATE_ERROR"      name = "Remote PIN Check Next State Number" description = "State number to which the terminal goes when local PIN verification is not performed."/>
+      <Part10 value = "###"  mask = "DATA"             name = "Local PIN Check Maximum PIN retries" description = "Maximum number of incorrect PIN entries allowed before the terminal enters the state determined by table entry 6."/>
+    </State>
+    <State name = "C" extended = "0">
+      <Part1  value = "###"  mask = "STATE_NUMBER"     name = "State number" description = "State number"/>
+      <Part2  value = "#"    mask = "TYPE_STATE"       name = "Type"  description = "Envelope Dispenser State"/>
+      <Part3  value = "###"  mask = "STATE_OK"         name = "Next State Number" description = "State number that the terminal enters immediately or after an envelope is presented."/>
+      <Part4  value = "###"  mask = "RESERVED"         name = "Must be 000" description = "Reserved"/>
+      <Part5  value = "###"  mask = "RESERVED"         name = "Must be 000" description = "Reserved"/>
+      <Part6  value = "###"  mask = "RESERVED"         name = "Must be 000" description = "Reserved"/>
+      <Part7  value = "###"  mask = "RESERVED"         name = "Must be 000" description = "Reserved"/>
+      <Part8  value = "###"  mask = "RESERVED"         name = "Must be 000" description = "Reserved"/>
+      <Part9  value = "###"  mask = "RESERVED"         name = "Must be 000" description = "Reserved"/>
+      <Part10 value = "###"  mask = "RESERVED"         name = "Must be 000" description = "Reserved"/>
+    </State>
+    <State name = "D" extended = "1">
+      <Part1  value = "###"  mask = "STATE_NUMBER"     name = "State number" description = "State number"/>
+      <Part2  value = "#"    mask = "TYPE_STATE"       name = "Type"  description = "Pre-Set Operation Code Buffer State"/>
+      <Part3  value = "###"  mask = "STATE_OK"         name = "Next State Number" description = "State number to which the terminal goes after presetting the Operation Code buffer."/>
+      <Part4  value = "###"  mask = "DATA"             name = "Clear Mask" description = "Specifies bytes of Operation Code buffer to be cleared to graphic ‘space’. Each bit relates to a byte in the Operation Code buffer. If a bit is zero, the corresponding entry is cleared. If a bit is one, the corresponding entry is unchanged. See Table Note 3."/>
+      <Part5  value = "###"  mask = "DATA"             name = "‘A’ Pre-Set Mask" description = "The buffer contains eight bytes. This entry sets the specified bytes to ‘C’. If a bit is one, the corresponding entry is set to ‘A’. If a bit is zero, the corresponding entry is unchanged. See Table Note 3."/>
+      <Part6  value = "###"  mask = "DATA"             name = "‘B’ Pre-Set Mask" description = "The buffer contains eight bytes. This entry sets the specified bytes to ‘C’. If a bit is one, the corresponding entry is set to ‘B’. If a bit is zero, the corresponding entry is unchanged. See Table Note 3."/>
+      <Part7  value = "###"  mask = "DATA"             name = "‘C’ Pre-Set Mask" description = "The buffer contains eight bytes. This entry sets the specified bytes to ‘C’. If a bit is one, the corresponding entry is set to ‘C’. If a bit is zero, the corresponding entry is unchanged. See Table Note 3."/>
+      <Part8  value = "###"  mask = "DATA"             name = "‘D’ Pre-Set Mask" description = "The buffer contains eight bytes. This entry sets the specified bytes to ‘D’. If a bit is one, the corresponding entry is set to ‘D’. If a bit is zero, the corresponding entry is unchanged. See Table Note 3."/>
+      <Part9  value = "###"  mask = "REDERVED"         name = "Must be 000 for each entry" description = "Reserved"/>
+      <Part10 value = "###"  mask = "STATE_EXTENDED"   name = "Extension State Number" description = "State number of the Extension state containing information on how the other operation codes are pre-set."/>
+      <!--Extended 1-->
+      <Part11 value = "###"  mask = "STATE_EXTENDED"   name = "State extended" description = "State extended"/>
+      <Part12 value = "#"    mask = "TYPE_STATE"       name = "Type" description = "Extension to State D"/>
+      <Part13 value = "###"  mask = "DATA"             name = "‘F’ Pre-Set Mask" description = "The buffer contains eight bytes. This entry sets the specified bytes to ‘F’. If a bit is one, the corresponding entry is set to ‘F’. If a bit is zero, the corresponding entry is unchanged. See Table Note 3."/>
+      <Part14 value = "###"  mask = "DATA"             name = "‘G’ Pre-Set Mask" description = "The buffer contains eight bytes. This entry sets the specified bytes to ‘G’. If a bit is one, the corresponding entry is set to ‘G’. If a bit is zero, the corresponding entry is unchanged. See Table Note 3."/>
+      <Part15 value = "###"  mask = "DATA"             name = "‘H’ Pre-Set Mask" description = "The buffer contains eight bytes. This entry sets the specified bytes to ‘H’. If a bit is one, the corresponding entry is set to ‘H’. If a bit is zero, the corresponding entry is unchanged. See Table Note 3."/>
+      <Part16 value = "###"  mask = "DATA"             name = "‘I’ Pre-Set Mask" description = "The buffer contains eight bytes. This entry sets the specified bytes to ‘I’. If a bit is one, the corresponding entry is set to ‘I’. If a bit is zero, the corresponding entry is unchanged. See Table Note 3."/>
+      <Part17 value = "###"  mask = "RESERVED"         name = "Must be 000" description = "Reserved"/>
+      <Part18 value = "###"  mask = "RESERVED"         name = "Must be 000" description = "Reserved"/>
+      <Part19 value = "###"  mask = "RESERVED"         name = "Must be 000" description = "Reserved"/>
+      <Part20 value = "###"  mask = "RESERVED"         name = "Must be 000" description = "Reserved"/>
+    </State>
+
+
   
 </STATES>
-
-<!--MASCA
-  <State type = ""  descriptionType = ""  
-                    numePart1 = ""
-                    numePart2 = "" 
-                    numePart3 = ""
-                    numePart4 = ""
-                    numePart5 = ""
-                    numePart6 = ""
-                    numePart7 = ""
-                    numePart8 = ""
-                    descriprionPart1 = ""
-                    descriprionPart2 = ""
-                    descriprionPart3 = ""
-                    descriprionPart4 = ""
-                    descriprionPart5 = ""
-                    descriprionPart6 = ""
-                    descriprionPart7 = ""
-                    descriprionPart8 = ""
-   ></State>
+<!--
+    <State name = "" extended = "">
+      <Part1  value = "###"      mask = "STATE_NUMBER" name = "State number" description = "State number"/>
+      <Part2  value = "#"        mask = "TYPE_STATE"   name = "Type" description = ""/>
+      <Part3  value = "###"  mask = "" name = "" description = ""/>
+      <Part4  value = "###"  mask = "" name = "" description = ""/>
+      <Part5  value = "###"  mask = "" name = "" description = ""/>
+      <Part6  value = "###"  mask = "" name = "" description = ""/>
+      <Part7  value = "###"  mask = "" name = "" description = ""/>
+      <Part8  value = "###"  mask = "" name = "" description = ""/>
+      <Part9  value = "###"  mask = "" name = "" description = ""/>
+      <Part10 value = "###"  mask = "" name = "" description = ""/>
+    </State>
 -->
+
