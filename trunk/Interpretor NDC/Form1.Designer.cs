@@ -981,7 +981,7 @@ namespace Interpretor_NDC
             this.textBox26.Location = new System.Drawing.Point(6, 183);
             this.textBox26.Name = "textBox26";
             this.textBox26.ReadOnly = true;
-            this.textBox26.Size = new System.Drawing.Size(23, 20);
+            this.textBox26.Size = new System.Drawing.Size(27, 20);
             this.textBox26.TabIndex = 49;
             // 
             // textBox27
