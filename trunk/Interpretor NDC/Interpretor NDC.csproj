@@ -80,8 +80,7 @@
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\..\..\..\Config.xml">
-      <Link>bin\Debug\Config.xml</Link>
+    <Content Include="bin\Debug\Config.xml">
     </Content>
   </ItemGroup>
   <ItemGroup>
