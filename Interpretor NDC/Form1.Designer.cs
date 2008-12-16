@@ -86,6 +86,9 @@ namespace Interpretor_NDC
             this.textBoxScreen = new System.Windows.Forms.TextBox();
             this.listBoxScreenKeyboard = new System.Windows.Forms.ListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabControlState = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -193,6 +196,9 @@ namespace Interpretor_NDC
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.tabControlState.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -802,8 +808,8 @@ namespace Interpretor_NDC
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.Linen;
+            this.tabPage4.Controls.Add(this.tabControlState);
             this.tabPage4.Controls.Add(this.button2);
-            this.tabPage4.Controls.Add(this.panel1);
             this.tabPage4.Controls.Add(this.button1);
             this.tabPage4.Controls.Add(this.buttonClearMap);
             this.tabPage4.Controls.Add(this.buttonGenerateMap);
@@ -811,13 +817,44 @@ namespace Interpretor_NDC
             this.tabPage4.Controls.Add(this.comboBoxViewStateTabel);
             this.tabPage4.Controls.Add(this.listBoxStateTabels);
             this.tabPage4.Controls.Add(this.buttonOpenStateTabels);
-            this.tabPage4.Controls.Add(this.panelDrawStates);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1007, 703);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "State Tabels";
+            // 
+            // tabControlState
+            // 
+            this.tabControlState.Controls.Add(this.tabPage5);
+            this.tabControlState.Controls.Add(this.tabPage6);
+            this.tabControlState.Location = new System.Drawing.Point(151, 4);
+            this.tabControlState.Name = "tabControlState";
+            this.tabControlState.SelectedIndex = 0;
+            this.tabControlState.Size = new System.Drawing.Size(850, 693);
+            this.tabControlState.TabIndex = 35;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.panel1);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(842, 667);
+            this.tabPage5.TabIndex = 0;
+            this.tabPage5.Text = "Details";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.panelDrawStates);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(842, 667);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "Map";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -840,9 +877,9 @@ namespace Interpretor_NDC
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(161, 7);
+            this.panel1.Location = new System.Drawing.Point(-2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(843, 183);
+            this.panel1.Size = new System.Drawing.Size(843, 658);
             this.panel1.TabIndex = 29;
             // 
             // groupBox3
@@ -1860,7 +1897,7 @@ namespace Interpretor_NDC
             "/"});
             this.comboBoxViewStateTabel.Location = new System.Drawing.Point(91, 41);
             this.comboBoxViewStateTabel.Name = "comboBoxViewStateTabel";
-            this.comboBoxViewStateTabel.Size = new System.Drawing.Size(64, 21);
+            this.comboBoxViewStateTabel.Size = new System.Drawing.Size(55, 21);
             this.comboBoxViewStateTabel.TabIndex = 29;
             this.comboBoxViewStateTabel.SelectedIndexChanged += new System.EventHandler(this.comboBoxViewStateTabel_SelectedIndexChanged);
             // 
@@ -1870,7 +1907,7 @@ namespace Interpretor_NDC
             this.listBoxStateTabels.HorizontalScrollbar = true;
             this.listBoxStateTabels.Location = new System.Drawing.Point(6, 68);
             this.listBoxStateTabels.Name = "listBoxStateTabels";
-            this.listBoxStateTabels.Size = new System.Drawing.Size(149, 420);
+            this.listBoxStateTabels.Size = new System.Drawing.Size(140, 420);
             this.listBoxStateTabels.TabIndex = 1;
             this.listBoxStateTabels.SelectedIndexChanged += new System.EventHandler(this.listBoxStateTabels_SelectedIndexChanged);
             // 
@@ -1878,7 +1915,7 @@ namespace Interpretor_NDC
             // 
             this.buttonOpenStateTabels.Location = new System.Drawing.Point(4, 7);
             this.buttonOpenStateTabels.Name = "buttonOpenStateTabels";
-            this.buttonOpenStateTabels.Size = new System.Drawing.Size(151, 28);
+            this.buttonOpenStateTabels.Size = new System.Drawing.Size(142, 28);
             this.buttonOpenStateTabels.TabIndex = 0;
             this.buttonOpenStateTabels.Text = "Deschide State Tabels.tdb";
             this.buttonOpenStateTabels.UseVisualStyleBackColor = true;
@@ -1888,9 +1925,9 @@ namespace Interpretor_NDC
             // 
             this.panelDrawStates.AutoScroll = true;
             this.panelDrawStates.BackColor = System.Drawing.Color.Coral;
-            this.panelDrawStates.Location = new System.Drawing.Point(161, 196);
+            this.panelDrawStates.Location = new System.Drawing.Point(3, 3);
             this.panelDrawStates.Name = "panelDrawStates";
-            this.panelDrawStates.Size = new System.Drawing.Size(839, 502);
+            this.panelDrawStates.Size = new System.Drawing.Size(836, 664);
             this.panelDrawStates.TabIndex = 31;
             // 
             // Form1
@@ -1911,6 +1948,9 @@ namespace Interpretor_NDC
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.tabControlState.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -2085,6 +2125,9 @@ namespace Interpretor_NDC
         private System.Windows.Forms.ComboBox comboBoxIdleScreen;
         private System.Windows.Forms.ComboBox comboBoxSubscreen;
         private System.Windows.Forms.TextBox textBoxScreenView;
+        private System.Windows.Forms.TabControl tabControlState;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage6;
     }
 }
 
