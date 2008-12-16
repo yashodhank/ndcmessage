@@ -109,7 +109,7 @@
   <State name = "I" extended = "1">
     <Part1  value = "###"   mask = "STATE_NUMBER" name = "State number" description = "State number"/>
     <Part2  value = "#"     mask = "TYPE_STATE"   name = "Type" description = "Transaction Request State"/>
-    <Part3  value = "###"   mask = "SCREEN_OK" name = "Screen Number" description = "Display screen shown on the cardholder screen while the terminal sends a Transaction Request to Central and waits for a Transaction Reply command. This is usually a ‘Please Wait’ screen."/>
+    <Part3  value = "###"   mask = "SCREEN_DISPLAY" name = "Screen Number" description = "Display screen shown on the cardholder screen while the terminal sends a Transaction Request to Central and waits for a Transaction Reply command. This is usually a ‘Please Wait’ screen."/>
     <Part4  value = "###"   mask = "STATE_OK" name = "Central Response Timeout Next" description = "State number to which the terminal goes if Central fails to reply to the Transaction Request within the permitted time interval (timer 03)."/>
     <Part5  value = "###"   mask = "DATA" name = "Send Track 2 Data" description = "See Table Note 6."/>
     <Part6  value = "###"   mask = "DATA" name = "Send Track 1 and/or Track 3 Data" description = "See Table Note 7."/>
@@ -478,6 +478,86 @@
     <Part38 value = "###"   mask = "SCREEN_DISPLAY" name = "Screen Base if FDK 'G'\r\n or FDK 'G' touch area is pressed" description = "Each table entry contains the screen number of the first screen of each language group. The initial base is 000, and all unused fields should contain this value. See Table Note 26"/>
     <Part39 value = "###"   mask = "SCREEN_DISPLAY" name = "Screen Base if FDK 'H'\r\n or FDK 'H' touch area is pressed" description = "Each table entry contains the screen number of the first screen of each language group. The initial base is 000, and all unused fields should contain this value. See Table Note 26"/>
     <Part40 value = "###"   mask = "SCREEN_DISPLAY" name = "Screen Base if FDK 'I'\r\n or FDK 'I' touch area is pressed" description = "Each table entry contains the screen number of the first screen of each language group. The initial base is 000, and all unused fields should contain this value. See Table Note 26"/>
+  </State>
+  <State name = ">" extended = "3">
+    <Part1  value = "###"   mask = "STATE_NUMBER" name = "State number" description = "State number"/>
+    <Part2  value = "#"     mask = "TYPE_STATE"   name = "Type" description = "Cash Accept State"/>
+    <Part3  value = "###"   mask = "DATA" name = "Cancel Key Mask" description = "Specifies the Cancel FDK which is active when the 'Please Enter Notes' screen is displayed. See Table Note 27 and Table Note 28."/>
+    <Part4  value = "###"   mask = "DATA" name = "Deposit Key Mask" description = "Specifies the Deposit FDK which is active when the Confirmation screen or Escrow Full screen is displayed. See Table Note 27 and Table Note 29"/>
+    <Part5  value = "###"   mask = "DATA" name = "Add More Key Mask" description = "Specifies the Add More FDK which is active when the Confirmation screen is displayed. See Table Note 27."/>
+    <Part6  value = "###"   mask = "DATA" name = "Refund Key Mask" description = "Specifies the Refund FDK which is active when the Confirmation screen or Escrow Full screen is displayed. See Table Note 27."/>
+    <Part7  value = "###"   mask = "STATE_EXTENSION" name = "Extension State 1" description = "State number for extension 1."/>
+    <Part8  value = "###"   mask = "STATE_EXTENSION" name = "Extension State 2" description = "State number for extension 2."/>
+    <Part9  value = "###"   mask = "STATE_EXTENSION" name = "Extension State 3" description = "State number for extension 3."/>
+    <Part10 value = "###"   mask = "RESERVED" name = "Reserved (000)" description = "Reserved for future use."/>
+
+    <Part11 value = "###"   mask = "STATE_EXTENDED" name = "State extended" description = "State extended"/>
+    <Part12 value = "#"     mask = "TYPE_STATE"   name = "Type" description = "Extension1 to State >"/>
+    <Part13 value = "###"   mask = "SCREEN_DISPLAY" name = "Please Enter Notes Screen" description = "This screen is displayed when the BNA has been successfully enabled (or re-enabled), to accept a cash deposit from the cardholder. See Table Note 30"/>
+    <Part14 value = "###"   mask = "SCREEN_DISPLAY" name = "Please Remove Notes Screen" description = "This screen is displayed when the BNA has refunded or rejected notes to the cardholder until the notes are removed, or timer 78 expires and the retract option is enabled. See Table Note 31"/>
+    <Part15 value = "###"   mask = "SCREEN_DISPLAY" name = "Confirmation Screen" description = "This screen is displayed when all the notes are at the escrow and are valid. The screen shows the number of notes of each denomination held at the escrow, and prompts the cardholder to add more notes, deposit the notes in the escrow, or request a refund. See “Confirmation Screens” on page 2-83"/>
+    <Part16 value = "###"   mask = "SCREEN_DISPLAY" name = "Hardware Error Screen" description = "This screen is displayed for 15 seconds when a hardware error (for example a note jam) occurs, so that the transaction cannot continue. See Table Note 32"/>
+    <Part17 value = "###"   mask = "SCREEN_DISPLAY" name = "Escrow Full Screen" description = "This screen is displayed when the maximum number of notes which can be held in the escrow is reached. See Table Note 33"/>
+    <Part18 value = "###"   mask = "SCREEN_DISPLAY" name = "Processing Notes Screen" description = "This screen is displayed while a bunch of notes is being processed after entry to the BNA."/>
+    <Part19 value = "###"   mask = "SCREEN_DISPLAY" name = "Please Remove More than 90 Notes Screen" description = "This screen is displayed when the BNA refunds notes to the cardholder because the number notes in the escrow exceeds the set capacity."/>
+    <Part20 value = "###"   mask = "RESERVED" name = "Reserved (000)" description = "Reserved for future use."/>
+
+    <Part21 value = "###"   mask = "STATE_EXTENDED" name = "State extended" description = "State extended"/>
+    <Part22 value = "#"     mask = "TYPE_STATE"   name = "Type" description = "Extension2 to State >"/>
+    <Part23 value = "###"   mask = "STATE_OK" name = "Good Next State Number" description = "State number the terminal proceeds to when the Deposit function has been selected."/>
+    <Part24 value = "###"   mask = "STATE_CANCEL" name = "Cancel Next State Number" description = "State number the terminal proceeds to if the cardholder presses the Cancel key to stop the Cash Deposit transaction."/>
+    <Part25 value = "###"   mask = "STATE_ERROR" name = "Device Error Next State Number" description = "State number the terminal proceeds to if an exception has occurred which may require subsequent action by Central. See Table Note 34 and Table Note 35"/>
+    <Part26 value = "###"   mask = "STATE_TIME_OUT" name = "Timeout Next State Number" description = "State number the terminal proceeds to if the cardholder fails to enter notes into the BNA before timer 77 expires, or fails to respond to the prompts on the Confirmation screen, and does not want more time."/>
+    <Part27 value = "###"   mask = "STATE_ERROR" name = "Notes at Refund Slot Next State Number" description = "State number the terminal proceeds to if the notes remain at the refund slot after timer 78 expires. Executed only if the retract option is not configured."/>
+    <Part28 value = "###"   mask = "RESERVED" name = "Reserved (000)" description = "Reserved for future use."/>
+    <Part29 value = "###"   mask = "RESERVED" name = "Reserved (000)" description = "Reserved for future use."/>
+    <Part30 value = "###"   mask = "RESERVED" name = "Reserved (000)" description = "Reserved for future use."/>
+
+    <Part31 value = "###"   mask = "STATE_EXTENDED" name = "State extended" description = "State extended"/>
+    <Part32 value = "#"     mask = "TYPE_STATE"   name = "Type" description = "Extension3 to State >"/>
+    <Part33 value = "###"   mask = "DATA" name = "Set denominations 1 - 12" description = "The three ASCII characters represent 4 bit nibble Hex values. These give three bitmaps, starting from the rightmost character. The individual bits set the denominations to active or inactive. For example, sending Hex values '10E' would set denominations 2, 3, 4 and 9 to active. All other denominations from 1 to 12 inclusive would be inactive. Active denomination type notes would then be accepted by the BNA.\r\nSee Table Note 36, Table Note 37 and Table Note 38\r\nHex values '10E' are broken down to binary as follows:\r\n 1 0 E\r\n0001 0000 1110\r\nTaking index 1 as the right most digit and index 12 as the left most digit, the active notes set will be notes indexed 2, 3, 4 and 9. See Table Note 39"/>
+    <Part34 value = "###"   mask = "DATA" name = "Set denominations 13 - 24" description = "The three ASCII  characters represent three bitmaps, starting from the rightmost character. The individual bits set the denominations to active or inactive. Bits 12 to 23 map to denominations 13 to 24 respectively. See Table Note 38"/>
+    <Part35 value = "###"   mask = "DATA" name = "Set denominations 25 - 36" description = "The three ASCII characters represent three bitmaps, starting from the rightmost character. The individual bits set the denominations to active or inactive. Bits 24 to 35 map to denominations 25 to 36 respectively. See Table Note 38"/>
+    <Part36 value = "###"   mask = "DATA" name = "Set denominations 37 - 48" description = "The three ASCII characters represent three bitmaps, starting from the rightmost character. The individual bits set the denominations to active or inactive. Bits 36 to 47 map to denominations 37 to 48 respectively. See Table Note 38"/>
+    <Part37 value = "###"   mask = "DATA" name = "Set denominations 49 - 50" description = "The three ASCII characters represent three bitmaps, starting from the rightmost character. The individual bits set the denominations to active or inactive. Bits 48 to 49 map to denominations 49 to 50 respectively. See Table Note 38"/>
+    <Part38 value = "###"   mask = "RESERVED" name = "Reserved (000)" description = "Reserved for future use."/>
+    <Part39 value = "###"   mask = "RESERVED" name = "Reserved (000)" description = "Reserved for future use."/>
+    <Part40 value = "###"   mask = "RESERVED" name = "Reserved (000)" description = "Reserved for future use."/>
+   </State>
+  <State name = "w" extended = "2">
+    <Part1  value = "###"   mask = "STATE_NUMBER" name = "State number" description = "State number"/>
+    <Part2  value = "#"     mask = "TYPE_STATE"   name = "Type" description = "Cheque Accept State"/>
+    <Part3  value = "###"   mask = "" name = "Reserved (000)" description = "Reserved for future use"/>
+    <Part4  value = "###"   mask = "" name = "Leave/Capture Option" description = "This entry defines the action to take if a physically unacceptable or jammed cheque is presented for return, but not taken:\r\n000 - Leave at throat\r\n001 - Capture unacceptable cheque to bin 1\r\nIf the returned cheque is unacceptable because it is too short and the table entry is set to capture the returned cheque, a jam may occur in the rear transport."/>
+    <Part5  value = "###"   mask = "" name = "Cheque Entry Retries" description = "Represents the number of cheque entry retries the cardholder is allowed during the execution of the state. Retries may be allowed if a physically unacceptable or incorrectly orientated cheque is detected:\r\n000 - Do not allow cardholder retries\r\n001 - Allow one further retry following initial rejection\r\n002 - Allow two further retries\r\n003 - Allow three further retries\r\nAfter all permissible retries have failed, the CPM accepts a physically acceptable cheque and continues to process it, even if the codeline cannot be read. For example, if this entry is set to 003 the cardholder is allowed four attempts to correctly enter the cheque. If on the last attempt the codeline is not found, the cheque is accepted as valid, but no codeline read is done."/>
+    <Part6  value = "###"   mask = "" name = "Image Lift" description = "Specifies whether a front and/or rear image is to be lifted, if hardware capabilities allow.\r\n000 - No cheque images are lifted\r\n001 - An image of the front of the cheque is lifted\r\n002 - An image of the rear of the cheque is lifted\r\n003 - An image of the front and rear of the cheque is lifted\r\nBy default the front image of the cheque is displayed. Screen C07 can be modified to display the rear image. Lifted front and rear images are deleted from the system during the Close State. See Table Note 40."/>
+    <Part7  value = "###"   mask = "" name = "Extension State 1" description = "State number for extension state 1. See “Extension 1 to State w” on page 2-87 If a value of 255 is used for this entry, this indicates there is no extension state 1."/>
+    <Part8  value = "###"   mask = "" name = "Extension State 2" description = "State number for extension state 2.See “Extension 2 to State w” on page 2-89 If a value of 255 is used for this entry, this indicates there is no extension state 2."/>
+    <Part9  value = "###"   mask = "" name = "Cancel Key Mask" description = "Specifies the Cancel FDK which is active when the Please Insert Cheque and Further Processing screens are displayed. Each bit relates to an FDK, as follows:\r\nBit 0 - FDK A\r\nBit 1 - FDK B\r\n\r\nBit 2 - FDK C\r\nBit 3 - FDK D\r\nBit 4 - FDK F\r\nBit 5 - FDK G\r\nBit 6 - FDK H\r\nBit 7 - FDK I\r\nIf a bit is set to 1, the relevant Cancel FDK is active. If a bit is set to 0, the relevant FDK is inactive."/>
+    <Part10 value = "###"   mask = "" name = "Deposit Key Mask" description = "Specifies the Deposit FDK which is active when the Further Processing screen is displayed. Each bit relates to an FDK, as follows:\r\nBit 0 - FDK A\r\nBit 1 - FDK B\r\nBit 2 - FDK C\r\nBit 3 - FDK D\r\nBit 4 - FDK F\r\nBit 5 - FDK G\r\nBit 6 - FDK H\r\nBit 7 - FDK I\r\nIf a bit is set to 1, the relevant Deposit FDK is active. If a bit is set to 0, the relevant FDK is inactive."/>
+
+
+    <Part11 value = "###"   mask = "STATE_EXTENDED" name = "State extended" description = "State extended"/>
+    <Part12 value = "#"     mask = "TYPE_STATE"   name = "Type" description = "Extension1 to State w"/>
+    <Part13 value = "###"   mask = "SCREEN_OK" name = "Please Insert Cheque Screen" description = "This screen is displayed when the CPM has been successfully enabled (or re-enabled) to accept a customer’s cheque.\r\nSee Table Note 41"/>
+    <Part14 value = "###"   mask = "SCREEN_OK" name = "Processing Cheque Screen" description = "This screen is displayed when the cheque has been successfully entered into the CPM."/>
+    <Part15 value = "###"   mask = "SCREEN_ERROR" name = "Unacceptable Cheque Screen" description = "This screen is displayed when a cheque cannot be accepted by the CPM.\r\n See Table Note 42"/>
+    <Part16 value = "###"   mask = "SCREEN_ERROR" name = "Incorrect Orientation Screen" description = "This screen is displayed when an incorrectly orientated cheque has been entered and retries still remain."/>
+    <Part17 value = "###"   mask = "SCREEN_DISPLAY" name = "Further Processing Screen" description = "This screen is displayed after the Processing Cheque screen, and may be used to display the lifted images."/>
+    <Part18 value = "###"   mask = "SCREEN_ERROR" name = "Cheque Captured Screen" description = "This screen is displayed when a cheque has been captured. Typically a cheque is captured if it is returned to the cardholder but not taken. This screen is displayed for the period defined by timer 87. See Table Note 43"/>
+    <Part19 value = "###"   mask = "SCREEN_ERROR" name = "Device Error Screen" description = "This screen is displayed when a hardware error such as a cheque jam condition occurs, preventing the transaction from being continued.\r\nThis screen is displayed for a fixed time of 15 seconds."/>
+    <Part20 value = "###"   mask = "SCREEN_DISPLAY" name = "Please Remove Cheque Screen" description = "This screen is displayed when the cheque is returned, and is waiting to be taken by the cardholder."/>
+
+    <Part21 value = "###"   mask = "STATE_EXTENDED" name = "State extended" description = "State extended"/>
+    <Part22 value = "#"     mask = "TYPE_STATE"   name = "Type" description = "Extension2 to State w"/>
+    <Part23 value = "###"   mask = "STATE_OK" name = "Cheque Already Present Next State Exit" description = "This exit is taken if a cheque is detected as already present in the CPM. The recommended next state is the Close state, to perform error recovery."/>
+    <Part24 value = "###"   mask = "STATE_ERROR" name = "No Exception Next State Exit" description = "This exit is taken if the cheque is accepted and processed without error, although the codeline may not have been read. The recommended next state is an Information Entry state, which prompts the cardholder to enter the amount on the cheque, and optionally displays the image lifted from the cheque.\r\nSee Table Note 42"/>
+    <Part25 value = "###"   mask = "STATE_EXCEPTION" name = "Exception Next State Exit" description = "This exit is taken when an exception has occurred (that is, a device failure occurs in the CPM). The recommended next state is the Close state, to perform error recovery.\r\nSee Table Note 44"/>
+    <Part26 value = "###"   mask = "STATE_CANCEL" name = "Customer Cancel/Timeout Next State Exit" description = "This exit is taken when the cardholder fails to insert a physically acceptable cheque within the required time or number of retries. The recommended next state is the 4 or 8 FDK Selection Function state from which the Cheque Deposit transaction was selected.\r\nSee Table Note 45."/>
+    <Part27 value = "###"   mask = "STATE_CAPTURED" name = "Cheque Captured Exit" description = "This exit is taken when the cardholder fails to take a returned cheque, which is then cleared to the CPM reject bin.\r\nSee Table Note 46"/>
+    <Part28 value = "###"   mask = "RESERVED" name = "Reserved (000)" description = "Reserved for future use."/>
+    <Part29 value = "###"   mask = "RESERVED" name = "Reserved (000)" description = "Reserved for future use."/>
+    <Part30 value = "###"   mask = "RESERVED" name = "Reserved (000)" description = "Reserved for future use."/>
   </State>
 </STATES>
 <!--
