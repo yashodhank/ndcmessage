@@ -88,8 +88,6 @@ namespace Interpretor_NDC
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControlState = new System.Windows.Forms.TabControl();
             this.tabPageState1 = new System.Windows.Forms.TabPage();
-            this.tabPageState2 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBoxDescriptionPart30 = new System.Windows.Forms.TextBox();
@@ -184,28 +182,29 @@ namespace Interpretor_NDC
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.tabPageState2 = new System.Windows.Forms.TabPage();
+            this.panelDrawStates = new System.Windows.Forms.Panel();
+            this.tabPageState3 = new System.Windows.Forms.TabPage();
+            this.labelDislpayScreen = new System.Windows.Forms.Label();
+            this.labelActualState = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonClearMap = new System.Windows.Forms.Button();
             this.buttonGenerateMap = new System.Windows.Forms.Button();
             this.labelViewStateType = new System.Windows.Forms.Label();
             this.comboBoxViewStateTabel = new System.Windows.Forms.ComboBox();
             this.listBoxStateTabels = new System.Windows.Forms.ListBox();
-            this.buttonOpenStateTabels = new System.Windows.Forms.Button();
-            this.panelDrawStates = new System.Windows.Forms.Panel();
-            this.tabPageState3 = new System.Windows.Forms.TabPage();
-            this.labelActualState = new System.Windows.Forms.Label();
-            this.labelDislpayScreen = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabControlState.SuspendLayout();
             this.tabPageState1.SuspendLayout();
-            this.tabPageState2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPageState2.SuspendLayout();
             this.tabPageState3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -820,7 +819,6 @@ namespace Interpretor_NDC
             this.tabPage4.Controls.Add(this.labelViewStateType);
             this.tabPage4.Controls.Add(this.comboBoxViewStateTabel);
             this.tabPage4.Controls.Add(this.listBoxStateTabels);
-            this.tabPage4.Controls.Add(this.buttonOpenStateTabels);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -850,31 +848,6 @@ namespace Interpretor_NDC
             this.tabPageState1.TabIndex = 0;
             this.tabPageState1.Text = "Details";
             this.tabPageState1.UseVisualStyleBackColor = true;
-            // 
-            // tabPageState2
-            // 
-            this.tabPageState2.Controls.Add(this.panelDrawStates);
-            this.tabPageState2.Location = new System.Drawing.Point(4, 22);
-            this.tabPageState2.Name = "tabPageState2";
-            this.tabPageState2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageState2.Size = new System.Drawing.Size(842, 667);
-            this.tabPageState2.TabIndex = 1;
-            this.tabPageState2.Text = "Map";
-            this.tabPageState2.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Linen;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(11, 530);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(37, 20);
-            this.button2.TabIndex = 34;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -1819,6 +1792,70 @@ namespace Interpretor_NDC
             this.label5.TabIndex = 4;
             this.label5.Text = "label5";
             // 
+            // tabPageState2
+            // 
+            this.tabPageState2.Controls.Add(this.panelDrawStates);
+            this.tabPageState2.Location = new System.Drawing.Point(4, 22);
+            this.tabPageState2.Name = "tabPageState2";
+            this.tabPageState2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageState2.Size = new System.Drawing.Size(842, 667);
+            this.tabPageState2.TabIndex = 1;
+            this.tabPageState2.Text = "Map";
+            this.tabPageState2.UseVisualStyleBackColor = true;
+            // 
+            // panelDrawStates
+            // 
+            this.panelDrawStates.AutoScroll = true;
+            this.panelDrawStates.BackColor = System.Drawing.Color.Coral;
+            this.panelDrawStates.Location = new System.Drawing.Point(3, 3);
+            this.panelDrawStates.Name = "panelDrawStates";
+            this.panelDrawStates.Size = new System.Drawing.Size(836, 664);
+            this.panelDrawStates.TabIndex = 31;
+            // 
+            // tabPageState3
+            // 
+            this.tabPageState3.Controls.Add(this.labelDislpayScreen);
+            this.tabPageState3.Controls.Add(this.labelActualState);
+            this.tabPageState3.Location = new System.Drawing.Point(4, 22);
+            this.tabPageState3.Name = "tabPageState3";
+            this.tabPageState3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageState3.Size = new System.Drawing.Size(842, 667);
+            this.tabPageState3.TabIndex = 2;
+            this.tabPageState3.Text = "Play";
+            this.tabPageState3.UseVisualStyleBackColor = true;
+            // 
+            // labelDislpayScreen
+            // 
+            this.labelDislpayScreen.AutoSize = true;
+            this.labelDislpayScreen.Location = new System.Drawing.Point(6, 23);
+            this.labelDislpayScreen.Name = "labelDislpayScreen";
+            this.labelDislpayScreen.Size = new System.Drawing.Size(85, 13);
+            this.labelDislpayScreen.TabIndex = 1;
+            this.labelDislpayScreen.Text = "Display screen : ";
+            // 
+            // labelActualState
+            // 
+            this.labelActualState.AutoSize = true;
+            this.labelActualState.Location = new System.Drawing.Point(7, 7);
+            this.labelActualState.Name = "labelActualState";
+            this.labelActualState.Size = new System.Drawing.Size(72, 13);
+            this.labelActualState.TabIndex = 0;
+            this.labelActualState.Text = "Actual state : ";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Linen;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(11, 530);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(37, 20);
+            this.button2.TabIndex = 34;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
@@ -1917,55 +1954,6 @@ namespace Interpretor_NDC
             this.listBoxStateTabels.TabIndex = 1;
             this.listBoxStateTabels.SelectedIndexChanged += new System.EventHandler(this.listBoxStateTabels_SelectedIndexChanged);
             // 
-            // buttonOpenStateTabels
-            // 
-            this.buttonOpenStateTabels.Location = new System.Drawing.Point(4, 7);
-            this.buttonOpenStateTabels.Name = "buttonOpenStateTabels";
-            this.buttonOpenStateTabels.Size = new System.Drawing.Size(142, 28);
-            this.buttonOpenStateTabels.TabIndex = 0;
-            this.buttonOpenStateTabels.Text = "Deschide State Tabels.tdb";
-            this.buttonOpenStateTabels.UseVisualStyleBackColor = true;
-            this.buttonOpenStateTabels.Click += new System.EventHandler(this.buttonOpenStateTabels_Click);
-            // 
-            // panelDrawStates
-            // 
-            this.panelDrawStates.AutoScroll = true;
-            this.panelDrawStates.BackColor = System.Drawing.Color.Coral;
-            this.panelDrawStates.Location = new System.Drawing.Point(3, 3);
-            this.panelDrawStates.Name = "panelDrawStates";
-            this.panelDrawStates.Size = new System.Drawing.Size(836, 664);
-            this.panelDrawStates.TabIndex = 31;
-            // 
-            // tabPageState3
-            // 
-            this.tabPageState3.Controls.Add(this.labelDislpayScreen);
-            this.tabPageState3.Controls.Add(this.labelActualState);
-            this.tabPageState3.Location = new System.Drawing.Point(4, 22);
-            this.tabPageState3.Name = "tabPageState3";
-            this.tabPageState3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageState3.Size = new System.Drawing.Size(842, 667);
-            this.tabPageState3.TabIndex = 2;
-            this.tabPageState3.Text = "Play";
-            this.tabPageState3.UseVisualStyleBackColor = true;
-            // 
-            // labelActualState
-            // 
-            this.labelActualState.AutoSize = true;
-            this.labelActualState.Location = new System.Drawing.Point(7, 7);
-            this.labelActualState.Name = "labelActualState";
-            this.labelActualState.Size = new System.Drawing.Size(72, 13);
-            this.labelActualState.TabIndex = 0;
-            this.labelActualState.Text = "Actual state : ";
-            // 
-            // labelDislpayScreen
-            // 
-            this.labelDislpayScreen.AutoSize = true;
-            this.labelDislpayScreen.Location = new System.Drawing.Point(6, 23);
-            this.labelDislpayScreen.Name = "labelDislpayScreen";
-            this.labelDislpayScreen.Size = new System.Drawing.Size(85, 13);
-            this.labelDislpayScreen.TabIndex = 1;
-            this.labelDislpayScreen.Text = "Display screen : ";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1986,7 +1974,6 @@ namespace Interpretor_NDC
             this.tabPage4.PerformLayout();
             this.tabControlState.ResumeLayout(false);
             this.tabPageState1.ResumeLayout(false);
-            this.tabPageState2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -1994,6 +1981,7 @@ namespace Interpretor_NDC
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPageState2.ResumeLayout(false);
             this.tabPageState3.ResumeLayout(false);
             this.tabPageState3.PerformLayout();
             this.ResumeLayout(false);
@@ -2017,7 +2005,6 @@ namespace Interpretor_NDC
         private System.Windows.Forms.TextBox textBoxArataLog;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Button buttonOpenStateTabels;
         private System.Windows.Forms.ListBox listBoxStateTabels;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
