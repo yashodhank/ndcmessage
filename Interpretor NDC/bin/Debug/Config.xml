@@ -5,7 +5,7 @@
     <Part2  value = "#"    mask = "TYPE"             name = "Type" description = "Card Read State"/>
     <Part3  value = "###"  mask = "SCREEN_DISPLAY"   name = "Screen Number" description = "Display screen that prompts the cardholder to enter the card. While the terminal is waiting for card entry, this screen is displayed."/>
     <Part4  value = "###"  mask = "STATE_OK"         name = "Good Read Next State Number" description = "State number to which the terminal goes: \r\n1. Following a good read of the card if FITs are not used (Table entry 9 = 000) \r\nor 2. If the Financial Institution number on the card matches a Financial Institution number in a FIT."/>
-    <Part5  value = "###"  mask = "STATE_ERROR"      name = "Error (Misread) Screen Number" description = "If the read conditions are not satisfied due to a bad card or a mechanism error, the card is ejected and this screen is displayed."/>
+    <Part5  value = "###"  mask = "SCREEN_ERROR"      name = "Error (Misread) Screen Number" description = "If the read conditions are not satisfied due to a bad card or a mechanism error, the card is ejected and this screen is displayed."/>
     <Part6  value = "###"  mask = "DATA"             name = "Read Condition 1" description = "These three entries specify which card track(s)and/or chip data will be read. The possible values for these entries are shown below this table."/>
     <Part7  value = "###"  mask = "DATA"             name = "Read Condition 2" description = "These three entries specify which card track(s)and/or chip data will be read. The possible values for these entries are shown below this table."/>
     <Part8  value = "###"  mask = "DATA"             name = "Read Condition 3" description = "These three entries specify which card track(s)and/or chip data will be read. The possible values for these entries are shown below this table."/>
@@ -16,7 +16,7 @@
     <Part1  value = "###"  mask = "NUMBER"     name = "State number" description = "State number"/>
     <Part2  value = "#"    mask = "TYPE"             name = "Type" description = "PIN Entry State"/>
     <Part3  value = "###"  mask = "SCREEN_DISPLAY"   name = "Screen number" description = "Display screen that prompts the cardholder to enter the PIN the first time. This screen, which is displayed on entering the PIN Entry state, must leave the cardholder screen cursor at the start of the PIN Entry display area. An ‘X’ is displayed for each key pressed."/>
-    <Part4  value = "###"  mask = "SCREEN_TIME_OUT"  name = "Time-Out Next State Number" description = "State number to which the terminal goes if the cardholder does not enter the PIN within the permitted time limit. Enter 255 if the time-out function is not required."/>
+    <Part4  value = "###"  mask = "STATE_TIME_OUT"   name = "Time-Out Next State Number" description = "State number to which the terminal goes if the cardholder does not enter the PIN within the permitted time limit. Enter 255 if the time-out function is not required."/>
     <Part5  value = "###"  mask = "STATE_CANCEL"     name = "Cancel Next State Number" description = "State number to which the terminal goes if the cardholder presses the Cancel key before the maximum number of digits specified for the PIN have been entered."/>
     <Part6  value = "###"  mask = "STATE_OK"         name = "Local PIN Check Good PIN" description = "State number to which the terminal goes after verification of a correct PIN entry. A Pre-Set Operation Code Buffer state (clearing the function key buffer before Transaction Selection) usually follows a correct PIN entry."/>
     <Part7  value = "###"  mask = "STATE_ERROR"      name = "Local PIN Check Maximum Bad" description = "State number to which the terminal goes if the correct PIN has not been entered after the number of attempts allowed by table entry 9. The terminal normally enters a Close state if this occurs."/>
@@ -181,6 +181,28 @@
     <Part28 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
     <Part29 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
     <Part30 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
+  </State>
+  <State name = "_" extended = "2">
+    <Part1 value = "###"   mask = "NUMBER" name = "State number" description = "State number"/>
+    <Part2 value = "#"     mask = "TYPE"   name = "Type" description = "Expanded FIT Switch State"/>
+    <Part3 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
+    <Part4 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
+    <Part5 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
+    <Part6 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
+    <Part7 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
+    <Part8 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
+    <Part9 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
+    <Part10 value = "###"   mask = "STATE_EXTENSION" name = "Extension State Number" description = "State number of the mandatory Extension state."/>
+    <Part11 value = "###"   mask = "STATE_EXTENDED" name = "State extended" description = "State extended"/>
+    <Part12 value = "#"     mask = "TYPE"   name = "Type" description = "Extension to State _"/>
+    <Part13 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
+    <Part14 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
+    <Part15 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
+    <Part16 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
+    <Part17 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
+    <Part18 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
+    <Part19 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
+    <Part20 value = "###"   mask = "STATE_OK" name = "Next State Number" description = "State to which the terminal goes depending on the next state index stored in the FIT. (Base 10 range 000-254 or 256-999) (Base 36 range 000-254 or 256-ZZZ)"/>
   </State>
   <State name = "L" extended = "0">
     <Part1  value = "###"   mask = "NUMBER" name = "State number" description = "State number"/>
@@ -355,7 +377,7 @@
   <State name = "b" extended = "1">
     <Part1  value = "###"   mask = "NUMBER" name = "State number" description = "State number"/>
     <Part2  value = "#"     mask = "TYPE"   name = "Type" description = "Customer-Selectable PIN State"/>
-    <Part3  value = "###"   mask = "SCREEN_DISPLAY" name = "State Type" description = "Display screen that prompts the cardholder to enter the PIN the first time."/>
+    <Part3  value = "###"   mask = "SCREEN_DISPLAY" name = "First Entry Screen Number" description = "Display screen that prompts the cardholder to enter the PIN the first time."/>
     <Part4  value = "###"   mask = "STATE_TIME_OUT" name = "Time-Out Next State Number" description = "State number to which the terminal goes if the cardholder does not make a CSP entry within the specified time limit. Enter 255 if the time-out function is not required."/>
     <Part5  value = "###"   mask = "STATE_CANCEL" name = "Cancel Next State Number" description = "State number to which the terminal goes if the cardholder presses the Cancel key to stop the CSP transaction."/>
     <Part6  value = "###"   mask = "STATE_OK" name = "Good Next State Number" description = "State number to which the terminal goes if the cardholder enters a matching pair of new PIN values."/>
