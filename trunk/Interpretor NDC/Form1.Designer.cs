@@ -87,6 +87,11 @@ namespace Interpretor_NDC
             this.textBoxScreen = new System.Windows.Forms.TextBox();
             this.listBoxScreenKeyboard = new System.Windows.Forms.ListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.buttonRedoViewStates = new System.Windows.Forms.Button();
+            this.buttonUndoViewStates = new System.Windows.Forms.Button();
+            this.buttonClearAllViewStates = new System.Windows.Forms.Button();
+            this.labelViewStates = new System.Windows.Forms.Label();
+            this.comboBoxViewStates = new System.Windows.Forms.ComboBox();
             this.tabControlState = new System.Windows.Forms.TabControl();
             this.tabPageState1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -194,10 +199,6 @@ namespace Interpretor_NDC
             this.buttonFindState = new System.Windows.Forms.Button();
             this.textBoxFindState = new System.Windows.Forms.TextBox();
             this.labelFindState = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.buttonClearMap = new System.Windows.Forms.Button();
-            this.buttonGenerateMap = new System.Windows.Forms.Button();
             this.labelViewStateType = new System.Windows.Forms.Label();
             this.comboBoxViewStateTabel = new System.Windows.Forms.ComboBox();
             this.listBoxStateTabels = new System.Windows.Forms.ListBox();
@@ -809,10 +810,6 @@ namespace Interpretor_NDC
             // 
             this.tabPage4.BackColor = System.Drawing.Color.Linen;
             this.tabPage4.Controls.Add(this.tabControlState);
-            this.tabPage4.Controls.Add(this.button2);
-            this.tabPage4.Controls.Add(this.button1);
-            this.tabPage4.Controls.Add(this.buttonClearMap);
-            this.tabPage4.Controls.Add(this.buttonGenerateMap);
             this.tabPage4.Controls.Add(this.labelViewStateType);
             this.tabPage4.Controls.Add(this.comboBoxViewStateTabel);
             this.tabPage4.Controls.Add(this.listBoxStateTabels);
@@ -822,6 +819,54 @@ namespace Interpretor_NDC
             this.tabPage4.Size = new System.Drawing.Size(1007, 703);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "State Tabels";
+            // 
+            // buttonRedoViewStates
+            // 
+            this.buttonRedoViewStates.Location = new System.Drawing.Point(764, 637);
+            this.buttonRedoViewStates.Name = "buttonRedoViewStates";
+            this.buttonRedoViewStates.Size = new System.Drawing.Size(33, 23);
+            this.buttonRedoViewStates.TabIndex = 40;
+            this.buttonRedoViewStates.Text = "->";
+            this.buttonRedoViewStates.UseVisualStyleBackColor = true;
+            this.buttonRedoViewStates.Click += new System.EventHandler(this.buttonRedoViewStates_Click);
+            // 
+            // buttonUndoViewStates
+            // 
+            this.buttonUndoViewStates.Location = new System.Drawing.Point(728, 637);
+            this.buttonUndoViewStates.Name = "buttonUndoViewStates";
+            this.buttonUndoViewStates.Size = new System.Drawing.Size(33, 23);
+            this.buttonUndoViewStates.TabIndex = 39;
+            this.buttonUndoViewStates.Text = "<-";
+            this.buttonUndoViewStates.UseVisualStyleBackColor = true;
+            this.buttonUndoViewStates.Click += new System.EventHandler(this.buttonUndoViewStates_Click);
+            // 
+            // buttonClearAllViewStates
+            // 
+            this.buttonClearAllViewStates.Location = new System.Drawing.Point(728, 608);
+            this.buttonClearAllViewStates.Name = "buttonClearAllViewStates";
+            this.buttonClearAllViewStates.Size = new System.Drawing.Size(69, 23);
+            this.buttonClearAllViewStates.TabIndex = 38;
+            this.buttonClearAllViewStates.Text = "Clear All";
+            this.buttonClearAllViewStates.UseVisualStyleBackColor = true;
+            this.buttonClearAllViewStates.Click += new System.EventHandler(this.buttonClearAllViewStates_Click);
+            // 
+            // labelViewStates
+            // 
+            this.labelViewStates.AutoSize = true;
+            this.labelViewStates.Location = new System.Drawing.Point(657, 591);
+            this.labelViewStates.Name = "labelViewStates";
+            this.labelViewStates.Size = new System.Drawing.Size(66, 13);
+            this.labelViewStates.TabIndex = 37;
+            this.labelViewStates.Text = "View States:";
+            // 
+            // comboBoxViewStates
+            // 
+            this.comboBoxViewStates.FormattingEnabled = true;
+            this.comboBoxViewStates.Location = new System.Drawing.Point(657, 610);
+            this.comboBoxViewStates.Name = "comboBoxViewStates";
+            this.comboBoxViewStates.Size = new System.Drawing.Size(69, 21);
+            this.comboBoxViewStates.TabIndex = 36;
+            this.comboBoxViewStates.SelectedIndexChanged += new System.EventHandler(this.comboBoxViewStates_SelectedIndexChanged);
             // 
             // tabControlState
             // 
@@ -1812,9 +1857,14 @@ namespace Interpretor_NDC
             // 
             // tabPageState3
             // 
+            this.tabPageState3.Controls.Add(this.buttonRedoViewStates);
             this.tabPageState3.Controls.Add(this.treeViewStatePart);
+            this.tabPageState3.Controls.Add(this.buttonUndoViewStates);
             this.tabPageState3.Controls.Add(this.labelDislpayScreen);
+            this.tabPageState3.Controls.Add(this.buttonClearAllViewStates);
             this.tabPageState3.Controls.Add(this.labelActualState);
+            this.tabPageState3.Controls.Add(this.labelViewStates);
+            this.tabPageState3.Controls.Add(this.comboBoxViewStates);
             this.tabPageState3.Location = new System.Drawing.Point(4, 22);
             this.tabPageState3.Name = "tabPageState3";
             this.tabPageState3.Padding = new System.Windows.Forms.Padding(3);
@@ -1835,7 +1885,7 @@ namespace Interpretor_NDC
             this.treeViewStatePart.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode3,
             treeNode4});
-            this.treeViewStatePart.Size = new System.Drawing.Size(178, 622);
+            this.treeViewStatePart.Size = new System.Drawing.Size(178, 520);
             this.treeViewStatePart.TabIndex = 2;
             this.treeViewStatePart.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewStatePart_AfterSelect);
             // 
@@ -1904,49 +1954,6 @@ namespace Interpretor_NDC
             this.labelFindState.Size = new System.Drawing.Size(111, 13);
             this.labelFindState.TabIndex = 0;
             this.labelFindState.Text = "Find state by number: ";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Linen;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(11, 530);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(37, 20);
-            this.button2.TabIndex = 34;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(11, 499);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 20);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // buttonClearMap
-            // 
-            this.buttonClearMap.Location = new System.Drawing.Point(57, 528);
-            this.buttonClearMap.Name = "buttonClearMap";
-            this.buttonClearMap.Size = new System.Drawing.Size(89, 23);
-            this.buttonClearMap.TabIndex = 33;
-            this.buttonClearMap.Text = "Clear Map";
-            this.buttonClearMap.UseVisualStyleBackColor = true;
-            // 
-            // buttonGenerateMap
-            // 
-            this.buttonGenerateMap.Location = new System.Drawing.Point(57, 496);
-            this.buttonGenerateMap.Name = "buttonGenerateMap";
-            this.buttonGenerateMap.Size = new System.Drawing.Size(89, 23);
-            this.buttonGenerateMap.TabIndex = 32;
-            this.buttonGenerateMap.Text = "Generate Map";
-            this.buttonGenerateMap.UseVisualStyleBackColor = true;
             // 
             // labelViewStateType
             // 
@@ -2093,9 +2100,6 @@ namespace Interpretor_NDC
         private System.Windows.Forms.ComboBox comboBoxViewStateTabel;
         private System.Windows.Forms.Label labelViewStateType;
         private System.Windows.Forms.Panel panelDrawStates;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button buttonGenerateMap;
-        private System.Windows.Forms.Button buttonClearMap;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxDescriptionPart7;
         private System.Windows.Forms.TextBox textBoxDescriptionPart6;
@@ -2106,7 +2110,6 @@ namespace Interpretor_NDC
         private System.Windows.Forms.TextBox textBoxDescriptionPart10;
         private System.Windows.Forms.TextBox textBoxDescriptionPart9;
         private System.Windows.Forms.TextBox textBoxDescriptionPart8;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBoxDescriptionPart1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
@@ -2227,6 +2230,11 @@ namespace Interpretor_NDC
         private System.Windows.Forms.Label labelFindState;
         private System.Windows.Forms.ListBox listBoxFindState;
         private System.Windows.Forms.Button buttonFindState;
+        private System.Windows.Forms.Label labelViewStates;
+        private System.Windows.Forms.ComboBox comboBoxViewStates;
+        private System.Windows.Forms.Button buttonClearAllViewStates;
+        private System.Windows.Forms.Button buttonRedoViewStates;
+        private System.Windows.Forms.Button buttonUndoViewStates;
     }
 }
 
