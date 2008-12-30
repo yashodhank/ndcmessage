@@ -28,8 +28,8 @@ namespace Interpretor_NDC
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("SCREENS");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("STATES");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("SCREENS");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("STATES");
             this.buttonOpenFile = new System.Windows.Forms.Button();
             this.openFileDialogMessageIn = new System.Windows.Forms.OpenFileDialog();
             this.labelInceputMesaj = new System.Windows.Forms.Label();
@@ -72,7 +72,6 @@ namespace Interpretor_NDC
             this.labelGoToSubscreen = new System.Windows.Forms.Label();
             this.labelGoToIdleScreen = new System.Windows.Forms.Label();
             this.buttonRefresh = new System.Windows.Forms.Button();
-            this.buttonPlaySubscreens = new System.Windows.Forms.Button();
             this.buttonPlayIdleScreens = new System.Windows.Forms.Button();
             this.buttonPlayVoices = new System.Windows.Forms.Button();
             this.labelSubscreen = new System.Windows.Forms.Label();
@@ -187,8 +186,14 @@ namespace Interpretor_NDC
             this.tabPageState2 = new System.Windows.Forms.TabPage();
             this.panelDrawStates = new System.Windows.Forms.Panel();
             this.tabPageState3 = new System.Windows.Forms.TabPage();
+            this.treeViewStatePart = new System.Windows.Forms.TreeView();
             this.labelDislpayScreen = new System.Windows.Forms.Label();
             this.labelActualState = new System.Windows.Forms.Label();
+            this.tabPageState4 = new System.Windows.Forms.TabPage();
+            this.listBoxFindState = new System.Windows.Forms.ListBox();
+            this.buttonFindState = new System.Windows.Forms.Button();
+            this.textBoxFindState = new System.Windows.Forms.TextBox();
+            this.labelFindState = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonClearMap = new System.Windows.Forms.Button();
@@ -196,12 +201,6 @@ namespace Interpretor_NDC
             this.labelViewStateType = new System.Windows.Forms.Label();
             this.comboBoxViewStateTabel = new System.Windows.Forms.ComboBox();
             this.listBoxStateTabels = new System.Windows.Forms.ListBox();
-            this.treeViewStatePart = new System.Windows.Forms.TreeView();
-            this.tabPageState4 = new System.Windows.Forms.TabPage();
-            this.labelFindState = new System.Windows.Forms.Label();
-            this.textBoxFindState = new System.Windows.Forms.TextBox();
-            this.buttonFindState = new System.Windows.Forms.Button();
-            this.listBoxFindState = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -598,7 +597,6 @@ namespace Interpretor_NDC
             this.tabPage3.Controls.Add(this.labelGoToSubscreen);
             this.tabPage3.Controls.Add(this.labelGoToIdleScreen);
             this.tabPage3.Controls.Add(this.buttonRefresh);
-            this.tabPage3.Controls.Add(this.buttonPlaySubscreens);
             this.tabPage3.Controls.Add(this.buttonPlayIdleScreens);
             this.tabPage3.Controls.Add(this.buttonPlayVoices);
             this.tabPage3.Controls.Add(this.labelSubscreen);
@@ -673,19 +671,9 @@ namespace Interpretor_NDC
             this.buttonRefresh.UseVisualStyleBackColor = true;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
-            // buttonPlaySubscreens
-            // 
-            this.buttonPlaySubscreens.Location = new System.Drawing.Point(753, 337);
-            this.buttonPlaySubscreens.Name = "buttonPlaySubscreens";
-            this.buttonPlaySubscreens.Size = new System.Drawing.Size(134, 23);
-            this.buttonPlaySubscreens.TabIndex = 15;
-            this.buttonPlaySubscreens.Text = "Play Subscreens";
-            this.buttonPlaySubscreens.UseVisualStyleBackColor = true;
-            this.buttonPlaySubscreens.Click += new System.EventHandler(this.buttonPlaySubscreens_Click);
-            // 
             // buttonPlayIdleScreens
             // 
-            this.buttonPlayIdleScreens.Location = new System.Drawing.Point(753, 308);
+            this.buttonPlayIdleScreens.Location = new System.Drawing.Point(865, 235);
             this.buttonPlayIdleScreens.Name = "buttonPlayIdleScreens";
             this.buttonPlayIdleScreens.Size = new System.Drawing.Size(134, 23);
             this.buttonPlayIdleScreens.TabIndex = 14;
@@ -695,7 +683,7 @@ namespace Interpretor_NDC
             // 
             // buttonPlayVoices
             // 
-            this.buttonPlayVoices.Location = new System.Drawing.Point(753, 279);
+            this.buttonPlayVoices.Location = new System.Drawing.Point(865, 135);
             this.buttonPlayVoices.Name = "buttonPlayVoices";
             this.buttonPlayVoices.Size = new System.Drawing.Size(134, 23);
             this.buttonPlayVoices.TabIndex = 13;
@@ -1835,6 +1823,22 @@ namespace Interpretor_NDC
             this.tabPageState3.Text = "Play";
             this.tabPageState3.UseVisualStyleBackColor = true;
             // 
+            // treeViewStatePart
+            // 
+            this.treeViewStatePart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.treeViewStatePart.Location = new System.Drawing.Point(657, 39);
+            this.treeViewStatePart.Name = "treeViewStatePart";
+            treeNode3.Name = "NodeScreen";
+            treeNode3.Text = "SCREENS";
+            treeNode4.Name = "NodeState";
+            treeNode4.Text = "STATES";
+            this.treeViewStatePart.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode3,
+            treeNode4});
+            this.treeViewStatePart.Size = new System.Drawing.Size(178, 622);
+            this.treeViewStatePart.TabIndex = 2;
+            this.treeViewStatePart.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewStatePart_AfterSelect);
+            // 
             // labelDislpayScreen
             // 
             this.labelDislpayScreen.AutoSize = true;
@@ -1852,6 +1856,54 @@ namespace Interpretor_NDC
             this.labelActualState.Size = new System.Drawing.Size(72, 13);
             this.labelActualState.TabIndex = 0;
             this.labelActualState.Text = "Actual state : ";
+            // 
+            // tabPageState4
+            // 
+            this.tabPageState4.BackColor = System.Drawing.Color.Silver;
+            this.tabPageState4.Controls.Add(this.listBoxFindState);
+            this.tabPageState4.Controls.Add(this.buttonFindState);
+            this.tabPageState4.Controls.Add(this.textBoxFindState);
+            this.tabPageState4.Controls.Add(this.labelFindState);
+            this.tabPageState4.Location = new System.Drawing.Point(4, 22);
+            this.tabPageState4.Name = "tabPageState4";
+            this.tabPageState4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageState4.Size = new System.Drawing.Size(842, 667);
+            this.tabPageState4.TabIndex = 3;
+            this.tabPageState4.Text = "Tools";
+            // 
+            // listBoxFindState
+            // 
+            this.listBoxFindState.FormattingEnabled = true;
+            this.listBoxFindState.Location = new System.Drawing.Point(10, 35);
+            this.listBoxFindState.Name = "listBoxFindState";
+            this.listBoxFindState.Size = new System.Drawing.Size(215, 238);
+            this.listBoxFindState.TabIndex = 3;
+            // 
+            // buttonFindState
+            // 
+            this.buttonFindState.Location = new System.Drawing.Point(176, 2);
+            this.buttonFindState.Name = "buttonFindState";
+            this.buttonFindState.Size = new System.Drawing.Size(49, 23);
+            this.buttonFindState.TabIndex = 2;
+            this.buttonFindState.Text = "Find";
+            this.buttonFindState.UseVisualStyleBackColor = true;
+            this.buttonFindState.Click += new System.EventHandler(this.buttonFindState_Click);
+            // 
+            // textBoxFindState
+            // 
+            this.textBoxFindState.Location = new System.Drawing.Point(124, 4);
+            this.textBoxFindState.Name = "textBoxFindState";
+            this.textBoxFindState.Size = new System.Drawing.Size(46, 20);
+            this.textBoxFindState.TabIndex = 1;
+            // 
+            // labelFindState
+            // 
+            this.labelFindState.AutoSize = true;
+            this.labelFindState.Location = new System.Drawing.Point(7, 7);
+            this.labelFindState.Name = "labelFindState";
+            this.labelFindState.Size = new System.Drawing.Size(111, 13);
+            this.labelFindState.TabIndex = 0;
+            this.labelFindState.Text = "Find state by number: ";
             // 
             // button2
             // 
@@ -1962,72 +2014,9 @@ namespace Interpretor_NDC
             this.listBoxStateTabels.Location = new System.Drawing.Point(5, 33);
             this.listBoxStateTabels.Name = "listBoxStateTabels";
             this.listBoxStateTabels.Size = new System.Drawing.Size(140, 459);
+            this.listBoxStateTabels.Sorted = true;
             this.listBoxStateTabels.TabIndex = 1;
             this.listBoxStateTabels.SelectedIndexChanged += new System.EventHandler(this.listBoxStateTabels_SelectedIndexChanged);
-            // 
-            // treeViewStatePart
-            // 
-            this.treeViewStatePart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.treeViewStatePart.Location = new System.Drawing.Point(657, 39);
-            this.treeViewStatePart.Name = "treeViewStatePart";
-            treeNode1.Name = "NodeScreen";
-            treeNode1.Text = "SCREENS";
-            treeNode2.Name = "NodeState";
-            treeNode2.Text = "STATES";
-            this.treeViewStatePart.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-            this.treeViewStatePart.Size = new System.Drawing.Size(178, 622);
-            this.treeViewStatePart.TabIndex = 2;
-            this.treeViewStatePart.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewStatePart_AfterSelect);
-            // 
-            // tabPageState4
-            // 
-            this.tabPageState4.BackColor = System.Drawing.Color.Silver;
-            this.tabPageState4.Controls.Add(this.listBoxFindState);
-            this.tabPageState4.Controls.Add(this.buttonFindState);
-            this.tabPageState4.Controls.Add(this.textBoxFindState);
-            this.tabPageState4.Controls.Add(this.labelFindState);
-            this.tabPageState4.Location = new System.Drawing.Point(4, 22);
-            this.tabPageState4.Name = "tabPageState4";
-            this.tabPageState4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageState4.Size = new System.Drawing.Size(842, 667);
-            this.tabPageState4.TabIndex = 3;
-            this.tabPageState4.Text = "Tools";
-            // 
-            // labelFindState
-            // 
-            this.labelFindState.AutoSize = true;
-            this.labelFindState.Location = new System.Drawing.Point(7, 7);
-            this.labelFindState.Name = "labelFindState";
-            this.labelFindState.Size = new System.Drawing.Size(111, 13);
-            this.labelFindState.TabIndex = 0;
-            this.labelFindState.Text = "Find state by number: ";
-            // 
-            // textBoxFindState
-            // 
-            this.textBoxFindState.Location = new System.Drawing.Point(124, 4);
-            this.textBoxFindState.Name = "textBoxFindState";
-            this.textBoxFindState.Size = new System.Drawing.Size(46, 20);
-            this.textBoxFindState.TabIndex = 1;
-            // 
-            // buttonFindState
-            // 
-            this.buttonFindState.Location = new System.Drawing.Point(176, 2);
-            this.buttonFindState.Name = "buttonFindState";
-            this.buttonFindState.Size = new System.Drawing.Size(49, 23);
-            this.buttonFindState.TabIndex = 2;
-            this.buttonFindState.Text = "Find";
-            this.buttonFindState.UseVisualStyleBackColor = true;
-            this.buttonFindState.Click += new System.EventHandler(this.buttonFindState_Click);
-            // 
-            // listBoxFindState
-            // 
-            this.listBoxFindState.FormattingEnabled = true;
-            this.listBoxFindState.Location = new System.Drawing.Point(10, 35);
-            this.listBoxFindState.Name = "listBoxFindState";
-            this.listBoxFindState.Size = new System.Drawing.Size(215, 628);
-            this.listBoxFindState.TabIndex = 3;
             // 
             // Form1
             // 
@@ -2218,7 +2207,6 @@ namespace Interpretor_NDC
         private System.Windows.Forms.Label labelPicture;
         private System.Windows.Forms.Label labelSubscreen;
         private System.Windows.Forms.Label labelIdleScreen;
-        private System.Windows.Forms.Button buttonPlaySubscreens;
         private System.Windows.Forms.Button buttonPlayIdleScreens;
         private System.Windows.Forms.Button buttonPlayVoices;
         private System.Windows.Forms.Button buttonRefresh;
